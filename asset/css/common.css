@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* Info
+   ========================================================================== */
+/**
+ * 1. Writer: Jiyeon Han
+ * 2. Production Date: 2022-09-28
+ */
+
+ 
+@import url("reset.css");
+@import url("layout.css");
+
+
+@import url('../fonts/pretendard.css');
+
+
+/* loading */
+.loading-container {
+   display: none;
+   pointer-events: none;
+   z-index: 9000;
+   text-align: center;
+   color: var(--bg-color)
+}
+
+.loading-bg,
+.loading-container {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%
+}
+
+.loading-bg {
+   background-color: var(--brand-color)
+}
+
+.loading-lines-container {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column
+}
+
+.loading-word-mask {
+   position: absolute;
+   display: block;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   overflow: hidden
+}
+
+.loading-word {
+   letter-spacing: -.05em;
+   position: relative;
+   display: inline-block;
+   color: var(--background-color);
+   font-size: 3.9vw;
+   line-height: 1em
+}
+
+@media(max-width:1024px) {
+   .loading-word {
+       font-size: 6vw
+   }
+}
+
+@media(max-width:767px) {
+   .loading-word {
+       font-size: 8vw
+   }
+}
+
+.loading-path {
+   position: relative;
+   display: inline-block;
+   color: var(--background-color);
+   vertical-align: top
+}
+
+@media(max-width:767px) {
+   .loading-path {
+       font-size: 10px
+   }
+}
+
+.loading-line {
+   position: relative;
+   display: block;
+   width: 100vw;
+   height: 100%;
+   margin-bottom: -1px;
+   background-color: var(--brand-color)
+}
