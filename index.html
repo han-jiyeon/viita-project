@@ -30,22 +30,21 @@
     <link rel="icon" type="image/png" sizes="32x32" href="asset/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="asset/img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="asset/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- style -->
     <link rel="preload" as="style" href="/fonts/fonts.css">
-    <!-- <link rel="preload" as="style" href="asset/fonts/pretendard.css"> -->
+    <link rel="preload" as="style" href="asset/fonts/pretendard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="/fonts/fonts.css" media="all">
     <link rel="stylesheet" href="asset/css/reset.css">
     <link rel="stylesheet" href="asset/css/style.css">
-    <script src="asset/js/jquery-3.6.0.min.js"></script>
+    <script src="asset/js/jquery-3.6.0.min.js" defer></script>
+    <script src="asset/js/jquery.easing.1.3.js" defer></script>
+    <script src="asset/js/SuperMarquee.min.js" defer></script>
+    <script src="asset/js/main.js" defer></script>
 </head>
 
 <body>
@@ -141,12 +140,15 @@
                 <nav class="nav">
                     <ul>
                         <li class="nav_item active">
+                            <div class="nav_bg"></div>
                             <span class="nav_text">HOME</span>
                         </li>
                         <li class="nav_item">
+                            <div class="nav_bg"></div>
                             <span class="nav_text">PRODUCTS</span>
                         </li>
                         <li class="nav_item">
+                            <div class="nav_bg"></div>
                             <span class="nav_text">ABOUT</span>
                         </li>
                     </ul>
@@ -265,7 +267,12 @@
                                 HRV-measurement industry.</p>
                             <div class="left_box_pic">
                                 <div class="pic_list">
-                                    <img src="asset/img/right_box_img01.jpg" alt="viita-watches_list_img">
+                                    <img src="asset/img/left_box_img01.jpg" alt="viita-watches_list_img">
+                                    <img src="asset/img/left_box_img02.jpg" alt="viita-watches_list_img">
+                                    <img src="asset/img/left_box_img03.jpg" alt="viita-watches_list_img">
+                                </div>
+                                <div class="pic_color">
+                                    <div class=""></div>
                                 </div>
                                 <div class="pic_bg">
                                 </div>
@@ -279,20 +286,20 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
-                                            src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png 3841.5w, "
-                                            alt="Bugatti_ceramique_edition_one" class="list_pic" style=" opacity: 1;">
+                                        <img id="sbimage-77328087960" draggable="false" width="930" height="930"
+                                            src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/c346b859a3/viita_carbon.png"
+                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/c346b859a3/viita_carbon.png 1601w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/c346b859a3/viita_carbon.png 1921w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/c346b859a3/viita_carbon.png 2561w, "
+                                            alt="Viita_carbon" imgparams="[object Object]">
                                     </div>
                                     <div class="info">
                                         <div class="title">
-                                            <div class="list_item2">Bugatti Ceramique Edition One</div>
-                                            <div class="list_item2">2021</div>
+                                            <div class="list_item2">Bugatti Carbone Limited Edition</div>
+                                            <div class="list_item2">2022</div>
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
-                                            Bugatti Ceramique Edition One - Bugatti Ceramique Edition One - Bugatti
-                                            Ceramique Edition One
+                                            <div id="supermarquee1" class="marquee_inner">
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -303,7 +310,7 @@
                                         <img id="" draggable="false" width="930" height="930"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png"
                                             srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png 3841.5w, "
-                                            alt="Bugatti_ceramique_edition_one" class="list_pic" style=" opacity: 1;">
+                                            alt="Bugatti_ceramique_edition_one" style=" opacity: 1;">
                                     </div>
                                     <div class="info">
                                         <div class="title">
@@ -312,8 +319,29 @@
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
-                                            Viita Crystals from Swarovski - Viita Crystals from Swarovski - Viita
-                                            Crystals from Swarovski
+                                            <div id="supermarquee2" class="marquee_inner">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="list_item">
+                                    <div class="pic_wrap">
+                                        <img id="sbimage-27632002048" draggable="false" width="930" height="930"
+                                            src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/6b84eae0ca/viita_swarovski.png"
+                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/6b84eae0ca/viita_swarovski.png 1601w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/6b84eae0ca/viita_swarovski.png 1921w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/6b84eae0ca/viita_swarovski.png 2561w, "
+                                            alt="Viita_swarovski" imgparams="[object Object]">
+                                    </div>
+                                    <div class="info">
+                                        <div class="title">
+                                            <div class="list_item2">Viita Crystals from Swarovski</div>
+                                            <div class="list_item2">2019</div>
+                                            <div class="list_item2">Smartwatch</div>
+                                        </div>
+                                        <div class="marquee">
+                                            <div id="supermarquee3" class="marquee_inner"> 
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -324,9 +352,7 @@
                                         <img id="" draggable="false" width="930" height="930"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/ca935b3172/vitalmonitor_nano.png"
                                             srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/ca935b3172/vitalmonitor_nano.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/ca935b3172/vitalmonitor_nano.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/ca935b3172/vitalmonitor_nano.png 3841.5w, "
-                                            alt="Vitalmonitor_nano" imgparams="[object Object]"
-                                            class="intro-list-item-pic sbimage"
-                                            style="transform: translate(0px, 100vh); opacity: 1;">
+                                            alt="Vitalmonitor_nano" imgparams="[object Object]">
                                     </div>
                                     <div class="info">
                                         <div class="title">
@@ -335,7 +361,7 @@
                                             <div class="list_item2">Health Monitor</div>
                                         </div>
                                         <div class="marquee">
-                                            Vitalmonitor Nano - Vitalmonitor Nano - Vitalmonitor Nano
+                                            <div id="supermarquee4" class="marquee_inner"></div>
                                         </div>
                                     </div>
                                 </li>
@@ -346,9 +372,7 @@
                                         <img id="" draggable="false" width="930" height="930"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/cf00e8508e/viita_race.png"
                                             srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/cf00e8508e/viita_race.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/cf00e8508e/viita_race.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/cf00e8508e/viita_race.png 3841.5w, "
-                                            alt="Viita_race" imgparams="[object Object]"
-                                            class="intro-list-item-pic sbimage"
-                                            style="transform: translate(0px, 100vh); opacity: 1;">
+                                            alt="Viita_race" imgparams="[object Object]">
                                     </div>
                                     <div class="info">
                                         <div class="title">
@@ -357,7 +381,7 @@
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
-                                            Viita Race HRV - Viita Race HRV - Viita Race HRV
+                                            <div id="supermarquee5" class="marquee_inner"></div>
                                         </div>
                                     </div>
                                 </li>
@@ -368,9 +392,7 @@
                                         <img id="" draggable="false" width="930" height="930"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/47a7348b2a/viita_titan.png"
                                             srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/47a7348b2a/viita_titan.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/47a7348b2a/viita_titan.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/47a7348b2a/viita_titan.png 3841.5w, "
-                                            alt="Viita_titan" imgparams="[object Object]"
-                                            class="intro-list-item-pic sbimage"
-                                            style="transform: translate(0px, 100vh); opacity: 1;">
+                                            alt="Viita_titan" imgparams="[object Object]">
                                     </div>
                                     <div class="info">
                                         <div class="title">
@@ -379,7 +401,7 @@
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
-                                            Viita Titan HRV - Viita Titan HRV - Viita Titan HRV
+                                            <div id="supermarquee6" class="marquee_inner"></div>
                                         </div>
                                     </div>
                                 </li>
@@ -390,9 +412,7 @@
                                         <img id="" draggable="false" width="930" height="930"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/08284715ef/viita_active.png"
                                             srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/08284715ef/viita_active.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/08284715ef/viita_active.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/08284715ef/viita_active.png 3841.5w, "
-                                            alt="Viita_active" imgparams="[object Object]"
-                                            class="intro-list-item-pic sbimage"
-                                            style="transform: translate(0px, 100vh); opacity: 1;">
+                                            alt="Viita_active" imgparams="[object Object]">
                                     </div>
                                     <div class="info">
                                         <div class="title">
@@ -401,7 +421,7 @@
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
-                                            Viita Active HRV - Viita Active HRV - Viita Active HRV
+                                            <div id="supermarquee7" class="marquee_inner"></div>
                                         </div>
                                     </div>
                                 </li>
@@ -412,9 +432,7 @@
                                         <img id="" draggable="false" width="930" height="930"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/3266688948/viita_hybrid.png"
                                             srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/3266688948/viita_hybrid.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/3266688948/viita_hybrid.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/3266688948/viita_hybrid.png 3841.5w, "
-                                            alt="Viita_hybrid" imgparams="[object Object]"
-                                            class="intro-list-item-pic sbimage"
-                                            style="transform: translate(0px, 100vh); opacity: 1;">
+                                            alt="Viita_hybrid" imgparams="[object Object]">
                                     </div>
                                     <div class="info">
                                         <div class="title">
@@ -423,7 +441,7 @@
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
-                                            Viita Hybrid HRV - Viita Hybrid HRV - Viita Hybrid HRV
+                                            <div id="supermarquee8" class="marquee_inner"></div>
                                         </div>
                                     </div>
                                 </li>
@@ -434,9 +452,7 @@
                                         <img id="" draggable="false" width="930" height="930"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/de4650e2dc/vitalmonitor.png"
                                             srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/de4650e2dc/vitalmonitor.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/de4650e2dc/vitalmonitor.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/de4650e2dc/vitalmonitor.png 3841.5w, "
-                                            alt="Vitalmonitor" imgparams="[object Object]"
-                                            class="intro-list-item-pic sbimage"
-                                            style="transform: translate(0px, 100vh); opacity: 1;">
+                                            alt="Vitalmonitor" imgparams="[object Object]">
                                     </div>
                                     <div class="info">
                                         <div class="title">
@@ -445,7 +461,7 @@
                                             <div class="list_item2">Health Monitor</div>
                                         </div>
                                         <div class="marquee">
-                                            Vitalmonitor - Vitalmonitor - Vitalmonitor
+                                            <div id="supermarquee9" class="marquee_inner"></div>
                                         </div>
                                     </div>
                                 </li>
@@ -456,9 +472,7 @@
                                         <img id="" draggable="false" width="930" height="930"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/63991de26c/vitalmonitor_og.png"
                                             srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/63991de26c/vitalmonitor_og.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/63991de26c/vitalmonitor_og.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/63991de26c/vitalmonitor_og.png 3841.5w, "
-                                            alt="Vitalmonitor_og" imgparams="[object Object]"
-                                            class="intro-list-item-pic sbimage"
-                                            style="transform: translate(0px, 100vh); opacity: 1;">
+                                            alt="Vitalmonitor_og" imgparams="[object Object]">
                                     </div>
                                     <div class="info">
                                         <div class="title">
@@ -467,13 +481,104 @@
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
-                                            <div class="marquee_inner">
-                                                Vitalmonitor Original - Vitalmonitor Original - Vitalmonitor Original
-                                            </div>
+                                            <div id="supermarquee10" class="marquee_inner"></div>
                                         </div>
                                     </div>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                </section>
+                <section id="counter" class="sec sec_count">
+                    <ul class="left_count">
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                    </ul>
+                    <span class="center_count counter-value" data-count="10">0</span>
+                    <ul class="right_count">
+                        <li>Projects</li>
+                        <li>Projects</li>
+                        <li>Projects</li>
+                        <li>Projects</li>
+                        <li>Projects</li>
+                        <li>Projects</li>
+                        <li>Projects</li>
+                        <li>Projects</li>
+                        <li>Projects</li>
+                        <li>Projects</li>
+                    </ul>
+                </section>
+                <section id="product" class="sec sec_product">
+                    <div id="product0" class="product product-size" data-v-7718a013="" style="visibility: visible;">
+                        <div class="product-stickytainer">
+                            <div class="product-pinner">
+                                <div class="product-mask" style="color: white; opacity: 1;">
+                                    <div class="product-bg-picvid-box" style="transform: translate3d(0px, -3.1623%, 0px);">
+                                        <div class="product-bg-pic-toggler"><img id="sbimage-28936021037" draggable="false" width="2560"
+                                                height="1441"
+                                                src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/8533x4800/0c57232f96/01_bolide_print.jpg"
+                                                srcset="https://img2.storyblok.com/1366x0/filters:quality(85):format(webp)/f/160527/8533x4800/0c57232f96/01_bolide_print.jpg 1367w, https://img2.storyblok.com/1600x0/filters:quality(85):format(webp)/f/160527/8533x4800/0c57232f96/01_bolide_print.jpg 1601w, https://img2.storyblok.com/1920x0/filters:quality(85):format(webp)/f/160527/8533x4800/0c57232f96/01_bolide_print.jpg 1921w, https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/8533x4800/0c57232f96/01_bolide_print.jpg 2561w, "
+                                                alt="background" imgparams="[object Object]" class="product-bg-pic sbimage">
+                                            <!---->
+                                        </div>
+                                        <!---->
+                                        <div class="product-bg-darkener"></div>
+                                    </div>
+                                    <div class="product-top"><span class="product-date">2022</span> <span class="product-number">№ 1 /
+                                            10</span>
+                                        <div class="product-brand-box"><img id="sbimage-15852981350" draggable="false" width="200"
+                                                height="103"
+                                                src="https://img2.storyblok.com/200x0/filters:quality(99):format(webp)/f/160527/298x152/17d8959a00/bugatti_logo.png"
+                                                srcset="https://img2.storyblok.com/200x0/filters:quality(99):format(webp)/f/160527/298x152/17d8959a00/bugatti_logo.png 2561w, "
+                                                alt="Bugatti_logo" imgparams="[object Object]" class="product-brand sbimage"></div>
+                                    </div>
+                                    <div class="product-center">
+                                        <div class="product-triple-rt-box">
+                                            <!---->
+                                            <!---->
+                                            <div class="runningtext-bufferdiv product-rt">
+                                                <div class="js-runningtext runningtext">
+                                                    <div class="js-runningtext-l1 runningtext-l1"
+                                                        style="transform: translate3d(-0.263%, 0px, 0px);"><span
+                                                            class="runningtext-word">Bugatti Carbone Limited Edition </span><span
+                                                            class="runningtext-word">Bugatti Carbone Limited Edition </span></div>
+                                                    <div class="js-runningtext-l2 runningtext-l2"
+                                                        style="transform: translate3d(-0.263%, 0px, 0px);"><span
+                                                            class="runningtext-word">Bugatti Carbone Limited Edition </span><span
+                                                            class="runningtext-word">Bugatti Carbone Limited Edition </span></div>
+                                                </div>
+                                            </div>
+                                            <!---->
+                                            <!---->
+                                        </div>
+                                        <div class="product-pic-box"><img id="sbimage-37239184874" draggable="false" height="NaN"
+                                                src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/c346b859a3/viita_carbon.png"
+                                                srcset="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/c346b859a3/viita_carbon.png 2561w, "
+                                                alt="Viita_carbon" imgparams="[object Object]" class="product-pic sbimage"
+                                                style="transform: translate3d(0px, 0.0062vw, 0px);"></div>
+                                    </div>
+                                    <div class="product-bot">
+                                        <div class="product-bot-left"><span class="product-name">Bugatti Carbone Limited Edition</span>
+                                        </div>
+                                        <div class="product-bot-center">
+                                            <!----> <a href="https://bugatti-smartwatches.com" target="_blank" rel="noopener noreferrer"
+                                                class="product-btn product-btn-sale" style="color: white;">
+                                                <div class="product-btn-bg bright-button" style="background-color: rgb(215, 30, 40);"></div>
+                                                <span class="product-btn-txt">BUY NOW</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-bot-right"><span class="product-type">Smartwatch</span></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -596,8 +701,6 @@
     </div>
 
     <!-- id="entire"> -->
-
-    <script src="asset/js/main.js"></script>
 </body>
 
 </html>
