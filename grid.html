@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .initloading-box {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .loading_item {
+            width: 10%;
+            height: 10vh;
+            line-height: 10vh;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .loading_item span {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            color: #b8b8b8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="initloading-container" style="display: flex;">
+        <div class="initloading-box">
+            <!-- <div class="initloading-item initloading-item1"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item2">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item3" style="opacity: 0;"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item4">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item5"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item6" style="opacity: 0;">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item7"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item8">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item9" style="opacity: 0;"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item10">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item11" style="opacity: 0;"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item12">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item13"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item14">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item15"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item16">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item17"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item18">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item19"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item20" style="opacity: 0;">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item21"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item22" style="opacity: 0;">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item23"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item24">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item25"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item26" style="opacity: 0;">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item27"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item28">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item29"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item30">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item31" style="opacity: 0;"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item32">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item33" style="opacity: 0;"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item34">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item35" style="opacity: 0;"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item36">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item37"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item38" style="opacity: 0;">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item39" style="opacity: 0;"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item40">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item41" style="opacity: 0;"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item42">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item43"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item44">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item45"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item46">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item47"><span class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item48">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item49" style="opacity: 0;"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item50">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item1"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item2">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item3"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item4" style="opacity: 0;">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item5" style="opacity: 0;"><span
+                    class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item-desktop initloading-item6">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item7"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item8">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item9"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item10">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item11"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item12" style="opacity: 0;">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item13"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item14" style="opacity: 0;">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item15"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item16" style="opacity: 0;">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item17"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item18">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item19"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item20">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item21"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item22">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item23" style="opacity: 0;"><span
+                    class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item-desktop initloading-item24">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item25" style="opacity: 0;"><span
+                    class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item-desktop initloading-item26" style="opacity: 0;">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item27"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item28">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item29"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item30">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item31"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item32">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item33" style="opacity: 0;"><span
+                    class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item-desktop initloading-item34">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item35"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item36">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item37"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item38">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item39" style="opacity: 0;"><span
+                    class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item-desktop initloading-item40">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item41" style="opacity: 0;"><span
+                    class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item-desktop initloading-item42" style="opacity: 0;">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item43"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item44">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item45"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item46">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item47" style="opacity: 0;"><span
+                    class="blink">LOADING</span></div>
+            <div class="initloading-item initloading-item-desktop initloading-item48" style="opacity: 0;">
+                VIITA
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item49"><span class="blink">LOADING</span>
+            </div>
+            <div class="initloading-item initloading-item-desktop initloading-item50">
+                VIITA
+            </div> -->
+        </div>
+    </div>
+    <script src="asset/js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="asset/js/main.js"></script>
+</body>
+
+</html>
