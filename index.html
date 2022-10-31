@@ -1,5 +1,5 @@
-<html lang="ko" class="wf-aeonik-n4-active wf-active" style="--vh:8.9px;">
-
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
     <title>VIITA - Home</title>
     <meta charset="utf-8">
@@ -33,20 +33,26 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- style -->
-    <link rel="preload" as="style" href="/fonts/fonts.css">
-    <link rel="preload" as="style" href="asset/fonts/pretendard.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link rel="stylesheet" href="/fonts/fonts.css" media="all">
+    <link rel="stylesheet" href="asset/fonts/pretendard.css">
     <link rel="stylesheet" href="asset/css/reset.css">
     <link rel="stylesheet" href="asset/css/style.css">
     <script src="asset/js/jquery-3.6.0.min.js" defer></script>
     <script src="asset/js/jquery.easing.1.3.js" defer></script>
     <script src="asset/js/SuperMarquee.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+    <!-- ScrollMagic -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.js"></script>
+
+    <!--GSAP animation plugin should be placed after ScrollMagic! -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
     <script src="asset/js/main.js" defer></script>
 </head>
-
 <body>
+    
     <div class="initloading-box">
     </div>
     <div id="wrap">
@@ -141,16 +147,22 @@
                 <nav class="nav">
                     <ul>
                         <li class="nav_item active">
-                            <div class="nav_bg"></div>
-                            <span class="nav_text">HOME</span>
+                            <a href="#">
+                                <div class="nav_bg"></div>
+                                <span class="nav_text">HOME</span>
+                            </a>
                         </li>
                         <li class="nav_item">
+                            <a href="#product">
                             <div class="nav_bg"></div>
                             <span class="nav_text">PRODUCTS</span>
+                        </a>
                         </li>
                         <li class="nav_item">
+                            <a href="#about">
                             <div class="nav_bg"></div>
                             <span class="nav_text">ABOUT</span>
+                        </a>
                         </li>
                     </ul>
                 </nav>
@@ -267,13 +279,15 @@
                                 professional athletes. Within only 3 years VIITA became the European leader in the
                                 HRV-measurement industry.</p>
                             <div class="left_box_pic">
-                                <div class="pic_list">
-                                    <img src="asset/img/left_box_img01.jpg" alt="viita-watches_list_img">
-                                    <img src="asset/img/left_box_img02.jpg" alt="viita-watches_list_img">
-                                    <img src="asset/img/left_box_img03.jpg" alt="viita-watches_list_img">
-                                </div>
-                                <div class="pic_color">
-                                    <div class=""></div>
+                                <div class="fade_slide_wrap">
+                                    <div class="pic_list">
+                                        <img src="asset/img/left_box_img01.jpg" alt="viita-watches_list_img">
+                                        <img src="asset/img/left_box_img02.jpg" alt="viita-watches_list_img">
+                                        <img src="asset/img/left_box_img03.jpg" alt="viita-watches_list_img">
+                                    </div>
+                                    <div class="pic_color">
+                                        <div class="change_color"></div>
+                                    </div>
                                 </div>
                                 <div class="pic_bg">
                                 </div>
@@ -287,25 +301,19 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="sbimage-77328087960" draggable="false" width="930" height="930"
+                                        <img id="" draggable="false" width="930" height="930" data-color="003264"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/c346b859a3/viita_carbon.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/c346b859a3/viita_carbon.png 1601w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/c346b859a3/viita_carbon.png 1921w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/c346b859a3/viita_carbon.png 2561w, "
                                             alt="Viita_carbon" imgparams="[object Object]">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
                                             <div class="list_item2">Bugatti Carbone Limited Edition</div>
                                             <div class="list_item2">2022</div>
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
-<<<<<<< HEAD
                                             <div id="supermarquee1" class="marquee_inner">
-=======
                                             <div class="marquee_inner">
-                                                Bugatti Ceramique Edition One - Bugatti Ceramique Edition One - Bugatti
-                                                Ceramique Edition One
->>>>>>> b89a5439a28a9774fb2cfc76b85f13715478e087
                                             </div>
                                         </div>
                                     </div>
@@ -314,19 +322,17 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
+                                        <img id="" draggable="false" width="930" height="930" data-color="d71e28"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png 3841.5w, "
                                             alt="Bugatti_ceramique_edition_one" style=" opacity: 1;">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
                                             <div class="list_item2">Bugatti Ceramique Edition One</div>
                                             <div class="list_item2">2021</div>
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
-<<<<<<< HEAD
                                             <div id="supermarquee2" class="marquee_inner">
                                             </div>
                                         </div>
@@ -336,9 +342,8 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="sbimage-27632002048" draggable="false" width="930" height="930"
+                                        <img id="sbimage-27632002048" draggable="false" width="930" height="930" data-color="efccf0"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/6b84eae0ca/viita_swarovski.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/6b84eae0ca/viita_swarovski.png 1601w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/6b84eae0ca/viita_swarovski.png 1921w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/6b84eae0ca/viita_swarovski.png 2561w, "
                                             alt="Viita_swarovski" imgparams="[object Object]">
                                     </div>
                                     <div class="info">
@@ -349,11 +354,7 @@
                                         </div>
                                         <div class="marquee">
                                             <div id="supermarquee3" class="marquee_inner"> 
-=======
                                             <div class="marquee_inner">
-                                                Viita Crystals from Swarovski - Viita Crystals from Swarovski - Viita
-                                                Crystals from Swarovski
->>>>>>> b89a5439a28a9774fb2cfc76b85f13715478e087
                                             </div>
                                         </div>
                                     </div>
@@ -362,25 +363,20 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
+                                        <img id="" draggable="false" width="930" height="930" data-color="3abbce"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/ca935b3172/vitalmonitor_nano.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/ca935b3172/vitalmonitor_nano.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/ca935b3172/vitalmonitor_nano.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/ca935b3172/vitalmonitor_nano.png 3841.5w, "
                                             alt="Vitalmonitor_nano" imgparams="[object Object]">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
                                             <div class="list_item2">Vitalmonitor Nano</div>
                                             <div class="list_item2">2019</div>
                                             <div class="list_item2">Health Monitor</div>
                                         </div>
                                         <div class="marquee">
-<<<<<<< HEAD
                                             <div id="supermarquee4" class="marquee_inner"></div>
-=======
                                             <div class="marquee_inner">
-                                                Vitalmonitor Nano - Vitalmonitor Nano - Vitalmonitor Nano
                                             </div>
->>>>>>> b89a5439a28a9774fb2cfc76b85f13715478e087
                                         </div>
                                     </div>
                                 </li>
@@ -388,25 +384,20 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
+                                        <img id="" draggable="false" width="930" height="930" data-color="fff600"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/cf00e8508e/viita_race.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/cf00e8508e/viita_race.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/cf00e8508e/viita_race.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/cf00e8508e/viita_race.png 3841.5w, "
                                             alt="Viita_race" imgparams="[object Object]">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
                                             <div class="list_item2">Viita Race HRV</div>
                                             <div class="list_item2">2019</div>
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
-<<<<<<< HEAD
                                             <div id="supermarquee5" class="marquee_inner"></div>
-=======
                                             <div class="marquee_inner">
-                                                Viita Race HRV - Viita Race HRV - Viita Race HRV
                                             </div>
->>>>>>> b89a5439a28a9774fb2cfc76b85f13715478e087
                                         </div>
                                     </div>
                                 </li>
@@ -414,25 +405,20 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
+                                        <img id="" draggable="false" width="930" height="930" data-color="000000"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/47a7348b2a/viita_titan.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/47a7348b2a/viita_titan.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/47a7348b2a/viita_titan.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/47a7348b2a/viita_titan.png 3841.5w, "
                                             alt="Viita_titan" imgparams="[object Object]">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
                                             <div class="list_item2">Viita Titan HRV</div>
                                             <div class="list_item2">2018</div>
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
-<<<<<<< HEAD
                                             <div id="supermarquee6" class="marquee_inner"></div>
-=======
                                             <div class="marquee_inner">
-                                                Viita Titan HRV - Viita Titan HRV - Viita Titan HRV
                                             </div>
->>>>>>> b89a5439a28a9774fb2cfc76b85f13715478e087
                                         </div>
                                     </div>
                                 </li>
@@ -440,25 +426,20 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
+                                        <img id="" draggable="false" width="930" height="930" data-color="083ea7"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/08284715ef/viita_active.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/08284715ef/viita_active.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/08284715ef/viita_active.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/08284715ef/viita_active.png 3841.5w, "
                                             alt="Viita_active" imgparams="[object Object]">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
                                             <div class="list_item2">Viita Active HRV</div>
                                             <div class="list_item2">2018</div>
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
-<<<<<<< HEAD
                                             <div id="supermarquee7" class="marquee_inner"></div>
-=======
                                             <div class="marquee_inner">
-                                                Viita Active HRV - Viita Active HRV - Viita Active HRV
                                             </div>
->>>>>>> b89a5439a28a9774fb2cfc76b85f13715478e087
                                         </div>
                                     </div>
                                 </li>
@@ -466,25 +447,20 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
+                                        <img id="" draggable="false" width="930" height="930" data-color="d48db7"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/3266688948/viita_hybrid.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/3266688948/viita_hybrid.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/3266688948/viita_hybrid.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/3266688948/viita_hybrid.png 3841.5w, "
                                             alt="Viita_hybrid" imgparams="[object Object]">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
                                             <div class="list_item2">Viita Hybrid HRV</div>
                                             <div class="list_item2">2017</div>
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
-<<<<<<< HEAD
                                             <div id="supermarquee8" class="marquee_inner"></div>
-=======
                                             <div class="marquee_inner">
-                                                Viita Hybrid HRV - Viita Hybrid HRV - Viita Hybrid HRV
                                             </div>
->>>>>>> b89a5439a28a9774fb2cfc76b85f13715478e087
                                         </div>
                                     </div>
                                 </li>
@@ -492,25 +468,20 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
+                                        <img id="" draggable="false" width="930" height="930" data-color="3abbce"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/de4650e2dc/vitalmonitor.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/de4650e2dc/vitalmonitor.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/de4650e2dc/vitalmonitor.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/de4650e2dc/vitalmonitor.png 3841.5w, "
                                             alt="Vitalmonitor" imgparams="[object Object]">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
                                             <div class="list_item2">Vitalmonitor</div>
                                             <div class="list_item2">2015</div>
                                             <div class="list_item2">Health Monitor</div>
                                         </div>
                                         <div class="marquee">
-<<<<<<< HEAD
                                             <div id="supermarquee9" class="marquee_inner"></div>
-=======
                                             <div class="marquee_inner">
-                                                Vitalmonitor - Vitalmonitor - Vitalmonitor
                                             </div>
->>>>>>> b89a5439a28a9774fb2cfc76b85f13715478e087
                                         </div>
                                     </div>
                                 </li>
@@ -518,12 +489,11 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
+                                        <img id="" draggable="false" width="930" height="930" data-color="ffffff"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/63991de26c/vitalmonitor_og.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/63991de26c/vitalmonitor_og.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/63991de26c/vitalmonitor_og.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/63991de26c/vitalmonitor_og.png 3841.5w, "
                                             alt="Vitalmonitor_og" imgparams="[object Object]">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
                                             <div class="list_item2">Vitalmonitor Original</div>
                                             <div class="list_item2">2013</div>
@@ -566,65 +536,538 @@
                     </ul>
                 </section>
                 <section id="product" class="sec sec_product">
-                    <div id="product0" class="product product-size" data-v-7718a013="" style="visibility: visible;">
-                        <div class="product-stickytainer">
-                            <div class="product-pinner">
-                                <div class="product-mask" style="color: white; opacity: 1;">
-                                    <div class="product-bg-picvid-box" style="transform: translate3d(0px, -3.1623%, 0px);">
-                                        <div class="product-bg-pic-toggler"><img id="sbimage-28936021037" draggable="false" width="2560"
-                                                height="1441"
-                                                src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/8533x4800/0c57232f96/01_bolide_print.jpg"
-                                                srcset="https://img2.storyblok.com/1366x0/filters:quality(85):format(webp)/f/160527/8533x4800/0c57232f96/01_bolide_print.jpg 1367w, https://img2.storyblok.com/1600x0/filters:quality(85):format(webp)/f/160527/8533x4800/0c57232f96/01_bolide_print.jpg 1601w, https://img2.storyblok.com/1920x0/filters:quality(85):format(webp)/f/160527/8533x4800/0c57232f96/01_bolide_print.jpg 1921w, https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/8533x4800/0c57232f96/01_bolide_print.jpg 2561w, "
-                                                alt="background" imgparams="[object Object]" class="product-bg-pic sbimage">
-                                            <!---->
-                                        </div>
-                                        <!---->
-                                        <div class="product-bg-darkener"></div>
-                                    </div>
-                                    <div class="product-top"><span class="product-date">2022</span> <span class="product-number">№ 1 /
-                                            10</span>
-                                        <div class="product-brand-box"><img id="sbimage-15852981350" draggable="false" width="200"
-                                                height="103"
-                                                src="https://img2.storyblok.com/200x0/filters:quality(99):format(webp)/f/160527/298x152/17d8959a00/bugatti_logo.png"
-                                                srcset="https://img2.storyblok.com/200x0/filters:quality(99):format(webp)/f/160527/298x152/17d8959a00/bugatti_logo.png 2561w, "
-                                                alt="Bugatti_logo" imgparams="[object Object]" class="product-brand sbimage"></div>
-                                    </div>
-                                    <div class="product-center">
-                                        <div class="product-triple-rt-box">
-                                            <!---->
-                                            <!---->
-                                            <div class="runningtext-bufferdiv product-rt">
-                                                <div class="js-runningtext runningtext">
-                                                    <div class="js-runningtext-l1 runningtext-l1"
-                                                        style="transform: translate3d(-0.263%, 0px, 0px);"><span
-                                                            class="runningtext-word">Bugatti Carbone Limited Edition </span><span
-                                                            class="runningtext-word">Bugatti Carbone Limited Edition </span></div>
-                                                    <div class="js-runningtext-l2 runningtext-l2"
-                                                        style="transform: translate3d(-0.263%, 0px, 0px);"><span
-                                                            class="runningtext-word">Bugatti Carbone Limited Edition </span><span
-                                                            class="runningtext-word">Bugatti Carbone Limited Edition </span></div>
-                                                </div>
+                    <div class="products-container" data-v-7718a013="" style="visibility: visible;">
+                        <div id="product0" class="product product-size" data-v-7718a013="" style="visibility: visible;">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask">
+                                        <div class="product-bg-picvid-box">
+                                            <div class="product-bg-pic-toggler"><img id="sbimage-42358899346" draggable="false" width="2560"
+                                                    height="1441"
+                                                    src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/8533x4800/0c57232f96/01_bolide_print.jpg"
+                                                    alt="background" imgparams="[object Object]" class="product-bg-pic sbimage">
+                                                <!---->
                                             </div>
                                             <!---->
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2022</span> <span class="product-number">№ 1 /
+                                                10</span>
+                                            <div class="product-brand-box"><img id="sbimage-96000691863" draggable="false" width="200"
+                                                    height="103"
+                                                    src="https://img2.storyblok.com/200x0/filters:quality(99):format(webp)/f/160527/298x152/17d8959a00/bugatti_logo.png"
+                                                    alt="Bugatti_logo" imgparams="[object Object]" class="product-brand sbimage"></div>
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <!---->
+                                                <!---->
+                                                <div id="runningtext-l1" class="runningtext-bufferdiv product-rt">
+                                                </div>
+                                                <!---->
+                                                <!---->
+                                            </div>
+                                            <div class="product-pic-box"><img id="sbimage-5265922322" draggable="false" height="NaN"
+                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/c346b859a3/viita_carbon.png"
+                                                    alt="Viita_carbon" imgparams="[object Object]" class="product-pic sbimage"
+                                                    style="transform: translate(0px, 0vw);"></div>
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Bugatti Carbone Limited Edition</span>
+                                            </div>
+                                            <div class="product-bot-center">
+                                                <!----> <a href="https://bugatti-smartwatches.com" target="_blank" rel="noopener noreferrer"
+                                                    class="product-btn product-btn-sale" style="color: white;">
+                                                    <div class="product-btn-bg bright-button" style="background-color: rgb(215, 30, 40);">
+                                                    </div> <span class="product-btn-txt">BUY NOW</span>
+                                                </a>
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Smartwatch</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product1" class="product product-size" data-v-7718a013="" style="visibility: visible;">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask">
+                                        <div class="product-bg-picvid-box">
+                                            <!---->
+                                            <div class="product-bg-vid-toggler"><video id="product-vid" autoplay= 'autoplay' preload="preload" poster=""
+                                                    muted="muted" playsinline="" loop="loop" class="product-bg-video">
+                                                    <source src="https://a.storyblok.com/f/160527/x/6ae606f546/bugatti_teaser_clip_cc.mp4">
+                                                </video></div>
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2021</span> <span class="product-number">№ 2 /
+                                                10</span>
+                                            <div class="product-brand-box"><img id="sbimage-91646397958" draggable="false" width="200"
+                                                    height="103"
+                                                    src="https://img2.storyblok.com/200x0/filters:quality(99):format(webp)/f/160527/298x152/17d8959a00/bugatti_logo.png"
+                                                    alt="Bugatti_logo" imgparams="[object Object]" class="product-brand sbimage"></div>
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <!---->
+                                                <!---->
+                                                <div id="runningtext-l2" class="runningtext-bufferdiv product-rt">
+                                                </div>
+                                                <!---->
+                                                <!---->
+                                            </div>
                                             <!---->
                                         </div>
-                                        <div class="product-pic-box"><img id="sbimage-37239184874" draggable="false" height="NaN"
-                                                src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/c346b859a3/viita_carbon.png"
-                                                srcset="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/c346b859a3/viita_carbon.png 2561w, "
-                                                alt="Viita_carbon" imgparams="[object Object]" class="product-pic sbimage"
-                                                style="transform: translate3d(0px, 0.0062vw, 0px);"></div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Bugatti Ceramique Edition One</span>
+                                            </div>
+                                            <div class="product-bot-center">
+                                                <!----> <a href="https://bugatti-smartwatches.com" target="_blank" rel="noopener noreferrer"
+                                                    class="product-btn product-btn-sale" style="color: white;">
+                                                    <div class="product-btn-bg bright-button" style="background-color: rgb(215, 30, 40);">
+                                                    </div> <span class="product-btn-txt">BUY NOW</span>
+                                                </a>
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Smartwatch</span></div>
+                                        </div>
                                     </div>
-                                    <div class="product-bot">
-                                        <div class="product-bot-left"><span class="product-name">Bugatti Carbone Limited Edition</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product2" class="product product-size" data-v-7718a013="" style="visibility: visible;">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask" style="color: rgb(239, 204, 240); opacity: 1;">
+                                        <div class="product-bg-picvid-box">
+                                            <div class="product-bg-pic-toggler"><img id="sbimage-38713604444" draggable="false" width="2560"
+                                                    height="1882"
+                                                    src="https://img2.storyblok.com/2240x0/filters:quality(85):format(webp)/f/160527/2240x1646/da6808bea4/swarovski_bg.jpg"
+                                                    alt="background" imgparams="[object Object]" class="product-bg-pic sbimage">
+                                                <!---->
+                                            </div>
+                                            <!---->
+                                            <div class="product-bg-darkener"></div>
                                         </div>
-                                        <div class="product-bot-center">
-                                            <!----> <a href="https://bugatti-smartwatches.com" target="_blank" rel="noopener noreferrer"
-                                                class="product-btn product-btn-sale" style="color: white;">
-                                                <div class="product-btn-bg bright-button" style="background-color: rgb(215, 30, 40);"></div>
-                                                <span class="product-btn-txt">BUY NOW</span>
-                                            </a>
+                                        <div class="product-top"><span class="product-date">2019</span> <span class="product-number">№ 3 /
+                                                10</span>
+                                            <div class="product-brand-box product-brand-box-bigger"><img id="sbimage-82486705233"
+                                                    draggable="false" width="200" height="200"
+                                                    src="https://img2.storyblok.com/200x0/filters:quality(99):format(webp)/f/160527/1024x1024/a40cab7411/swarovski_white.png"
+                                                    alt="Swarovski_white" imgparams="[object Object]" class="product-brand sbimage"></div>
                                         </div>
-                                        <div class="product-bot-right"><span class="product-type">Smartwatch</span></div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <div class="product-triple-rt-mask1">
+                                                    <div class="runningtext-bufferdiv product-triple-rt js-product-triple-rt1">
+                                                        <div class="js-runningtext runningtext">
+                                                            <!--  -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-triple-rt-mask2">
+                                                    <div class="runningtext-bufferdiv product-triple-rt js-product-triple-rt2 inverse">
+                                                        <div class="js-runningtext runningtext">
+                                                            <!--  -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="runningtext-l3-1" class="runningtext-bufferdiv product-rt">
+                                                </div>
+                                                <div id="runningtext-l3-2" class="runningtext-bufferdiv product-rt">
+                                                </div>
+                                                <div id="runningtext-l3-3" class="runningtext-bufferdiv product-rt">
+                                                </div>
+                                                <div id="runningtext-l3-4" class="runningtext-bufferdiv product-rt">
+                                                </div>
+                                                <div id="runningtext-l3-5" class="runningtext-bufferdiv product-rt">
+                                                </div>
+                                                <div class="product-triple-rt-mask4">
+                                                    <div class="runningtext-bufferdiv product-triple-rt js-product-triple-rt4 inverse">
+                                                        <div class="js-runningtext runningtext">
+                                                            <!--  -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-triple-rt-mask5">
+                                                    <div class="runningtext-bufferdiv product-triple-rt js-product-triple-rt5">
+                                                        <div class="js-runningtext runningtext">
+                                                            <div class="js-runningtext-l1"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-pic-box"><img id="sbimage-93201915857" draggable="false" height="NaN"
+                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/6b84eae0ca/viita_swarovski.png"
+                                                    alt="Viita_swarovski" imgparams="[object Object]" class="product-pic sbimage"></div>
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Viita Crystals from Swarovski</span>
+                                            </div>
+                                            <div class="product-bot-center">
+                                                <div class="product-btn product-btn-sold-out" style="color: black;">
+                                                    <div class="product-btn-bg bright-button" style="background-color: rgb(239, 204, 240);">
+                                                    </div> <span class="product-btn-txt">SOLD OUT</span>
+                                                </div>
+                                                <!---->
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Smartwatch</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product3" class="product product-size" data-v-7718a013="">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask" style="color: white; background-color: rgb(58, 187, 206); opacity: 1;">
+                                        <div class="product-bg-picvid-box">
+                                            <!---->
+                                            <!---->
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2019</span> <span class="product-number">№ 4 /
+                                                10</span>
+                                            <!---->
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <!---->
+                                                <!---->
+                                                <div id="runningtext-l4" class="runningtext-bufferdiv product-rt">
+                                                    <div class="js-runningtext runningtext">
+                                                    </div>
+                                                </div>
+                                                <!---->
+                                                <!---->
+                                            </div>
+                                            <div class="product-pic-box"><img id="sbimage-79377746140" draggable="false" height="NaN"
+                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/ca935b3172/vitalmonitor_nano.png"
+                                                    alt="Vitalmonitor_nano" imgparams="[object Object]" class="product-pic sbimage"></div>
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Vitalmonitor Nano</span></div>
+                                            <div class="product-bot-center">
+                                                <!----> <a href="https://www.vital-monitor.com" target="_blank" rel="noopener noreferrer"
+                                                    class="product-btn product-btn-sale" style="color: rgb(58, 187, 206);">
+                                                    <div class="product-btn-bg bright-button" style="background-color: white;"></div> <span
+                                                        class="product-btn-txt">BUY NOW</span>
+                                                </a>
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Health Monitor</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product4" class="product product-size" data-v-7718a013="">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask" style="color: rgb(255, 246, 0); opacity: 1;">
+                                        <div class="product-bg-picvid-box">
+                                            <div class="product-bg-pic-toggler"><img id="sbimage-51710422420" draggable="false" width="2560"
+                                                    height="1707"
+                                                    src="https://img2.storyblok.com/2000x0/filters:quality(85):format(webp)/f/160527/2000x1333/8074e55216/f1_home.jpg"
+                                                    alt="background" imgparams="[object Object]" class="product-bg-pic sbimage">
+                                                <!---->
+                                            </div>
+                                            <!---->
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2019</span> <span class="product-number">№ 5 /
+                                                10</span>
+                                            <!---->
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <!---->
+                                                <!---->
+                                                <div id="runningtext-l5" class="runningtext-bufferdiv product-rt">
+                                                    <div class="js-runningtext runningtext">
+                                                    </div>
+                                                </div>
+                                                <!---->
+                                                <!---->
+                                            </div>
+                                            <div class="product-pic-box"><img id="sbimage-51126859230" draggable="false" height="NaN"
+                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/cf00e8508e/viita_race.png"
+                                                    alt="Viita_race" imgparams="[object Object]" class="product-pic sbimage"></div>
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Viita Race HRV</span></div>
+                                            <div class="product-bot-center">
+                                                <div class="product-btn product-btn-sold-out" style="color: black;">
+                                                    <div class="product-btn-bg bright-button" style="background-color: rgb(255, 246, 0);">
+                                                    </div> <span class="product-btn-txt">SOLD OUT</span>
+                                                </div>
+                                                <!---->
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Smartwatch</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product5" class="product product-size" data-v-7718a013="">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask" style="color: white; opacity: 1;">
+                                        <div class="product-bg-picvid-box">
+                                            <div class="product-bg-pic-toggler"><img id="sbimage-14916087718" draggable="false" width="2560"
+                                                    height="1707"
+                                                    src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/4752x3168/3163b3b048/fabien-martin-417393-unsplash.jpg"
+                                                    alt="background" imgparams="[object Object]" class="product-bg-pic sbimage">
+                                                <!---->
+                                            </div>
+                                            <!---->
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2018</span> <span class="product-number">№ 6 /
+                                                10</span>
+                                            <!---->
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <!---->
+                                                <!---->
+                                                <div id="runningtext-l6" class="runningtext-bufferdiv product-rt">
+                                                    <div class="js-runningtext runningtext">
+                                                    </div>
+                                                </div>
+                                                <!---->
+                                                <!---->
+                                            </div>
+                                            <div class="product-pic-box"><img id="sbimage-97964422312" draggable="false" height="NaN"
+                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/47a7348b2a/viita_titan.png"
+                                                    alt="Viita_titan" imgparams="[object Object]" class="product-pic sbimage"></div>
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Viita Titan HRV</span></div>
+                                            <div class="product-bot-center">
+                                                <div class="product-btn product-btn-sold-out" style="color: black;">
+                                                    <div class="product-btn-bg bright-button" style="background-color: white;"></div> <span
+                                                        class="product-btn-txt">SOLD OUT</span>
+                                                </div>
+                                                <!---->
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Smartwatch</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product6" class="product product-size" data-v-7718a013="">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask" style="color: rgb(31, 222, 145); opacity: 1;">
+                                        <div class="product-bg-picvid-box">
+                                            <div class="product-bg-pic-toggler"><img id="sbimage-51893548306" draggable="false" width="2560"
+                                                    height="1689"
+                                                    src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/4000x2639/b95744b09f/timo_thinking.jpg"
+                                                    alt="background" imgparams="[object Object]" class="product-bg-pic sbimage">
+                                                <!---->
+                                            </div>
+                                            <!---->
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2018</span> <span class="product-number">№ 7 /
+                                                10</span>
+                                            <!---->
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <!---->
+                                                <!---->
+                                                <div id="runningtext-l7" class="runningtext-bufferdiv product-rt">
+                                                    <div class="js-runningtext runningtext">
+                                                    </div>
+                                                </div>
+                                                <!---->
+                                                <!---->
+                                            </div>
+                                            <div class="product-pic-box"><img id="sbimage-59658609640" draggable="false" height="NaN"
+                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/08284715ef/viita_active.png"
+                                                    alt="Viita_active" imgparams="[object Object]" class="product-pic sbimage"></div>
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Viita Active HRV</span></div>
+                                            <div class="product-bot-center">
+                                                <div class="product-btn product-btn-sold-out" style="color: rgb(8, 62, 167);">
+                                                    <div class="product-btn-bg bright-button" style="background-color: rgb(31, 222, 145);">
+                                                    </div> <span class="product-btn-txt">SOLD OUT</span>
+                                                </div>
+                                                <!---->
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Smartwatch</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product7" class="product product-size" data-v-7718a013="">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask" style="color: rgb(255, 228, 206); opacity: 1;">
+                                        <div class="product-bg-picvid-box">
+                                            <div class="product-bg-pic-toggler"><img id="sbimage-45033471992" draggable="false" width="2560"
+                                                    height="1647"
+                                                    src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/2800x1801/0aa65f2a8f/viita_magalie_health_solo.jpg"
+                                                    alt="background" imgparams="[object Object]" class="product-bg-pic sbimage">
+                                                <!---->
+                                            </div>
+                                            <!---->
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2017</span> <span class="product-number">№ 8 /
+                                                10</span>
+                                            <!---->
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <!---->
+                                                <!---->
+                                                <div id="runningtext-l8" class="runningtext-bufferdiv product-rt">
+                                                    <div class="js-runningtext runningtext">
+                                                    </div>
+                                                </div>
+                                                <!---->
+                                                <!---->
+                                            </div>
+                                            <div class="product-pic-box"><img id="sbimage-88146913533" draggable="false" height="NaN"
+                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/3266688948/viita_hybrid.png"
+                                                    alt="Viita_hybrid" imgparams="[object Object]" class="product-pic sbimage"></div>
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Viita Hybrid HRV</span></div>
+                                            <div class="product-bot-center">
+                                                <div class="product-btn product-btn-sold-out" style="color: rgb(212, 141, 183);">
+                                                    <div class="product-btn-bg bright-button" style="background-color: rgb(255, 228, 206);">
+                                                    </div> <span class="product-btn-txt">SOLD OUT</span>
+                                                </div>
+                                                <!---->
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Smartwatch</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product8" class="product product-size" data-v-7718a013="">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask" style="color: white; background-color: rgb(58, 187, 206); opacity: 1;">
+                                        <div class="product-bg-picvid-box">
+                                            <!---->
+                                            <!---->
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2015</span> <span class="product-number">№ 9 /
+                                                10</span>
+                                            <!---->
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <div class="product-triple-rt-mask1">
+                                                    <div class="runningtext-bufferdiv product-triple-rt js-product-triple-rt1">
+                                                        <div class="js-runningtext runningtext">
+                                                            <div class="js-runningtext-l1"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-triple-rt-mask2">
+                                                    <div class="runningtext-bufferdiv product-triple-rt js-product-triple-rt2 inverse">
+                                                        <div class="js-runningtext runningtext">
+                                                            <div class="js-runningtext-l1"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="runningtext-l9-1" class="runningtext-bufferdiv product-rt">
+                                                </div>
+                                                <div id="runningtext-l9-2" class="runningtext-bufferdiv product-rt">
+                                                </div>
+                                                <div id="runningtext-l9-3" class="runningtext-bufferdiv product-rt">
+                                                </div>
+                                                <div id="runningtext-l9-4" class="runningtext-bufferdiv product-rt">
+                                                </div>
+                                                <div id="runningtext-l9-5" class="runningtext-bufferdiv product-rt">
+                                                </div>
+                                                <div class="product-triple-rt-mask4">
+                                                    <div class="runningtext-bufferdiv product-triple-rt js-product-triple-rt4 inverse">
+                                                        <div class="js-runningtext runningtext">
+                                                            <div class="js-runningtext-l1"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-triple-rt-mask5">
+                                                    <div class="runningtext-bufferdiv product-triple-rt js-product-triple-rt5">
+                                                        <div class="js-runningtext runningtext">
+                                                            <div class="js-runningtext-l1"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-pic-box"><img id="sbimage-12910815509" draggable="false" height="NaN"
+                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/de4650e2dc/vitalmonitor.png"
+                                                    alt="Vitalmonitor" imgparams="[object Object]" class="product-pic sbimage"></div>
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Vitalmonitor</span></div>
+                                            <div class="product-bot-center">
+                                                <div class="product-btn product-btn-sold-out" style="color: rgb(58, 187, 206);">
+                                                    <div class="product-btn-bg bright-button" style="background-color: white;"></div> <span
+                                                        class="product-btn-txt">SOLD OUT</span>
+                                                </div>
+                                                <!---->
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Health Monitor</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product9" class="product product-size" data-v-7718a013="">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask" style="color: white; opacity: 1;">
+                                        <div class="product-bg-picvid-box">
+                                            <div class="product-bg-pic-toggler"><img id="sbimage-18344282282" draggable="false" width="2560"
+                                                    height="2129"
+                                                    src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/3888x3233/6eef3c4f65/ben-pham-qdghsjae09a-unsplash.jpg"
+                                                    alt="background" imgparams="[object Object]" class="product-bg-pic sbimage">
+                                                <!---->
+                                            </div>
+                                            <!---->
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2013</span> <span class="product-number">№ 10 /
+                                                10</span>
+                                            <!---->
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <!---->
+                                                <!---->
+                                                <div id="runningtext-l10" class="runningtext-bufferdiv product-rt">
+                                                    <div class="js-runningtext runningtext">
+                                                    </div>
+                                                </div>
+                                                <!---->
+                                                <!----
+                                            </div>
+                                            <div class="product-pic-box"><img id="sbimage-71468206916" draggable="false" height="NaN"
+                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/63991de26c/vitalmonitor_og.png"
+                                                    alt="Vitalmonitor_og" imgparams="[object Object]" class="product-pic sbimage"></div>
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Vitalmonitor Original</span></div>
+                                            <div class="product-bot-center">
+                                                <div class="product-btn product-btn-sold-out" style="color: white;">
+                                                    <div class="product-btn-bg bright-button" style="background-color: rgb(58, 187, 206);">
+                                                    </div> <span class="product-btn-txt">SOLD OUT</span>
+                                                </div>
+                                                <!---->
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Health Monitor</span></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -633,7 +1076,7 @@
                 </section>
             </div>
             <!-- footer -->
-            <footer>
+            <!-- <footer>
                 <div class="footer_inner_box">
                     <div class="imprint_box">
                         <a href="" class="footer_imprint">Imprint</a>
@@ -744,19 +1187,12 @@
 
                     </a>
                 </div>
-            </footer>
+            </footer> -->
         </div>
 
     </div>
 
     <!-- id="entire"> -->
-<<<<<<< HEAD
-=======
 
-    <script src="asset/js/main.js"></script>
-
-
->>>>>>> b89a5439a28a9774fb2cfc76b85f13715478e087
 </body>
-
 </html>
