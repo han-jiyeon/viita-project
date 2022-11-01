@@ -392,8 +392,48 @@ header .nav .nav_item.active .nav_bg {
     text-transform: uppercase;
 }
 
-.sec_container .sec_count .left_count li {
-    /* opacity: 0; */
+.sec_container .sec_count li {
+    opacity: 0;
+}
+
+.sec_container .sec_count li.active  {
+    opacity: 1;
+}
+.sec_container .sec_count .left_count li:nth-child(2),
+.sec_container .sec_count .right_count li:nth-child(2) {
+    transition-delay: 0.1s;
+}
+.sec_container .sec_count .left_count li:nth-child(3),
+.sec_container .sec_count .right_count li:nth-child(3) {
+    transition-delay: 0.2s;
+}
+.sec_container .sec_count .left_count li:nth-child(4),
+.sec_container .sec_count .right_count li:nth-child(4) {
+    transition-delay: 0.3s;
+}
+.sec_container .sec_count .left_count li:nth-child(5),
+.sec_container .sec_count .right_count li:nth-child(5) {
+    transition-delay: 0.4s;
+}
+.sec_container .sec_count .left_count li:nth-child(6),
+.sec_container .sec_count .right_count li:nth-child(6) {
+    transition-delay: 0.5s;
+}
+.sec_container .sec_count .left_count li:nth-child(7),
+.sec_container .sec_count .right_count li:nth-child(7) {
+    transition-delay: 0.6s;
+}
+.sec_container .sec_count .left_count li:nth-child(8),
+.sec_container .sec_count .right_count li:nth-child(8) {
+    transition-delay: 0.7s;
+}
+.sec_container .sec_count .left_count li:nth-child(9),
+.sec_container .sec_count .right_count li:nth-child(9) {
+    transition-delay: 0.8s;
+}
+.sec_container .sec_count .left_count li:nth-child(10),
+.sec_container .sec_count .right_count li:nth-child(10) {
+    transition-delay: 0.9s;
 }
 
 .sec_container .sec_count .center_count {
@@ -428,8 +468,10 @@ header .nav .nav_item.active .nav_bg {
     overflow: hidden;
 }
 
-.product-bg-pic-toggler {
+.product-bg-pic-toggler,
+.product-bg-vid-toggler {
     width: 100%;
+    height: 100%;
 }
 
 
@@ -701,7 +743,8 @@ header .nav .nav_item.active .nav_bg {
     -o-object-fit: cover;
     object-fit: cover;
     width: 100%;
-    /* height: 120%; */
+    height: 120%;
+    /* transform: translateY(-75%); */
 }
 
 .product-bg-darkener {

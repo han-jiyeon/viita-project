@@ -124,14 +124,14 @@ $(function(){
           var leftC = $('.left_count li');
           var rightC = $('.right_count li');
           // console.log(countTop,winH,countTop- winH, winST);
-          var oTop = countTop - winH + 300;
+          var oTop = countTop - winH;
           if (winST >= oTop) {
 
             leftC.addClass('active');
             rightC.addClass('active');
             $('.counter-value').each(function() {
               var $this = $(this);
-              var  countTo = $this.attr('data-number');
+              var  countTo = $this.attr('data-count');
               $({
                 countNum: $this.text()
               }).animate({
@@ -139,8 +139,9 @@ $(function(){
                 },
         
                 {
+        
                   duration: 1000,
-                  easing: 'linear',
+                  easing: 'swing',
                   step: function() {
                     $this.text(Math.floor(this.countNum));
                   },
@@ -151,7 +152,7 @@ $(function(){
         
                 });
             });
-          }else if(winST < (countTop-450)) {
+          }else if(winST < oTop) {
             $('.center_count').text(0);
             
             
@@ -291,6 +292,38 @@ $(function () {
   const controller = new ScrollMagic.Controller();
 
 	if ($("#product").length > 0) {
+    /* Initialize Controller */
+    var tl = gsap.timeline({});
+    let tween1 = tl.to('#product0 .product-bg-pic', {
+      y:0,
+      smooth: 1,
+      // ease:Power3.easeOut, 
+      onComplete: function () {
+        // TweenMax.to('#product0 .product-bg-pic', { y:"-25%"});
+      },
+  });
+    
+    /* ScrollMagic Scene */
+    var tweenscene1 = new ScrollMagic.Scene({
+      triggerElement: "#product1",
+			triggerHook: 0.9, 
+			offset: "-1000%",
+			// duration: "50%"
+      }).
+      setTween(tween1)
+      .addIndicators()
+      .addTo(controller);
+    
+      // var tweenscene12 = new ScrollMagic.Scene({
+      //   triggerElement: "#product1",
+      //   triggerHook: 1.6, 
+      //   offset: "-20%",
+      //   // duration: "50%"
+      //   })
+      //   .setTween(tween12)
+      //   .addIndicators()
+      //   .addTo(controller);
+
     let prod1 = TweenMax.to('#product0 .product-mask', 0.5, {
       rotation:7, 
       scale:'0.7',
@@ -307,10 +340,30 @@ $(function () {
 			duration: "130%"
       }).
       setTween(prod1)
-      // .addIndicators()
+      .addIndicators()
       .addTo(controller);
 
   }
+  let tween2 = tl.to('#product1 .product-bg-video', {
+    y:0,
+    smooth: 1,
+    // ease:Power3.easeOut, 
+    onComplete: function () {
+      // TweenMax.to('#product0 .product-bg-pic', { y:"-25%"});
+    },
+});
+  
+  /* ScrollMagic Scene */
+  var tweenscene2 = new ScrollMagic.Scene({
+    triggerElement: "#product2",
+    triggerHook: 1.6, 
+    offset: "-1000%",
+    // duration: "50%"
+    }).
+    setTween(tween2)
+    .addIndicators()
+    .addTo(controller);
+  
   let prod2 =  TweenMax.to('#product1 .product-mask', 0.5, {
     rotation:7, 
     scale:'0.7',
@@ -329,7 +382,7 @@ $(function () {
     duration: "130%"
     }).
     setTween(prod2)
-    // .addIndicators()
+    .addIndicators()
     .addTo(controller);
 
 
@@ -351,7 +404,7 @@ $(function () {
       duration: "130%"
       }).
       setTween(prod3)
-      // .addIndicators()
+      .addIndicators()
       .addTo(controller);
   
       let prod4 =  TweenMax.to('#product3 .product-mask', 0.5,{
@@ -372,7 +425,7 @@ $(function () {
         duration: "130%"
         }).
         setTween(prod4)
-        // .addIndicators()
+        .addIndicators()
         .addTo(controller);
 
         
@@ -394,7 +447,7 @@ $(function () {
         duration: "130%"
         }).
         setTween(prod5)
-        // .addIndicators()
+        .addIndicators()
         .addTo(controller);
 
         
@@ -416,7 +469,7 @@ $(function () {
         duration: "130%"
         }).
         setTween(prod6)
-        // .addIndicators()
+        .addIndicators()
         .addTo(controller);
 
         
@@ -438,7 +491,7 @@ $(function () {
         duration: "130%"
         }).
         setTween(prod7)
-        // .addIndicators()
+        .addIndicators()
         .addTo(controller);
         
         
@@ -460,7 +513,7 @@ $(function () {
         duration: "130%"
         }).
         setTween(prod8)
-        // .addIndicators()
+        .addIndicators()
         .addTo(controller);
         
       let prod9 =  TweenMax.to('#product8 .product-mask', 0.5, {
@@ -481,7 +534,7 @@ $(function () {
         duration: "130%"
         }).
         setTween(prod9)
-        // .addIndicators()
+        .addIndicators()
         .addTo(controller);
         
         
@@ -505,7 +558,7 @@ $(function () {
         duration: "130%"
         }).
         setTween(prod10)
-        // .addIndicators()
+        .addIndicators()
         .addTo(controller);
 });
 

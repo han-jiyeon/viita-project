@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="scroll-behavior: smooth;">
+<html lang="ko" style="scroll-behavior: smooth;">
 <head>
     <title>VIITA - Home</title>
     <meta charset="utf-8">
@@ -36,11 +36,11 @@
     <link rel="stylesheet" href="asset/fonts/pretendard.css">
     <link rel="stylesheet" href="asset/css/reset.css">
     <link rel="stylesheet" href="asset/css/style.css">
-    <script src="asset/js/jquery-3.6.0.min.js" defer></script>
-    <script src="asset/js/jquery.easing.1.3.js" defer></script>
-    <script src="asset/js/SuperMarquee.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="asset/js/jquery-3.6.0.min.js"></script>
+    <script src="asset/js/jquery.easing.1.3.js"></script>
+    <script src="asset/js/SuperMarquee.min.js"></script>
     <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
     <!-- ScrollMagic -->
@@ -49,13 +49,12 @@
 
     <!--GSAP animation plugin should be placed after ScrollMagic! -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
-    <script src="asset/js/main.js" defer></script>
 </head>
 <body>
     
     <div class="initloading-box">
     </div>
-    <div id="wrap">
+    <div id="scroll-container">
         <div class="loading-container">
             <div class="loading-bg"></div>
             <div class="loading-lines-container">
@@ -171,15 +170,15 @@
             <div class="sec_container">
                 <section id="intro" class="sec sec_intro">
                     <div>
-                        <span class="intro-headline">
+                        <div class="intro-headline">
                             <h1>The health, <br>soft- &amp; <br>hardware <br>company.</h1>
-                        </span>
+                        </div>
                     </div>
                     <div class="intro_icon_box">
                         <div class="intro_icon">
-                            <svg id="b" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" width="329.094"
+                            <svg data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" width="329.094"
                                 height="293" viewBox="0 0 329.094 293" class="icon icon-h">
-                                <g id="c" data-name="Ebene 1">
+                                <g data-name="Ebene 1">
                                     <g>
                                         <path
                                             d="M298.582,31.055h0c-34.016-34.016-89.166-34.016-123.182,0l-10.582,10.582-11.124-11.124C119.678-3.504,64.528-3.504,30.512,30.512h0C-3.504,64.528-3.504,119.678,30.512,153.694l11.124,11.124h0l123.182,123.182,133.764-133.764c34.016-34.016,34.016-89.166,0-123.182Z"
@@ -193,7 +192,7 @@
                             </svg>
                         </div>
                         <div class="intro_icon">
-                            <svg id="b" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" width="340" height="283"
+                            <svg data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" width="340" height="283"
                                 viewBox="0 0 340 283" class="icon icon-s">
                                 <path
                                     d="M315.833,10c7.812,0,14.167,6.355,14.167,14.167v234.667c0,7.812-6.355,14.167-14.167,14.167H24.167c-7.812,0-14.167-6.355-14.167-14.167V24.167c0-7.812,6.355-14.167,14.167-14.167H315.833m0-10H24.167C10.82,0,0,10.82,0,24.167v234.667c0,13.347,10.82,24.167,24.167,24.167H315.833c13.347,0,24.167-10.82,24.167-24.167V24.167c0-13.347-10.82-24.167-24.167-24.167h0Z">
@@ -219,9 +218,9 @@
                             </svg>
                         </div>
                         <div class="intro_icon">
-                            <svg id="b" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" width="219.005"
+                            <svg data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" width="219.005"
                                 height="292.846" viewBox="0 0 219.005 292.846" class="icon icon-hd">
-                                <g id="c" data-name="Ebene 1">
+                                <g data-name="Ebene 1">
                                     <g>
                                         <polyline
                                             points="191.49 94.135 163.877 27.09 147.515 5 105.679 5 105.459 5 63.623 5 47.481 27.09 19.649 94.135"
@@ -301,9 +300,9 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930" data-color="003264"
+                                        <img draggable="false" width="930" height="930" data-color="003264"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/c346b859a3/viita_carbon.png"
-                                            alt="Viita_carbon" imgparams="[object Object]">
+                                            alt="Viita_carbon">
                                     </div>
                                     <div class="info">
                                         <div class="title">
@@ -313,7 +312,7 @@
                                         </div>
                                         <div class="marquee">
                                             <div id="supermarquee1" class="marquee_inner">
-                                            <div class="marquee_inner">
+                                            <div class="marquee_inner"> </div>
                                             </div>
                                         </div>
                                     </div>
@@ -322,7 +321,7 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930" data-color="d71e28"
+                                        <img draggable="false" width="930" height="930" data-color="d71e28"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png"
                                             alt="Bugatti_ceramique_edition_one" style=" opacity: 1;">
                                     </div>
@@ -344,7 +343,7 @@
                                     <div class="pic_wrap">
                                         <img id="sbimage-27632002048" draggable="false" width="930" height="930" data-color="efccf0"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/6b84eae0ca/viita_swarovski.png"
-                                            alt="Viita_swarovski" imgparams="[object Object]">
+                                            alt="Viita_swarovski">
                                     </div>
                                     <div class="info">
                                         <div class="title">
@@ -358,14 +357,15 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                                 </li>
                             </ul>
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930" data-color="3abbce"
+                                        <img draggable="false" width="930" height="930" data-color="3abbce"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/ca935b3172/vitalmonitor_nano.png"
-                                            alt="Vitalmonitor_nano" imgparams="[object Object]">
+                                            alt="Vitalmonitor_nano">
                                     </div>
                                     <div class="info">
                                         <div class="title">
@@ -384,9 +384,9 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930" data-color="fff600"
+                                        <img draggable="false" width="930" height="930" data-color="fff600"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/cf00e8508e/viita_race.png"
-                                            alt="Viita_race" imgparams="[object Object]">
+                                            alt="Viita_race">
                                     </div>
                                     <div class="info">
                                         <div class="title">
@@ -405,9 +405,9 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930" data-color="000000"
+                                        <img draggable="false" width="930" height="930" data-color="000000"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/47a7348b2a/viita_titan.png"
-                                            alt="Viita_titan" imgparams="[object Object]">
+                                            alt="Viita_titan">
                                     </div>
                                     <div class="info">
                                         <div class="title">
@@ -426,9 +426,9 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930" data-color="083ea7"
+                                        <img draggable="false" width="930" height="930" data-color="083ea7"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/08284715ef/viita_active.png"
-                                            alt="Viita_active" imgparams="[object Object]">
+                                            alt="Viita_active">
                                     </div>
                                     <div class="info">
                                         <div class="title">
@@ -447,9 +447,9 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930" data-color="d48db7"
+                                        <img draggable="false" width="930" height="930" data-color="d48db7"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/3266688948/viita_hybrid.png"
-                                            alt="Viita_hybrid" imgparams="[object Object]">
+                                            alt="Viita_hybrid">
                                     </div>
                                     <div class="info">
                                         <div class="title">
@@ -468,9 +468,9 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930" data-color="3abbce"
+                                        <img draggable="false" width="930" height="930" data-color="3abbce"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/de4650e2dc/vitalmonitor.png"
-                                            alt="Vitalmonitor" imgparams="[object Object]">
+                                            alt="Vitalmonitor">
                                     </div>
                                     <div class="info">
                                         <div class="title">
@@ -489,9 +489,9 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930" data-color="ffffff"
+                                        <img draggable="false" width="930" height="930" data-color="ffffff"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/63991de26c/vitalmonitor_og.png"
-                                            alt="Vitalmonitor_og" imgparams="[object Object]">
+                                            alt="Vitalmonitor_og">
                                     </div>
                                     <div class="info">
                                         <div class="title">
@@ -521,7 +521,7 @@
                         <li>FINISHED</li>
                         <li>FINISHED</li>
                     </ul>
-                    <span class="center_count counter-value" data-count="10">0</span>
+                    <span class="center_count counter-value" data-number="10">0</span>
                     <ul class="right_count">
                         <li>Projects</li>
                         <li>Projects</li>
@@ -542,10 +542,10 @@
                                 <div class="product-pinner">
                                     <div class="product-mask">
                                         <div class="product-bg-picvid-box">
-                                            <div class="product-bg-pic-toggler"><img id="sbimage-42358899346" draggable="false" width="2560"
+                                            <div class="product-bg-pic-toggler"><img width="2560"
                                                     height="1441"
                                                     src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/8533x4800/0c57232f96/01_bolide_print.jpg"
-                                                    alt="background" imgparams="[object Object]" class="product-bg-pic sbimage">
+                                                    alt="background" class="product-bg-pic sbimage" data-speed=".4">
                                                 <!---->
                                             </div>
                                             <!---->
@@ -556,7 +556,7 @@
                                             <div class="product-brand-box"><img id="sbimage-96000691863" draggable="false" width="200"
                                                     height="103"
                                                     src="https://img2.storyblok.com/200x0/filters:quality(99):format(webp)/f/160527/298x152/17d8959a00/bugatti_logo.png"
-                                                    alt="Bugatti_logo" imgparams="[object Object]" class="product-brand sbimage"></div>
+                                                    alt="Bugatti_logo" class="product-brand sbimage"></div>
                                         </div>
                                         <div class="product-center">
                                             <div class="product-triple-rt-box">
@@ -567,9 +567,9 @@
                                                 <!---->
                                                 <!---->
                                             </div>
-                                            <div class="product-pic-box"><img id="sbimage-5265922322" draggable="false" height="NaN"
+                                            <div class="product-pic-box"><img
                                                     src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/c346b859a3/viita_carbon.png"
-                                                    alt="Viita_carbon" imgparams="[object Object]" class="product-pic sbimage"
+                                                    alt="Viita_carbon" class="product-pic sbimage"
                                                     style="transform: translate(0px, 0vw);"></div>
                                         </div>
                                         <div class="product-bot">
@@ -594,7 +594,7 @@
                                     <div class="product-mask">
                                         <div class="product-bg-picvid-box">
                                             <!---->
-                                            <div class="product-bg-vid-toggler"><video id="product-vid" autoplay= 'autoplay' preload="preload" poster=""
+                                            <div class="product-bg-vid-toggler"><video id="product-vid" autoplay= 'autoplay'
                                                     muted="muted" playsinline="" loop="loop" class="product-bg-video">
                                                     <source src="https://a.storyblok.com/f/160527/x/6ae606f546/bugatti_teaser_clip_cc.mp4">
                                                 </video></div>
@@ -605,7 +605,7 @@
                                             <div class="product-brand-box"><img id="sbimage-91646397958" draggable="false" width="200"
                                                     height="103"
                                                     src="https://img2.storyblok.com/200x0/filters:quality(99):format(webp)/f/160527/298x152/17d8959a00/bugatti_logo.png"
-                                                    alt="Bugatti_logo" imgparams="[object Object]" class="product-brand sbimage"></div>
+                                                    alt="Bugatti_logo" class="product-brand sbimage"></div>
                                         </div>
                                         <div class="product-center">
                                             <div class="product-triple-rt-box">
@@ -642,7 +642,7 @@
                                             <div class="product-bg-pic-toggler"><img id="sbimage-38713604444" draggable="false" width="2560"
                                                     height="1882"
                                                     src="https://img2.storyblok.com/2240x0/filters:quality(85):format(webp)/f/160527/2240x1646/da6808bea4/swarovski_bg.jpg"
-                                                    alt="background" imgparams="[object Object]" class="product-bg-pic sbimage">
+                                                    alt="background" class="product-bg-pic sbimage">
                                                 <!---->
                                             </div>
                                             <!---->
@@ -653,7 +653,7 @@
                                             <div class="product-brand-box product-brand-box-bigger"><img id="sbimage-82486705233"
                                                     draggable="false" width="200" height="200"
                                                     src="https://img2.storyblok.com/200x0/filters:quality(99):format(webp)/f/160527/1024x1024/a40cab7411/swarovski_white.png"
-                                                    alt="Swarovski_white" imgparams="[object Object]" class="product-brand sbimage"></div>
+                                                    alt="Swarovski_white" class="product-brand sbimage"></div>
                                         </div>
                                         <div class="product-center">
                                             <div class="product-triple-rt-box">
@@ -696,9 +696,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="product-pic-box"><img id="sbimage-93201915857" draggable="false" height="NaN"
+                                            <div class="product-pic-box"><img draggable="false"
                                                     src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/6b84eae0ca/viita_swarovski.png"
-                                                    alt="Viita_swarovski" imgparams="[object Object]" class="product-pic sbimage"></div>
+                                                    alt="Viita_swarovski" class="product-pic sbimage"></div>
                                         </div>
                                         <div class="product-bot">
                                             <div class="product-bot-left"><span class="product-name">Viita Crystals from Swarovski</span>
@@ -740,9 +740,9 @@
                                                 <!---->
                                                 <!---->
                                             </div>
-                                            <div class="product-pic-box"><img id="sbimage-79377746140" draggable="false" height="NaN"
+                                            <div class="product-pic-box"><img draggable="false"
                                                     src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/ca935b3172/vitalmonitor_nano.png"
-                                                    alt="Vitalmonitor_nano" imgparams="[object Object]" class="product-pic sbimage"></div>
+                                                    alt="Vitalmonitor_nano" class="product-pic sbimage"></div>
                                         </div>
                                         <div class="product-bot">
                                             <div class="product-bot-left"><span class="product-name">Vitalmonitor Nano</span></div>
@@ -767,7 +767,7 @@
                                             <div class="product-bg-pic-toggler"><img id="sbimage-51710422420" draggable="false" width="2560"
                                                     height="1707"
                                                     src="https://img2.storyblok.com/2000x0/filters:quality(85):format(webp)/f/160527/2000x1333/8074e55216/f1_home.jpg"
-                                                    alt="background" imgparams="[object Object]" class="product-bg-pic sbimage">
+                                                    alt="background" class="product-bg-pic sbimage">
                                                 <!---->
                                             </div>
                                             <!---->
@@ -788,9 +788,9 @@
                                                 <!---->
                                                 <!---->
                                             </div>
-                                            <div class="product-pic-box"><img id="sbimage-51126859230" draggable="false" height="NaN"
+                                            <div class="product-pic-box"><img 
                                                     src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/cf00e8508e/viita_race.png"
-                                                    alt="Viita_race" imgparams="[object Object]" class="product-pic sbimage"></div>
+                                                    alt="Viita_race" class="product-pic sbimage"></div>
                                         </div>
                                         <div class="product-bot">
                                             <div class="product-bot-left"><span class="product-name">Viita Race HRV</span></div>
@@ -815,7 +815,7 @@
                                             <div class="product-bg-pic-toggler"><img id="sbimage-14916087718" draggable="false" width="2560"
                                                     height="1707"
                                                     src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/4752x3168/3163b3b048/fabien-martin-417393-unsplash.jpg"
-                                                    alt="background" imgparams="[object Object]" class="product-bg-pic sbimage">
+                                                    alt="background" class="product-bg-pic sbimage">
                                                 <!---->
                                             </div>
                                             <!---->
@@ -836,9 +836,9 @@
                                                 <!---->
                                                 <!---->
                                             </div>
-                                            <div class="product-pic-box"><img id="sbimage-97964422312" draggable="false" height="NaN"
+                                            <div class="product-pic-box"><img 
                                                     src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/47a7348b2a/viita_titan.png"
-                                                    alt="Viita_titan" imgparams="[object Object]" class="product-pic sbimage"></div>
+                                                    alt="Viita_titan" class="product-pic sbimage"></div>
                                         </div>
                                         <div class="product-bot">
                                             <div class="product-bot-left"><span class="product-name">Viita Titan HRV</span></div>
@@ -863,7 +863,7 @@
                                             <div class="product-bg-pic-toggler"><img id="sbimage-51893548306" draggable="false" width="2560"
                                                     height="1689"
                                                     src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/4000x2639/b95744b09f/timo_thinking.jpg"
-                                                    alt="background" imgparams="[object Object]" class="product-bg-pic sbimage">
+                                                    alt="background" class="product-bg-pic sbimage">
                                                 <!---->
                                             </div>
                                             <!---->
@@ -884,9 +884,9 @@
                                                 <!---->
                                                 <!---->
                                             </div>
-                                            <div class="product-pic-box"><img id="sbimage-59658609640" draggable="false" height="NaN"
+                                            <div class="product-pic-box"><img 
                                                     src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/08284715ef/viita_active.png"
-                                                    alt="Viita_active" imgparams="[object Object]" class="product-pic sbimage"></div>
+                                                    alt="Viita_active" class="product-pic sbimage"></div>
                                         </div>
                                         <div class="product-bot">
                                             <div class="product-bot-left"><span class="product-name">Viita Active HRV</span></div>
@@ -911,7 +911,7 @@
                                             <div class="product-bg-pic-toggler"><img id="sbimage-45033471992" draggable="false" width="2560"
                                                     height="1647"
                                                     src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/2800x1801/0aa65f2a8f/viita_magalie_health_solo.jpg"
-                                                    alt="background" imgparams="[object Object]" class="product-bg-pic sbimage">
+                                                    alt="background" class="product-bg-pic sbimage">
                                                 <!---->
                                             </div>
                                             <!---->
@@ -932,9 +932,9 @@
                                                 <!---->
                                                 <!---->
                                             </div>
-                                            <div class="product-pic-box"><img id="sbimage-88146913533" draggable="false" height="NaN"
+                                            <div class="product-pic-box"><img 
                                                     src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/3266688948/viita_hybrid.png"
-                                                    alt="Viita_hybrid" imgparams="[object Object]" class="product-pic sbimage"></div>
+                                                    alt="Viita_hybrid" class="product-pic sbimage"></div>
                                         </div>
                                         <div class="product-bot">
                                             <div class="product-bot-left"><span class="product-name">Viita Hybrid HRV</span></div>
@@ -1005,9 +1005,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="product-pic-box"><img id="sbimage-12910815509" draggable="false" height="NaN"
+                                            <div class="product-pic-box"><img 
                                                     src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/de4650e2dc/vitalmonitor.png"
-                                                    alt="Vitalmonitor" imgparams="[object Object]" class="product-pic sbimage"></div>
+                                                    alt="Vitalmonitor" class="product-pic sbimage"></div>
                                         </div>
                                         <div class="product-bot">
                                             <div class="product-bot-left"><span class="product-name">Vitalmonitor</span></div>
@@ -1032,7 +1032,7 @@
                                             <div class="product-bg-pic-toggler"><img id="sbimage-18344282282" draggable="false" width="2560"
                                                     height="2129"
                                                     src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/3888x3233/6eef3c4f65/ben-pham-qdghsjae09a-unsplash.jpg"
-                                                    alt="background" imgparams="[object Object]" class="product-bg-pic sbimage">
+                                                    alt="background" class="product-bg-pic sbimage">
                                                 <!---->
                                             </div>
                                             <!---->
@@ -1050,21 +1050,6 @@
                                                     <div class="js-runningtext runningtext">
                                                     </div>
                                                 </div>
-                                                <!---->
-                                                <!----
-                                            </div>
-                                            <div class="product-pic-box"><img id="sbimage-71468206916" draggable="false" height="NaN"
-                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/63991de26c/vitalmonitor_og.png"
-                                                    alt="Vitalmonitor_og" imgparams="[object Object]" class="product-pic sbimage"></div>
-                                        </div>
-                                        <div class="product-bot">
-                                            <div class="product-bot-left"><span class="product-name">Vitalmonitor Original</span></div>
-                                            <div class="product-bot-center">
-                                                <div class="product-btn product-btn-sold-out" style="color: white;">
-                                                    <div class="product-btn-bg bright-button" style="background-color: rgb(58, 187, 206);">
-                                                    </div> <span class="product-btn-txt">SOLD OUT</span>
-                                                </div>
-                                                <!---->
                                             </div>
                                             <div class="product-bot-right"><span class="product-type">Health Monitor</span></div>
                                         </div>
@@ -1073,6 +1058,9 @@
                             </div>
                         </div>
                     </div>
+                </section>
+                <section id="about" class="sec sec_about">
+
                 </section>
             </div>
             <!-- footer -->
@@ -1194,5 +1182,6 @@
 
     <!-- id="entire"> -->
 
+    <script src="asset/js/main.js" defer></script>
 </body>
 </html>
