@@ -1,5 +1,5 @@
 $(function(){
-
+  
   // left_box_slide
     setInterval(function(){
         $('.pic_list img:first').fadeOut(1000).next().fadeIn(1000);
@@ -14,11 +14,16 @@ $(function(){
   }, 150);
     // img
     $(this).find(".pic_wrap img").css({
-      top: "-100vh"
+      top: "100vh",
+      // background:'red',
     });
     $(this).find(".pic_wrap img").stop().animate({
-      top: "15%"
-    },800,"easeOutExpo");
+      top: "-100vh"
+    },0);
+    console.log("됨");
+    // $(this).find(".pic_wrap img").stop().animate({
+    //   top: "15%"
+    // },800,"easeOutExpo");
   
     var $bgColor = $(this).find('img').attr('data-color');
     $(".pic_color").css({
@@ -140,7 +145,6 @@ $(function(){
         
                 {
                   duration: 1000,
-                  easing: 'linear',
                   step: function() {
                     $this.text(Math.floor(this.countNum));
                   },
@@ -287,30 +291,43 @@ $(function(){
 
 // product
 $(function () {
-  
   const controller = new ScrollMagic.Controller();
 
+  gsap.registerPlugin(ScrollTrigger);
+    
+  gsap.to("#product0 .product-bg-pic", {
+    y: 0,
+    scrollTrigger: {
+      trigger: "#counter",
+      start: "center center",
+      end: "top 100px",
+      ease: Power3.easeOut,
+      scrub: true,
+      markers: true,
+    }
+  });
+
 	if ($("#product").length > 0) {
+    
     let prod1 = TweenMax.to('#product0 .product-mask', 0.5, {
       rotation:7, 
       scale:'0.7',
       onComplete: function () {
         $('#product0').addClass('hide');
       },
-  });
+    });
 
     /* ScrollMagic Scene */
     var scene1 = new ScrollMagic.Scene({
       triggerElement: "#product1",
 			triggerHook: 0.8, 
 			offset: 0,
-			duration: "130%"
+			duration: "100%"
       }).
       setTween(prod1)
       // .addIndicators()
       .addTo(controller);
 
-  }
   let prod2 =  TweenMax.to('#product1 .product-mask', 0.5, {
     rotation:7, 
     scale:'0.7',
@@ -321,17 +338,25 @@ $(function () {
       $('#product0').removeClass('hide');
     },
   });
+  let tl = gsap.timeline();
+  let prod3_text = tl.to('#product2 .product-rt .runningtext', 0.4, {
+    top:'0',
+  }).to('.product-rt .runningtext_fade', 0.03, {
+    opacity:'0.2',
+  });
   /* ScrollMagic Scene */
   var scene2 = new ScrollMagic.Scene({
     triggerElement: "#product2",
     triggerHook: 0.8, 
-    offset: 0,
-    duration: "130%"
+    offset: -150,
+    duration: "95%"
     }).
     setTween(prod2)
+    .setTween(prod3_text)
     // .addIndicators()
     .addTo(controller);
 
+    let sm31 = document.getElementById('runningtext-l3-1');
 
     let prod3 =  TweenMax.to('#product2 .product-mask', 0.5, {
       rotation:7, 
@@ -507,9 +532,39 @@ $(function () {
         setTween(prod10)
         // .addIndicators()
         .addTo(controller);
+
+      }
+
+
+      $(".right_box ul .list_item").click(function(){
+
+      });
 });
 
 
+
+// ABOUT
+$(function () {
+
+	var controller = new ScrollMagic.Controller();
+	var tween1 = TweenMax.to('.raster_item', 0.3, {
+    visibility: 'visible',
+		stagger: {
+			grid: 'auto',
+			from: "random",
+      amount: '10',
+		}
+	});
+	var scene = new ScrollMagic.Scene({
+    triggerHook: 0,
+		triggerElement: "#product9",
+		duration: "60%",
+    
+	}).setTween(tween1)
+  // .addIndicators()
+  .addTo(controller);
+
+});
 
     //     let box = $('.initloading-box');
     //     let item = $('<div class="loading_item"> </div>');

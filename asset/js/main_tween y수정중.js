@@ -292,25 +292,19 @@ $(function () {
   const controller = new ScrollMagic.Controller();
 
 	if ($("#product").length > 0) {
-    /* Initialize Controller */
-    var tl = gsap.timeline({});
-    let tween1 = tl.to('#product0 .product-bg-pic', {
-      y:0,
-      smooth: 1,
-      // ease:Power3.easeOut, 
-      onComplete: function () {
-        // TweenMax.to('#product0 .product-bg-pic', { y:"-25%"});
-      },
-  });
+
+    let tl1 = gsap.timeline({paused: !0});
+
+    let tween0 = tl1.to('#product0 .product-bg-pic', {
+        y: "0%"
+    });
     
     /* ScrollMagic Scene */
     var tweenscene1 = new ScrollMagic.Scene({
-      triggerElement: "#product1",
-			triggerHook: 0.9, 
-			offset: "-1000%",
-			// duration: "50%"
+      triggerElement: "#product",
+      triggerHook: 0.2,
       }).
-      setTween(tween1)
+      setTween(tween0)
       .addIndicators()
       .addTo(controller);
     
