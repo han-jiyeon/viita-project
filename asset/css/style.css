@@ -1041,10 +1041,20 @@ header .nav .nav_item.active .nav_bg {
     background-color: var(--main-color);
 }
 .icon_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     width: 100vw;
     height: 100vh;
     flex-wrap: wrap;
+    opacity:0;
+    padding: 10vh 5.20833vw;
+    box-sizing: border-box;
+    align-items: center;
+}
+.icon_wrap.on {
+    opacity: 1;
 }
 .icon_item {
     display: flex;
@@ -1056,6 +1066,10 @@ header .nav .nav_item.active .nav_bg {
 .icon_item .icon_ab {
     position: absolute;
     /* transform: translate(-50%, -50%); */
+    opacity: 0;
+}
+.icon_item .icon_ab.on {
+    opacity: 1;
 }
 .icon_item .icon {
     /* width: 100%; */
@@ -1089,7 +1103,7 @@ header .nav .nav_item.active .nav_bg {
 #about .icon-software path {
     fill: var(--bg-color) !important;
 }
-.about-toggle-element4 svg { width: 18vw; height: 18vw; }
+.about-toggle-element4 svg {width: 18vw;/* height: 18vw; */}
 
 
 

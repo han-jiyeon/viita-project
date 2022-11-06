@@ -6,7 +6,7 @@ $(function(){
         $('.pic_list img:first').appendTo('.pic_list');
     },2000);
   
-    //right_list img
+    //right_list watch img
   $(".list_item").mouseenter(function(){
     
     $(this).find('.info').animate({
@@ -46,6 +46,7 @@ $(function(){
       });
     });
   
+  // left_box_slide text
   $(".list_item").mouseenter(function(){
     $('.pic_sm').css({
       "text-decoration": "line-through"
@@ -65,7 +66,6 @@ $(function(){
           document.getElementById('supermarquee1'), {
           content : "Bugatti Carbone Limited Edition -"
         });
-
 
         const sm2 = new SuperMarquee( 
           document.getElementById('supermarquee2'), {
@@ -115,8 +115,7 @@ $(function(){
 
 
         
-        
-
+      
 
         //count
 
@@ -534,19 +533,7 @@ $(function () {
         .addTo(controller);
 
       }
-<<<<<<< HEAD
-      
  });
-=======
-
-
-      $(".right_box ul .list_item").click(function(){
-
-      });
-});
-
-
-
 // ABOUT
 $(function () {
 
@@ -567,6 +554,68 @@ $(function () {
 	}).setTween(tween1)
   // .addIndicators()
   .addTo(controller);
+
+});
+
+
+
+$(function(){
+  // about
+
+
+  // $(window).scroll(function() {
+        
+  //   var iconWrapTop =  $('.icon_wrap').offset().top - 60;
+  //   var winST = $(window).scrollTop();
+  //   console.log(iconWrapTop, winST+"!");
+  //   if(winST>=iconWrapTop) {
+  //     $('.icon_wrap').addClass('on');
+  //   }else {
+  //     $('.icon_wrap').remove('on');
+  //   }
+  // });
+
+  
+  const controller = new ScrollMagic.Controller();
+
+  gsap.registerPlugin(ScrollTrigger);
+    
+  let iconWrap =  TweenMax.to('.icon_wrap', 0.5, {
+    opacity:1, 
+  });
+  /* ScrollMagic Scene */
+  var iconWrapShow = new ScrollMagic.Scene({
+    triggerElement: ".about_content",
+  
+    triggerHook: 0.3, 
+    offset: -100,
+    duration: "50%"
+    }).
+    setTween(iconWrap)
+    // .addIndicators()
+    .addTo(controller);
+
+
+
+
+    setInterval(function(){
+      setTimeout(function(){
+        $('.icon_ab:nth-child(4)').removeClass('on');
+      $('.icon_ab:nth-child(1)').addClass('on');
+    },200);
+    setTimeout(function(){
+      $('.icon_ab:nth-child(1)').removeClass('on');
+      $('.icon_ab:nth-child(2)').addClass('on');
+  },400);
+  setTimeout(function(){
+    $('.icon_ab:nth-child(2)').removeClass('on');
+    $('.icon_ab:nth-child(3)').addClass('on');
+  },600);
+  setTimeout(function(){
+    $('.icon_ab:nth-child(3)').removeClass('on');
+    $('.icon_ab:nth-child(4)').addClass('on');
+  },800);
+    },1800);
 
 });
 
@@ -606,4 +655,3 @@ $(function () {
     //   }
 
 //  });
->>>>>>> 31ad2b9572adacafd9278802448cb1b878b1cf5c
