@@ -1,4 +1,5 @@
-<html lang="ko" class="wf-aeonik-n4-active wf-active" style="--vh:8.9px;">
+<!DOCTYPE html>
+<html lang="ko" style="scroll-behavior: smooth;">
 
 <head>
     <title>VIITA - Home</title>
@@ -29,24 +30,32 @@
     <link rel="icon" type="image/png" sizes="32x32" href="asset/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="asset/img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="asset/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- style -->
-    <link rel="preload" as="style" href="/fonts/fonts.css">
-    <!-- <link rel="preload" as="style" href="asset/fonts/pretendard.css"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/fonts/fonts.css" media="all">
+    <link rel="stylesheet" href="asset/fonts/pretendard.css">
     <link rel="stylesheet" href="asset/css/reset.css">
     <link rel="stylesheet" href="asset/css/style.css">
 </head>
+<script src="asset/js/jquery-3.6.0.min.js"></script>
+<script src="asset/js/jquery.easing.1.3.js"></script>
+<script src="asset/js/SuperMarquee.min.js"></script>
+<!-- ScrollMagic -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.js"></script>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+
+
+<!--GSAP animation plugin should be placed after ScrollMagic! -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+</head>
 
 <body>
+
     <div class="initloading-box">
     </div>
     <div id="wrap">
@@ -56,8 +65,8 @@
         <div id="home" class="page_home">
             <header>
                 <a href="#" class="logo_link">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        viewBox="0 0 500 70" style="enable-background:new 0 0 500 70;" xml:space="preserve">
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 70"
+                        style="enable-background:new 0 0 500 70;" xml:space="preserve">
                         <title>weaverloft_logo</title>
                         <g>
                             <polygon class="st0" points="150.9,2.93 163.49,2.93 178.3,47.82 171.88,66.54 	"></polygon>
@@ -108,13 +117,22 @@
                 <nav class="nav">
                     <ul>
                         <li class="nav_item active">
-                            <span class="nav_text">HOME</span>
+                            <a href="#">
+                                <div class="nav_bg"></div>
+                                <span class="nav_text">HOME</span>
+                            </a>
                         </li>
                         <li class="nav_item">
-                            <span class="nav_text">PRODUCTS</span>
+                            <a href="#product">
+                                <div class="nav_bg"></div>
+                                <span class="nav_text">PRODUCTS</span>
+                            </a>
                         </li>
                         <li class="nav_item">
-                            <span class="nav_text">ABOUT</span>
+                            <a href="#about">
+                                <div class="nav_bg"></div>
+                                <span class="nav_text">ABOUT</span>
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -123,15 +141,15 @@
             <div class="sec_container">
                 <section id="intro" class="sec sec_intro">
                     <div>
-                        <span class="intro-headline">
+                        <div class="intro-headline">
                             <h1>The health, <br>soft- &amp; <br>hardware <br>company.</h1>
-                        </span>
+                        </div>
                     </div>
                     <div class="intro_icon_box">
                         <div class="intro_icon">
-                            <svg id="b" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" width="329.094"
-                                height="293" viewBox="0 0 329.094 293" class="icon icon-h">
-                                <g id="c" data-name="Ebene 1">
+                            <svg data-name="Ebene 2" width="329.094" height="293" viewBox="0 0 329.094 293"
+                                class="icon icon-h">
+                                <g data-name="Ebene 1">
                                     <g>
                                         <path
                                             d="M298.582,31.055h0c-34.016-34.016-89.166-34.016-123.182,0l-10.582,10.582-11.124-11.124C119.678-3.504,64.528-3.504,30.512,30.512h0C-3.504,64.528-3.504,119.678,30.512,153.694l11.124,11.124h0l123.182,123.182,133.764-133.764c34.016-34.016,34.016-89.166,0-123.182Z"
@@ -145,8 +163,7 @@
                             </svg>
                         </div>
                         <div class="intro_icon">
-                            <svg id="b" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" width="340" height="283"
-                                viewBox="0 0 340 283" class="icon icon-s">
+                            <svg data-name="Ebene 2" width="340" height="283" viewBox="0 0 340 283" class="icon icon-s">
                                 <path
                                     d="M315.833,10c7.812,0,14.167,6.355,14.167,14.167v234.667c0,7.812-6.355,14.167-14.167,14.167H24.167c-7.812,0-14.167-6.355-14.167-14.167V24.167c0-7.812,6.355-14.167,14.167-14.167H315.833m0-10H24.167C10.82,0,0,10.82,0,24.167v234.667c0,13.347,10.82,24.167,24.167,24.167H315.833c13.347,0,24.167-10.82,24.167-24.167V24.167c0-13.347-10.82-24.167-24.167-24.167h0Z">
                                 </path>
@@ -171,9 +188,9 @@
                             </svg>
                         </div>
                         <div class="intro_icon">
-                            <svg id="b" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" width="219.005"
-                                height="292.846" viewBox="0 0 219.005 292.846" class="icon icon-hd">
-                                <g id="c" data-name="Ebene 1">
+                            <svg data-name="Ebene 2" width="219.005" height="292.846" viewBox="0 0 219.005 292.846"
+                                class="icon icon-hd">
+                                <g data-name="Ebene 1">
                                     <g>
                                         <polyline
                                             points="191.49 94.135 163.877 27.09 147.515 5 105.679 5 105.459 5 63.623 5 47.481 27.09 19.649 94.135"
@@ -231,8 +248,15 @@
                                 professional athletes. Within only 3 years VIITA became the European leader in the
                                 HRV-measurement industry.</p>
                             <div class="left_box_pic">
-                                <div class="pic_list">
-                                    <img src="asset/img/right_box_img01.jpg" alt="viita-watches_list_img">
+                                <div class="fade_slide_wrap">
+                                    <div class="pic_list">
+                                        <img src="asset/img/left_box_img01.jpg" alt="viita-watches_list_img">
+                                        <img src="asset/img/left_box_img02.jpg" alt="viita-watches_list_img">
+                                        <img src="asset/img/left_box_img03.jpg" alt="viita-watches_list_img">
+                                    </div>
+                                    <div class="pic_color">
+                                        <div class="change_color"></div>
+                                    </div>
                                 </div>
                                 <div class="pic_bg">
                                 </div>
@@ -246,21 +270,19 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
-                                            src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png 3841.5w, "
-                                            alt="Bugatti_ceramique_edition_one" class="list_pic" style=" opacity: 1;">
+                                        <img width="930" height="930" data-color="003264"
+                                            src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/c346b859a3/viita_carbon.png"
+                                            alt="Viita_carbon" style="top:-100vh;">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
-                                            <div class="list_item2">Bugatti Ceramique Edition One</div>
-                                            <div class="list_item2">2021</div>
+                                            <div class="list_item2">Bugatti Carbone Limited Edition</div>
+                                            <div class="list_item2">2022</div>
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
-                                            <div class="marquee_inner">
-                                                Bugatti Ceramique Edition One - Bugatti Ceramique Edition One - Bugatti
-                                                Ceramique Edition One
+                                            <div id="supermarquee1" class="marquee_inner">
+                                                <div class="marquee_inner"> </div>
                                             </div>
                                         </div>
                                     </div>
@@ -269,21 +291,18 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
+                                        <img width="930" height="930" data-color="d71e28"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/1bb7dfa3e8/bugatti_ceramique_edition_one.png 3841.5w, "
-                                            alt="Bugatti_ceramique_edition_one" class="list_pic" style=" opacity: 1;">
+                                            alt="Bugatti_ceramique_edition_one" style=" opacity: 1;">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
                                             <div class="list_item2">Bugatti Ceramique Edition One</div>
                                             <div class="list_item2">2021</div>
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
-                                            <div class="marquee_inner">
-                                                Viita Crystals from Swarovski - Viita Crystals from Swarovski - Viita
-                                                Crystals from Swarovski
+                                            <div id="supermarquee2" class="marquee_inner">
                                             </div>
                                         </div>
                                     </div>
@@ -292,22 +311,41 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
+                                        <img id="sbimage-27632002048" width="930" height="930" data-color="efccf0"
+                                            src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/6b84eae0ca/viita_swarovski.png"
+                                            alt="Viita_swarovski">
+                                    </div>
+                                    <div class="info">
+                                        <div class="title">
+                                            <div class="list_item2">Viita Crystals from Swarovski</div>
+                                            <div class="list_item2">2019</div>
+                                            <div class="list_item2">Smartwatch</div>
+                                        </div>
+                                        <div class="marquee">
+                                            <div id="supermarquee3" class="marquee_inner">
+                                                <div class="marquee_inner">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="list_item">
+                                    <div class="pic_wrap">
+                                        <img width="930" height="930" data-color="3abbce"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/ca935b3172/vitalmonitor_nano.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/ca935b3172/vitalmonitor_nano.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/ca935b3172/vitalmonitor_nano.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/ca935b3172/vitalmonitor_nano.png 3841.5w, "
-                                            alt="Vitalmonitor_nano" imgparams="[object Object]"
-                                            class="intro-list-item-pic sbimage"
-                                            style="transform: translate(0px, 100vh); opacity: 1;">
+                                            alt="Vitalmonitor_nano">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
                                             <div class="list_item2">Vitalmonitor Nano</div>
                                             <div class="list_item2">2019</div>
                                             <div class="list_item2">Health Monitor</div>
                                         </div>
                                         <div class="marquee">
+                                            <div id="supermarquee4" class="marquee_inner"></div>
                                             <div class="marquee_inner">
-                                                Vitalmonitor Nano - Vitalmonitor Nano - Vitalmonitor Nano
                                             </div>
                                         </div>
                                     </div>
@@ -316,22 +354,19 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
+                                        <img width="930" height="930" data-color="fff600"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/cf00e8508e/viita_race.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/cf00e8508e/viita_race.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/cf00e8508e/viita_race.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/cf00e8508e/viita_race.png 3841.5w, "
-                                            alt="Viita_race" imgparams="[object Object]"
-                                            class="intro-list-item-pic sbimage"
-                                            style="transform: translate(0px, 100vh); opacity: 1;">
+                                            alt="Viita_race">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
                                             <div class="list_item2">Viita Race HRV</div>
                                             <div class="list_item2">2019</div>
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
+                                            <div id="supermarquee5" class="marquee_inner"></div>
                                             <div class="marquee_inner">
-                                                Viita Race HRV - Viita Race HRV - Viita Race HRV
                                             </div>
                                         </div>
                                     </div>
@@ -340,22 +375,19 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
+                                        <img width="930" height="930" data-color="000000"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/47a7348b2a/viita_titan.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/47a7348b2a/viita_titan.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/47a7348b2a/viita_titan.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/47a7348b2a/viita_titan.png 3841.5w, "
-                                            alt="Viita_titan" imgparams="[object Object]"
-                                            class="intro-list-item-pic sbimage"
-                                            style="transform: translate(0px, 100vh); opacity: 1;">
+                                            alt="Viita_titan">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
                                             <div class="list_item2">Viita Titan HRV</div>
                                             <div class="list_item2">2018</div>
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
+                                            <div id="supermarquee6" class="marquee_inner"></div>
                                             <div class="marquee_inner">
-                                                Viita Titan HRV - Viita Titan HRV - Viita Titan HRV
                                             </div>
                                         </div>
                                     </div>
@@ -364,22 +396,19 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
+                                        <img width="930" height="930" data-color="083ea7"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/08284715ef/viita_active.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/08284715ef/viita_active.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/08284715ef/viita_active.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/08284715ef/viita_active.png 3841.5w, "
-                                            alt="Viita_active" imgparams="[object Object]"
-                                            class="intro-list-item-pic sbimage"
-                                            style="transform: translate(0px, 100vh); opacity: 1;">
+                                            alt="Viita_active">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
                                             <div class="list_item2">Viita Active HRV</div>
                                             <div class="list_item2">2018</div>
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
+                                            <div id="supermarquee7" class="marquee_inner"></div>
                                             <div class="marquee_inner">
-                                                Viita Active HRV - Viita Active HRV - Viita Active HRV
                                             </div>
                                         </div>
                                     </div>
@@ -388,22 +417,19 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
+                                        <img width="930" height="930" data-color="d48db7"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/3266688948/viita_hybrid.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/3266688948/viita_hybrid.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/3266688948/viita_hybrid.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/3266688948/viita_hybrid.png 3841.5w, "
-                                            alt="Viita_hybrid" imgparams="[object Object]"
-                                            class="intro-list-item-pic sbimage"
-                                            style="transform: translate(0px, 100vh); opacity: 1;">
+                                            alt="Viita_hybrid">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
                                             <div class="list_item2">Viita Hybrid HRV</div>
                                             <div class="list_item2">2017</div>
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
+                                            <div id="supermarquee8" class="marquee_inner"></div>
                                             <div class="marquee_inner">
-                                                Viita Hybrid HRV - Viita Hybrid HRV - Viita Hybrid HRV
                                             </div>
                                         </div>
                                     </div>
@@ -412,22 +438,19 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
+                                        <img width="930" height="930" data-color="3abbce"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/de4650e2dc/vitalmonitor.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/de4650e2dc/vitalmonitor.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/de4650e2dc/vitalmonitor.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/de4650e2dc/vitalmonitor.png 3841.5w, "
-                                            alt="Vitalmonitor" imgparams="[object Object]"
-                                            class="intro-list-item-pic sbimage"
-                                            style="transform: translate(0px, 100vh); opacity: 1;">
+                                            alt="Vitalmonitor">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
                                             <div class="list_item2">Vitalmonitor</div>
                                             <div class="list_item2">2015</div>
                                             <div class="list_item2">Health Monitor</div>
                                         </div>
                                         <div class="marquee">
+                                            <div id="supermarquee9" class="marquee_inner"></div>
                                             <div class="marquee_inner">
-                                                Vitalmonitor - Vitalmonitor - Vitalmonitor
                                             </div>
                                         </div>
                                     </div>
@@ -436,23 +459,18 @@
                             <ul>
                                 <li class="list_item">
                                     <div class="pic_wrap">
-                                        <img id="" draggable="false" width="930" height="930"
+                                        <img width="930" height="930" data-color="ffffff"
                                             src="https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/63991de26c/vitalmonitor_og.png"
-                                            srcset="https://img2.storyblok.com/566x0/filters:quality(85):format(webp)/f/160527/1000x1000/63991de26c/vitalmonitor_og.png 2401.5w, https://img2.storyblok.com/679x0/filters:quality(85):format(webp)/f/160527/1000x1000/63991de26c/vitalmonitor_og.png 2881.5w, https://img2.storyblok.com/930x0/filters:quality(85):format(webp)/f/160527/1000x1000/63991de26c/vitalmonitor_og.png 3841.5w, "
-                                            alt="Vitalmonitor_og" imgparams="[object Object]"
-                                            class="intro-list-item-pic sbimage"
-                                            style="transform: translate(0px, 100vh); opacity: 1;">
+                                            alt="Vitalmonitor_og">
                                     </div>
-                                    <div class="info" style="transform: translateY(0px);">
+                                    <div class="info">
                                         <div class="title">
                                             <div class="list_item2">Vitalmonitor Original</div>
                                             <div class="list_item2">2013</div>
                                             <div class="list_item2">Smartwatch</div>
                                         </div>
                                         <div class="marquee">
-                                            <div class="marquee_inner">
-                                                Vitalmonitor Original - Vitalmonitor Original - Vitalmonitor Original
-                                            </div>
+                                            <div id="supermarquee10" class="marquee_inner"></div>
                                         </div>
                                     </div>
                                 </li>
@@ -460,9 +478,1544 @@
                         </div>
                     </div>
                 </section>
+                <section id="counter" class="sec sec_count">
+                    <ul class="left_count">
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                        <li>FINISHED</li>
+                    </ul>
+                    <span class="center_count counter-value" data-number="10">0</span>
+                    <ul class="right_count">
+                        <li>Projects</li>
+                        <li>Projects</li>
+                        <li>Projects</li>
+                        <li>Projects</li>
+                        <li>Projects</li>
+                        <li>Projects</li>
+                        <li>Projects</li>
+                        <li>Projects</li>
+                        <li>Projects</li>
+                        <li>Projects</li>
+                    </ul>
+                </section>
+                <section id="product" class="sec sec_product">
+                    <div class="products-container">
+                        <div id="product0" class="product product-size">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask">
+                                        <div class="product-bg-picvid-box">
+                                            <div class="product-bg-pic-toggler"><img width="2560" height="1441"
+                                                    src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/8533x4800/0c57232f96/01_bolide_print.jpg"
+                                                    alt="background" class="product-bg-pic sbimage" data-speed=".4">
+                                                <!---->
+                                            </div>
+                                            <!---->
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2022</span> <span
+                                                class="product-number">№ 1 /
+                                                10</span>
+                                            <div class="product-brand-box"><img id="sbimage-96000691863" width="200"
+                                                    height="103"
+                                                    src="https://img2.storyblok.com/200x0/filters:quality(99):format(webp)/f/160527/298x152/17d8959a00/bugatti_logo.png"
+                                                    alt="Bugatti_logo" class="product-brand sbimage"></div>
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <!---->
+                                                <!---->
+                                                <div id="runningtext-l1" class="runningtext-bufferdiv product-rt">
+                                                </div>
+                                                <!---->
+                                                <!---->
+                                            </div>
+                                            <div class="product-pic-box"><img
+                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/c346b859a3/viita_carbon.png"
+                                                    alt="Viita_carbon" class="product-pic sbimage"
+                                                    style="transform: translate(0px, 0vw);"></div>
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Bugatti Carbone
+                                                    Limited Edition</span>
+                                            </div>
+                                            <div class="product-bot-center">
+                                                <!----> <a href="https://bugatti-smartwatches.com" target="_blank"
+                                                    rel="noopener noreferrer" class="product-btn product-btn-sale"
+                                                    style="color: white;">
+                                                    <div class="product-btn-bg bright-button"
+                                                        style="background-color: rgb(215, 30, 40);">
+                                                    </div> <span class="product-btn-txt">BUY NOW</span>
+                                                </a>
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Smartwatch</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product1" class="product product-size">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask">
+                                        <div class="product-bg-picvid-box">
+                                            <!---->
+                                            <div class="product-bg-vid-toggler"><video id="product-vid"
+                                                    autoplay='autoplay' muted="muted" playsinline="" loop="loop"
+                                                    class="product-bg-video">
+                                                    <source
+                                                        src="https://a.storyblok.com/f/160527/x/6ae606f546/bugatti_teaser_clip_cc.mp4">
+                                                </video></div>
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2021</span> <span
+                                                class="product-number">№ 2 /
+                                                10</span>
+                                            <div class="product-brand-box"><img id="sbimage-91646397958" width="200"
+                                                    height="103"
+                                                    src="https://img2.storyblok.com/200x0/filters:quality(99):format(webp)/f/160527/298x152/17d8959a00/bugatti_logo.png"
+                                                    alt="Bugatti_logo" class="product-brand sbimage"></div>
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <!---->
+                                                <!---->
+                                                <div id="runningtext-l2" class="runningtext-bufferdiv product-rt">
+                                                </div>
+                                                <!---->
+                                                <!---->
+                                            </div>
+                                            <!---->
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Bugatti Ceramique
+                                                    Edition One</span>
+                                            </div>
+                                            <div class="product-bot-center">
+                                                <!----> <a href="https://bugatti-smartwatches.com" target="_blank"
+                                                    rel="noopener noreferrer" class="product-btn product-btn-sale"
+                                                    style="color: white;">
+                                                    <div class="product-btn-bg bright-button"
+                                                        style="background-color: rgb(215, 30, 40);">
+                                                    </div> <span class="product-btn-txt">BUY NOW</span>
+                                                </a>
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Smartwatch</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product2" class="product product-size">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask" style="color: rgb(239, 204, 240); opacity: 1;">
+                                        <div class="product-bg-picvid-box">
+                                            <div class="product-bg-pic-toggler"><img id="sbimage-38713604444"
+                                                    width="2560" height="1882"
+                                                    src="https://img2.storyblok.com/2240x0/filters:quality(85):format(webp)/f/160527/2240x1646/da6808bea4/swarovski_bg.jpg"
+                                                    alt="background" class="product-bg-pic sbimage">
+                                                <!---->
+                                            </div>
+                                            <!---->
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2019</span> <span
+                                                class="product-number">№ 3 /
+                                                10</span>
+                                            <div class="product-brand-box product-brand-box-bigger"><img
+                                                    id="sbimage-82486705233" width="200" height="200"
+                                                    src="https://img2.storyblok.com/200x0/filters:quality(99):format(webp)/f/160527/1024x1024/a40cab7411/swarovski_white.png"
+                                                    alt="Swarovski_white" class="product-brand sbimage"></div>
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <div class="runningtext-bufferdiv product-rt">
+                                                    <div id="runningtext-l3-1" class="runningtext runningtext_fade">
+                                                    </div>
+                                                </div>
+                                                <div class="runningtext-bufferdiv product-rt">
+                                                    <div id="runningtext-l3-2" class="runningtext runningtext_fade">
+                                                    </div>
+                                                </div>
+                                                <div class="runningtext-bufferdiv product-rt">
+                                                    <div id="runningtext-l3-3" class="runningtext"></div>
+                                                </div>
+                                                <div class="runningtext-bufferdiv product-rt">
+                                                    <div id="runningtext-l3-4" class="runningtext runningtext_fade">
+                                                    </div>
+                                                </div>
+                                                <div class="runningtext-bufferdiv product-rt">
+                                                    <div id="runningtext-l3-5" class="runningtext runningtext_fade">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-pic-box"><img
+                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/6b84eae0ca/viita_swarovski.png"
+                                                    alt="Viita_swarovski" class="product-pic sbimage"></div>
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Viita Crystals from
+                                                    Swarovski</span>
+                                            </div>
+                                            <div class="product-bot-center">
+                                                <div class="product-btn product-btn-sold-out" style="color: black;">
+                                                    <div class="product-btn-bg bright-button"
+                                                        style="background-color: rgb(239, 204, 240);">
+                                                    </div> <span class="product-btn-txt">SOLD OUT</span>
+                                                </div>
+                                                <!---->
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Smartwatch</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product3" class="product product-size" data-v-7718a013="">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask"
+                                        style="color: white; background-color: rgb(58, 187, 206); opacity: 1;">
+                                        <div class="product-bg-picvid-box">
+                                            <!---->
+                                            <!---->
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2019</span> <span
+                                                class="product-number">№ 4 /
+                                                10</span>
+                                            <!---->
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <!---->
+                                                <!---->
+                                                <div id="runningtext-l4" class="runningtext-bufferdiv product-rt">
+                                                    <div class="js-runningtext runningtext">
+                                                    </div>
+                                                </div>
+                                                <!---->
+                                                <!---->
+                                            </div>
+                                            <div class="product-pic-box"><img
+                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/ca935b3172/vitalmonitor_nano.png"
+                                                    alt="Vitalmonitor_nano" class="product-pic sbimage"></div>
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Vitalmonitor
+                                                    Nano</span></div>
+                                            <div class="product-bot-center">
+                                                <!----> <a href="https://www.vital-monitor.com" target="_blank"
+                                                    rel="noopener noreferrer" class="product-btn product-btn-sale"
+                                                    style="color: rgb(58, 187, 206);">
+                                                    <div class="product-btn-bg bright-button"
+                                                        style="background-color: white;"></div> <span
+                                                        class="product-btn-txt">BUY NOW</span>
+                                                </a>
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Health
+                                                    Monitor</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product4" class="product product-size" data-v-7718a013="">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask" style="color: rgb(255, 246, 0); opacity: 1;">
+                                        <div class="product-bg-picvid-box">
+                                            <div class="product-bg-pic-toggler"><img id="sbimage-51710422420"
+                                                    width="2560" height="1707"
+                                                    src="https://img2.storyblok.com/2000x0/filters:quality(85):format(webp)/f/160527/2000x1333/8074e55216/f1_home.jpg"
+                                                    alt="background" class="product-bg-pic sbimage">
+                                                <!---->
+                                            </div>
+                                            <!---->
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2019</span> <span
+                                                class="product-number">№ 5 /
+                                                10</span>
+                                            <!---->
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <!---->
+                                                <!---->
+                                                <div id="runningtext-l5" class="runningtext-bufferdiv product-rt">
+                                                    <div class="js-runningtext runningtext">
+                                                    </div>
+                                                </div>
+                                                <!---->
+                                                <!---->
+                                            </div>
+                                            <div class="product-pic-box"><img
+                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/cf00e8508e/viita_race.png"
+                                                    alt="Viita_race" class="product-pic sbimage"></div>
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Viita Race
+                                                    HRV</span></div>
+                                            <div class="product-bot-center">
+                                                <div class="product-btn product-btn-sold-out" style="color: black;">
+                                                    <div class="product-btn-bg bright-button"
+                                                        style="background-color: rgb(255, 246, 0);">
+                                                    </div> <span class="product-btn-txt">SOLD OUT</span>
+                                                </div>
+                                                <!---->
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Smartwatch</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product5" class="product product-size" data-v-7718a013="">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask" style="color: white; opacity: 1;">
+                                        <div class="product-bg-picvid-box">
+                                            <div class="product-bg-pic-toggler"><img id="sbimage-14916087718"
+                                                    width="2560" height="1707"
+                                                    src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/4752x3168/3163b3b048/fabien-martin-417393-unsplash.jpg"
+                                                    alt="background" class="product-bg-pic sbimage">
+                                                <!---->
+                                            </div>
+                                            <!---->
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2018</span> <span
+                                                class="product-number">№ 6 /
+                                                10</span>
+                                            <!---->
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <!---->
+                                                <!---->
+                                                <div id="runningtext-l6" class="runningtext-bufferdiv product-rt">
+                                                    <div class="js-runningtext runningtext">
+                                                    </div>
+                                                </div>
+                                                <!---->
+                                                <!---->
+                                            </div>
+                                            <div class="product-pic-box"><img
+                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/47a7348b2a/viita_titan.png"
+                                                    alt="Viita_titan" class="product-pic sbimage"></div>
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Viita Titan
+                                                    HRV</span></div>
+                                            <div class="product-bot-center">
+                                                <div class="product-btn product-btn-sold-out" style="color: black;">
+                                                    <div class="product-btn-bg bright-button"
+                                                        style="background-color: white;"></div> <span
+                                                        class="product-btn-txt">SOLD OUT</span>
+                                                </div>
+                                                <!---->
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Smartwatch</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product6" class="product product-size" data-v-7718a013="">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask" style="color: rgb(31, 222, 145); opacity: 1;">
+                                        <div class="product-bg-picvid-box">
+                                            <div class="product-bg-pic-toggler"><img id="sbimage-51893548306"
+                                                    width="2560" height="1689"
+                                                    src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/4000x2639/b95744b09f/timo_thinking.jpg"
+                                                    alt="background" class="product-bg-pic sbimage">
+                                                <!---->
+                                            </div>
+                                            <!---->
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2018</span> <span
+                                                class="product-number">№ 7 /
+                                                10</span>
+                                            <!---->
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <div id="runningtext-l7" class="runningtext-bufferdiv product-rt">
+                                                    <div class="js-runningtext runningtext">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-pic-box"><img
+                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/08284715ef/viita_active.png"
+                                                    alt="Viita_active" class="product-pic sbimage"></div>
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Viita Active
+                                                    HRV</span></div>
+                                            <div class="product-bot-center">
+                                                <div class="product-btn product-btn-sold-out"
+                                                    style="color: rgb(8, 62, 167);">
+                                                    <div class="product-btn-bg bright-button"
+                                                        style="background-color: rgb(31, 222, 145);">
+                                                    </div> <span class="product-btn-txt">SOLD OUT</span>
+                                                </div>
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Smartwatch</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product7" class="product product-size" data-v-7718a013="">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask" style="color: rgb(255, 228, 206); opacity: 1;">
+                                        <div class="product-bg-picvid-box">
+                                            <div class="product-bg-pic-toggler"><img id="sbimage-45033471992"
+                                                    width="2560" height="1647"
+                                                    src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/2800x1801/0aa65f2a8f/viita_magalie_health_solo.jpg"
+                                                    alt="background" class="product-bg-pic sbimage">
+                                            </div>
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2017</span> <span
+                                                class="product-number">№ 8 / 10</span>
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <div id="runningtext-l8" class="runningtext-bufferdiv product-rt">
+                                                    <div class="js-runningtext runningtext">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-pic-box"><img
+                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/3266688948/viita_hybrid.png"
+                                                    alt="Viita_hybrid" class="product-pic sbimage"></div>
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Viita Hybrid
+                                                    HRV</span></div>
+                                            <div class="product-bot-center">
+                                                <div class="product-btn product-btn-sold-out"
+                                                    style="color: rgb(212, 141, 183);">
+                                                    <div class="product-btn-bg bright-button"
+                                                        style="background-color: rgb(255, 228, 206);">
+                                                    </div> <span class="product-btn-txt">SOLD OUT</span>
+                                                </div>
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Smartwatch</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product8" class="product product-size" data-v-7718a013="">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask"
+                                        style="color: white; background-color: rgb(58, 187, 206); opacity: 1;">
+                                        <div class="product-bg-picvid-box">
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2015</span> <span
+                                                class="product-number">№ 9 /
+                                                10</span>
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <div class="runningtext-bufferdiv product-rt">
+                                                    <div id="runningtext-l9-1" class="runningtext runningtext_fade">
+                                                    </div>
+                                                </div>
+                                                <div class="runningtext-bufferdiv product-rt">
+                                                    <div id="runningtext-l9-2" class="runningtext runningtext_fade">
+                                                    </div>
+                                                </div>
+                                                <div class="runningtext-bufferdiv product-rt">
+                                                    <div id="runningtext-l9-3" class="runningtext"></div>
+                                                </div>
+                                                <div class="runningtext-bufferdiv product-rt">
+                                                    <div id="runningtext-l9-4" class="runningtext runningtext_fade">
+                                                    </div>
+                                                </div>
+                                                <div class="runningtext-bufferdiv product-rt">
+                                                    <div id="runningtext-l9-5" class="runningtext runningtext_fade">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-pic-box"><img
+                                                    src="https://img2.storyblok.com/0x0/filters:quality(99):format(webp)/f/160527/1000x1000/de4650e2dc/vitalmonitor.png"
+                                                    alt="Vitalmonitor" class="product-pic sbimage"></div>
+                                        </div>
+                                        <div class="product-bot">
+                                            <div class="product-bot-left"><span class="product-name">Vitalmonitor</span>
+                                            </div>
+                                            <div class="product-bot-center">
+                                                <div class="product-btn product-btn-sold-out"
+                                                    style="color: rgb(58, 187, 206);">
+                                                    <div class="product-btn-bg bright-button"
+                                                        style="background-color: white;"></div> <span
+                                                        class="product-btn-txt">SOLD OUT</span>
+                                                </div>
+                                                <!---->
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Health
+                                                    Monitor</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product9" class="product product-size">
+                            <div class="product-stickytainer">
+                                <div class="product-pinner">
+                                    <div class="product-mask" style="color: white; opacity: 1;">
+                                        <div class="product-bg-picvid-box">
+                                            <div class="product-bg-pic-toggler"><img id="sbimage-18344282282"
+                                                    width="2560" height="2129"
+                                                    src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/3888x3233/6eef3c4f65/ben-pham-qdghsjae09a-unsplash.jpg"
+                                                    alt="background" class="product-bg-pic sbimage">
+                                            </div>
+                                            <div class="product-bg-darkener"></div>
+                                        </div>
+                                        <div class="product-top"><span class="product-date">2013</span> <span
+                                                class="product-number">№ 10 /
+                                                10</span>
+                                        </div>
+                                        <div class="product-center">
+                                            <div class="product-triple-rt-box">
+                                                <div id="runningtext-l10" class="runningtext-bufferdiv product-rt">
+                                                    <div class="js-runningtext runningtext">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-bot-right"><span class="product-type">Health
+                                                    Monitor</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="about" class="sec sec_about">
+                    <div class="raster_wrap">
+                        <div class="raster_inner">
+                            <div class="raster_item raster_item1"></div>
+                            <div class="raster_item raster_item2"></div>
+                            <div class="raster_item raster_item3"></div>
+                            <div class="raster_item raster_item4"></div>
+                            <div class="raster_item raster_item5"></div>
+                            <div class="raster_item raster_item6"></div>
+                            <div class="raster_item raster_item7"></div>
+                            <div class="raster_item raster_item8"></div>
+                            <div class="raster_item raster_item9"></div>
+                            <div class="raster_item raster_item10"></div>
+                            <div class="raster_item raster_item11"></div>
+                            <div class="raster_item raster_item12"></div>
+                            <div class="raster_item raster_item13"></div>
+                            <div class="raster_item raster_item14"></div>
+                            <div class="raster_item raster_item15"></div>
+                            <div class="raster_item raster_item16"></div>
+                            <div class="raster_item raster_item17"></div>
+                            <div class="raster_item raster_item18"></div>
+                            <div class="raster_item raster_item19"></div>
+                            <div class="raster_item raster_item20"></div>
+                            <div class="raster_item raster_item21"></div>
+                            <div class="raster_item raster_item22"></div>
+                            <div class="raster_item raster_item23"></div>
+                            <div class="raster_item raster_item24"></div>
+                            <div class="raster_item raster_item25"></div>
+                            <div class="raster_item raster_item26"></div>
+                            <div class="raster_item raster_item27"></div>
+                            <div class="raster_item raster_item28"></div>
+                            <div class="raster_item raster_item29"></div>
+                            <div class="raster_item raster_item30"></div>
+                            <div class="raster_item raster_item31"></div>
+                            <div class="raster_item raster_item32"></div>
+                            <div class="raster_item raster_item33"></div>
+                            <div class="raster_item raster_item34"></div>
+                            <div class="raster_item raster_item35"></div>
+                            <div class="raster_item raster_item36"></div>
+                            <div class="raster_item raster_item37"></div>
+                            <div class="raster_item raster_item38"></div>
+                            <div class="raster_item raster_item39"></div>
+                            <div class="raster_item raster_item40"></div>
+                            <div class="raster_item raster_item41"></div>
+                            <div class="raster_item raster_item42"></div>
+                            <div class="raster_item raster_item43"></div>
+                            <div class="raster_item raster_item44"></div>
+                            <div class="raster_item raster_item45"></div>
+                            <div class="raster_item raster_item46"></div>
+                            <div class="raster_item raster_item47"></div>
+                            <div class="raster_item raster_item48"></div>
+                            <div class="raster_item raster_item49"></div>
+                            <div class="raster_item raster_item50"></div>
+                            <div class="raster_item raster_item51"></div>
+                            <div class="raster_item raster_item52"></div>
+                            <div class="raster_item raster_item53"></div>
+                            <div class="raster_item raster_item54"></div>
+                            <div class="raster_item raster_item55"></div>
+                            <div class="raster_item raster_item56"></div>
+                            <div class="raster_item raster_item57"></div>
+                            <div class="raster_item raster_item58"></div>
+                            <div class="raster_item raster_item59"></div>
+                            <div class="raster_item raster_item60"></div>
+                            <div class="raster_item raster_item61"></div>
+                            <div class="raster_item raster_item62"></div>
+                            <div class="raster_item raster_item63"></div>
+                            <div class="raster_item raster_item64"></div>
+                            <div class="raster_item raster_item65"></div>
+                            <div class="raster_item raster_item66"></div>
+                            <div class="raster_item raster_item67"></div>
+                            <div class="raster_item raster_item68"></div>
+                            <div class="raster_item raster_item69"></div>
+                            <div class="raster_item raster_item70"></div>
+                            <div class="raster_item raster_item71"></div>
+                            <div class="raster_item raster_item72"></div>
+                            <div class="raster_item raster_item73"></div>
+                            <div class="raster_item raster_item74"></div>
+                            <div class="raster_item raster_item75"></div>
+                            <div class="raster_item raster_item76"></div>
+                            <div class="raster_item raster_item77"></div>
+                            <div class="raster_item raster_item78"></div>
+                            <div class="raster_item raster_item79"></div>
+                            <div class="raster_item raster_item80"></div>
+                            <div class="raster_item raster_item81"></div>
+                            <div class="raster_item raster_item82"></div>
+                            <div class="raster_item raster_item83"></div>
+                            <div class="raster_item raster_item84"></div>
+                            <div class="raster_item raster_item85"></div>
+                            <div class="raster_item raster_item86"></div>
+                            <div class="raster_item raster_item87"></div>
+                            <div class="raster_item raster_item88"></div>
+                            <div class="raster_item raster_item89"></div>
+                            <div class="raster_item raster_item90"></div>
+                            <div class="raster_item raster_item91"></div>
+                            <div class="raster_item raster_item92"></div>
+                            <div class="raster_item raster_item93"></div>
+                            <div class="raster_item raster_item94"></div>
+                            <div class="raster_item raster_item95"></div>
+                            <div class="raster_item raster_item96"></div>
+                            <div class="raster_item raster_item97"></div>
+                            <div class="raster_item raster_item98"></div>
+                            <div class="raster_item raster_item99"></div>
+                            <div class="raster_item raster_item100"></div>
+                            <div class="raster_item raster_item101"></div>
+                            <div class="raster_item raster_item102"></div>
+                            <div class="raster_item raster_item103"></div>
+                            <div class="raster_item raster_item104"></div>
+                            <div class="raster_item raster_item105"></div>
+                            <div class="raster_item raster_item106"></div>
+                            <div class="raster_item raster_item107"></div>
+                            <div class="raster_item raster_item108"></div>
+                            <div class="raster_item raster_item109"></div>
+                            <div class="raster_item raster_item110"></div>
+                            <div class="raster_item raster_item111"></div>
+                            <div class="raster_item raster_item112"></div>
+                            <div class="raster_item raster_item113"></div>
+                            <div class="raster_item raster_item114"></div>
+                            <div class="raster_item raster_item115"></div>
+                            <div class="raster_item raster_item116"></div>
+                            <div class="raster_item raster_item117"></div>
+                            <div class="raster_item raster_item118"></div>
+                            <div class="raster_item raster_item119"></div>
+                            <div class="raster_item raster_item120"></div>
+                            <div class="raster_item raster_item121"></div>
+                            <div class="raster_item raster_item122"></div>
+                            <div class="raster_item raster_item123"></div>
+                            <div class="raster_item raster_item124"></div>
+                            <div class="raster_item raster_item125"></div>
+                            <div class="raster_item raster_item126"></div>
+                            <div class="raster_item raster_item127"></div>
+                            <div class="raster_item raster_item128"></div>
+                            <div class="raster_item raster_item129"></div>
+                            <div class="raster_item raster_item130"></div>
+                            <div class="raster_item raster_item131"></div>
+                            <div class="raster_item raster_item132"></div>
+                            <div class="raster_item raster_item133"></div>
+                            <div class="raster_item raster_item134"></div>
+                            <div class="raster_item raster_item135"></div>
+                            <div class="raster_item raster_item136"></div>
+                            <div class="raster_item raster_item137"></div>
+                            <div class="raster_item raster_item138"></div>
+                            <div class="raster_item raster_item139"></div>
+                            <div class="raster_item raster_item140"></div>
+                            <div class="raster_item raster_item141"></div>
+                            <div class="raster_item raster_item142"></div>
+                            <div class="raster_item raster_item143"></div>
+                            <div class="raster_item raster_item144"></div>
+                            <div class="raster_item raster_item145"></div>
+                            <div class="raster_item raster_item146"></div>
+                            <div class="raster_item raster_item147"></div>
+                            <div class="raster_item raster_item148"></div>
+                            <div class="raster_item raster_item149"></div>
+                            <div class="raster_item raster_item150"></div>
+                            <div class="raster_item raster_item151"></div>
+                            <div class="raster_item raster_item152"></div>
+                            <div class="raster_item raster_item153"></div>
+                            <div class="raster_item raster_item154"></div>
+                            <div class="raster_item raster_item155"></div>
+                            <div class="raster_item raster_item156"></div>
+                            <div class="raster_item raster_item157"></div>
+                            <div class="raster_item raster_item158"></div>
+                            <div class="raster_item raster_item159"></div>
+                            <div class="raster_item raster_item160"></div>
+                            <div class="raster_item raster_item161"></div>
+                            <div class="raster_item raster_item162"></div>
+                            <div class="raster_item raster_item163"></div>
+                            <div class="raster_item raster_item164"></div>
+                            <div class="raster_item raster_item165"></div>
+                            <div class="raster_item raster_item166"></div>
+                            <div class="raster_item raster_item167"></div>
+                            <div class="raster_item raster_item168"></div>
+                            <div class="raster_item raster_item169"></div>
+                            <div class="raster_item raster_item170"></div>
+                            <div class="raster_item raster_item171"></div>
+                            <div class="raster_item raster_item172"></div>
+                            <div class="raster_item raster_item173"></div>
+                            <div class="raster_item raster_item174"></div>
+                            <div class="raster_item raster_item175"></div>
+                            <div class="raster_item raster_item176"></div>
+                            <div class="raster_item raster_item177"></div>
+                            <div class="raster_item raster_item178"></div>
+                            <div class="raster_item raster_item179"></div>
+                            <div class="raster_item raster_item180"></div>
+                            <div class="raster_item raster_item181"></div>
+                            <div class="raster_item raster_item182"></div>
+                            <div class="raster_item raster_item183"></div>
+                            <div class="raster_item raster_item184"></div>
+                            <div class="raster_item raster_item185"></div>
+                            <div class="raster_item raster_item186"></div>
+                            <div class="raster_item raster_item187"></div>
+                            <div class="raster_item raster_item188"></div>
+                            <div class="raster_item raster_item189"></div>
+                            <div class="raster_item raster_item190"></div>
+                            <div class="raster_item raster_item191"></div>
+                            <div class="raster_item raster_item192"></div>
+                            <div class="raster_item raster_item193"></div>
+                            <div class="raster_item raster_item194"></div>
+                            <div class="raster_item raster_item195"></div>
+                            <div class="raster_item raster_item196"></div>
+                            <div class="raster_item raster_item197"></div>
+                            <div class="raster_item raster_item198"></div>
+                            <div class="raster_item raster_item199"></div>
+                            <div class="raster_item raster_item200"></div>
+                        </div>
+                        <div class="icon_wrap">
+                            <div class="icon_item" style="opacity: 0.9404;">
+                                <svg width="329.094" height="293" viewBox="0 0 329.094 293"
+                                    class="icon icon-health icon_ab about-toggle-element1">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M298.582,31.055h0c-34.016-34.016-89.166-34.016-123.182,0l-10.582,10.582-11.124-11.124C119.678-3.504,64.528-3.504,30.512,30.512h0C-3.504,64.528-3.504,119.678,30.512,153.694l11.124,11.124h0l123.182,123.182,133.764-133.764c34.016-34.016,34.016-89.166,0-123.182Z"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="10">
+                                            </path>
+                                            <line x1="183.401" y1="107" x2="273.401" y2="107" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                            <line x1="228.401" y1="62" x2="228.401" y2="152" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <svg width="340" height="283" viewBox="0 0 340 283"
+                                    class="icon icon-software icon_ab about-toggle-element2">
+                                    <path
+                                        d="M315.833,10c7.812,0,14.167,6.355,14.167,14.167v234.667c0,7.812-6.355,14.167-14.167,14.167H24.167c-7.812,0-14.167-6.355-14.167-14.167V24.167c0-7.812,6.355-14.167,14.167-14.167H315.833m0-10H24.167C10.82,0,0,10.82,0,24.167v234.667c0,13.347,10.82,24.167,24.167,24.167H315.833c13.347,0,24.167-10.82,24.167-24.167V24.167c0-13.347-10.82-24.167-24.167-24.167h0Z">
+                                    </path>
+                                    <line x1="8" y1="54" x2="333" y2="54" fill="none" stroke="#000"
+                                        stroke-miterlimit="10" stroke-width="10"></line>
+                                    <g>
+                                        <polyline points="121.749 139.172 85 166.5 121.749 193.828" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2"></polyline>
+                                        <polyline points="219.251 193.828 256 166.5 219.251 139.172" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2">
+                                        </polyline>
+                                    </g>
+                                    <line x1="185.24" y1="104.591" x2="155.76" y2="228.409" fill="none" stroke="#000"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="10" class="ants2">
+                                    </line>
+                                    <circle cx="260" cy="29" r="7"></circle>
+                                    <circle cx="283" cy="29" r="7"></circle>
+                                    <circle cx="306" cy="29" r="7"></circle>
+                                </svg>
+                                <svg width="219.005" height="292.846" viewBox="0 0 219.005 292.846"
+                                    class="icon icon-hardware icon_ab about-toggle-element3">
+                                    <g>
+                                        <g>
+                                            <polyline
+                                                points="191.49 94.135 163.877 27.09 147.515 5 105.679 5 105.459 5 63.623 5 47.481 27.09 19.649 94.135"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="163.877" y1="27.09" x2="47.481" y2="27.09" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <polyline
+                                                points="19.649 198.712 47.261 265.757 63.623 287.846 105.459 287.846 105.679 287.846 147.515 287.846 163.658 265.757 191.49 198.712"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="47.261" y1="265.757" x2="163.658" y2="265.757" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <circle cx="105.679" cy="146.46" r="100.679" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="8"></circle>
+                                            <polyline
+                                                points="180.219 80.411 197.012 74.668 214.005 104.405 201.646 115.931"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <polyline
+                                                points="180.219 212.142 197.012 217.885 214.005 188.148 201.646 176.622"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="72.119" y1="168.126" x2="72.119" y2="146.036" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="89.112" y1="168.126" x2="89.112" y2="138.389" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="106.104" y1="168.126" x2="106.104" y2="131.592" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="123.096" y1="168.126" x2="123.096" y2="123.096" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="140.088" y1="168.126" x2="140.088" y2="114.6" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <div class="about-icon-word-wrapper icon_ab about-toggle-element4"><span>HEALTH</span>
+                                </div>
+                            </div>
+                            <div class="icon_item" style="opacity: 0.9404;">
+                                <svg width="329.094" height="293" viewBox="0 0 329.094 293"
+                                    class="icon icon-health icon_ab about-toggle-element1">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M298.582,31.055h0c-34.016-34.016-89.166-34.016-123.182,0l-10.582,10.582-11.124-11.124C119.678-3.504,64.528-3.504,30.512,30.512h0C-3.504,64.528-3.504,119.678,30.512,153.694l11.124,11.124h0l123.182,123.182,133.764-133.764c34.016-34.016,34.016-89.166,0-123.182Z"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="10">
+                                            </path>
+                                            <line x1="183.401" y1="107" x2="273.401" y2="107" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                            <line x1="228.401" y1="62" x2="228.401" y2="152" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <svg width="340" height="283" viewBox="0 0 340 283"
+                                    class="icon icon-software icon_ab about-toggle-element2">
+                                    <path
+                                        d="M315.833,10c7.812,0,14.167,6.355,14.167,14.167v234.667c0,7.812-6.355,14.167-14.167,14.167H24.167c-7.812,0-14.167-6.355-14.167-14.167V24.167c0-7.812,6.355-14.167,14.167-14.167H315.833m0-10H24.167C10.82,0,0,10.82,0,24.167v234.667c0,13.347,10.82,24.167,24.167,24.167H315.833c13.347,0,24.167-10.82,24.167-24.167V24.167c0-13.347-10.82-24.167-24.167-24.167h0Z">
+                                    </path>
+                                    <line x1="8" y1="54" x2="333" y2="54" fill="none" stroke="#000"
+                                        stroke-miterlimit="10" stroke-width="10"></line>
+                                    <g>
+                                        <polyline points="121.749 139.172 85 166.5 121.749 193.828" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2"></polyline>
+                                        <polyline points="219.251 193.828 256 166.5 219.251 139.172" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2">
+                                        </polyline>
+                                    </g>
+                                    <line x1="185.24" y1="104.591" x2="155.76" y2="228.409" fill="none" stroke="#000"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="10" class="ants2">
+                                    </line>
+                                    <circle cx="260" cy="29" r="7"></circle>
+                                    <circle cx="283" cy="29" r="7"></circle>
+                                    <circle cx="306" cy="29" r="7"></circle>
+                                </svg>
+                                <svg width="219.005" height="292.846" viewBox="0 0 219.005 292.846"
+                                    class="icon icon-hardware icon_ab about-toggle-element3">
+                                    <g>
+                                        <g>
+                                            <polyline
+                                                points="191.49 94.135 163.877 27.09 147.515 5 105.679 5 105.459 5 63.623 5 47.481 27.09 19.649 94.135"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="163.877" y1="27.09" x2="47.481" y2="27.09" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <polyline
+                                                points="19.649 198.712 47.261 265.757 63.623 287.846 105.459 287.846 105.679 287.846 147.515 287.846 163.658 265.757 191.49 198.712"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="47.261" y1="265.757" x2="163.658" y2="265.757" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <circle cx="105.679" cy="146.46" r="100.679" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="8"></circle>
+                                            <polyline
+                                                points="180.219 80.411 197.012 74.668 214.005 104.405 201.646 115.931"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <polyline
+                                                points="180.219 212.142 197.012 217.885 214.005 188.148 201.646 176.622"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="72.119" y1="168.126" x2="72.119" y2="146.036" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="89.112" y1="168.126" x2="89.112" y2="138.389" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="106.104" y1="168.126" x2="106.104" y2="131.592" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="123.096" y1="168.126" x2="123.096" y2="123.096" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="140.088" y1="168.126" x2="140.088" y2="114.6" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <div class="about-icon-word-wrapper icon_ab about-toggle-element4"><span>SOFTWARE</span>
+                                </div>
+                            </div>
+                            <div class="icon_item" style="opacity: 0.9404;">
+                                <svg width="329.094" height="293" viewBox="0 0 329.094 293"
+                                    class="icon icon-health icon_ab about-toggle-element1">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M298.582,31.055h0c-34.016-34.016-89.166-34.016-123.182,0l-10.582,10.582-11.124-11.124C119.678-3.504,64.528-3.504,30.512,30.512h0C-3.504,64.528-3.504,119.678,30.512,153.694l11.124,11.124h0l123.182,123.182,133.764-133.764c34.016-34.016,34.016-89.166,0-123.182Z"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="10">
+                                            </path>
+                                            <line x1="183.401" y1="107" x2="273.401" y2="107" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                            <line x1="228.401" y1="62" x2="228.401" y2="152" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <svg width="340" height="283" viewBox="0 0 340 283"
+                                    class="icon icon-software icon_ab about-toggle-element2">
+                                    <path
+                                        d="M315.833,10c7.812,0,14.167,6.355,14.167,14.167v234.667c0,7.812-6.355,14.167-14.167,14.167H24.167c-7.812,0-14.167-6.355-14.167-14.167V24.167c0-7.812,6.355-14.167,14.167-14.167H315.833m0-10H24.167C10.82,0,0,10.82,0,24.167v234.667c0,13.347,10.82,24.167,24.167,24.167H315.833c13.347,0,24.167-10.82,24.167-24.167V24.167c0-13.347-10.82-24.167-24.167-24.167h0Z">
+                                    </path>
+                                    <line x1="8" y1="54" x2="333" y2="54" fill="none" stroke="#000"
+                                        stroke-miterlimit="10" stroke-width="10"></line>
+                                    <g>
+                                        <polyline points="121.749 139.172 85 166.5 121.749 193.828" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2"></polyline>
+                                        <polyline points="219.251 193.828 256 166.5 219.251 139.172" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2">
+                                        </polyline>
+                                    </g>
+                                    <line x1="185.24" y1="104.591" x2="155.76" y2="228.409" fill="none" stroke="#000"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="10" class="ants2">
+                                    </line>
+                                    <circle cx="260" cy="29" r="7"></circle>
+                                    <circle cx="283" cy="29" r="7"></circle>
+                                    <circle cx="306" cy="29" r="7"></circle>
+                                </svg>
+                                <svg width="219.005" height="292.846" viewBox="0 0 219.005 292.846"
+                                    class="icon icon-hardware icon_ab about-toggle-element3">
+                                    <g>
+                                        <g>
+                                            <polyline
+                                                points="191.49 94.135 163.877 27.09 147.515 5 105.679 5 105.459 5 63.623 5 47.481 27.09 19.649 94.135"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="163.877" y1="27.09" x2="47.481" y2="27.09" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <polyline
+                                                points="19.649 198.712 47.261 265.757 63.623 287.846 105.459 287.846 105.679 287.846 147.515 287.846 163.658 265.757 191.49 198.712"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="47.261" y1="265.757" x2="163.658" y2="265.757" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <circle cx="105.679" cy="146.46" r="100.679" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="8"></circle>
+                                            <polyline
+                                                points="180.219 80.411 197.012 74.668 214.005 104.405 201.646 115.931"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <polyline
+                                                points="180.219 212.142 197.012 217.885 214.005 188.148 201.646 176.622"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="72.119" y1="168.126" x2="72.119" y2="146.036" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="89.112" y1="168.126" x2="89.112" y2="138.389" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="106.104" y1="168.126" x2="106.104" y2="131.592" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="123.096" y1="168.126" x2="123.096" y2="123.096" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="140.088" y1="168.126" x2="140.088" y2="114.6" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <div class="about-icon-word-wrapper icon_ab about-toggle-element4"><span>HARDWARE</span>
+                                </div>
+                            </div>
+                            <div class="icon_item" style="opacity: 0.9404;">
+                                <svg width="329.094" height="293" viewBox="0 0 329.094 293"
+                                    class="icon icon-health icon_ab about-toggle-element1">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M298.582,31.055h0c-34.016-34.016-89.166-34.016-123.182,0l-10.582,10.582-11.124-11.124C119.678-3.504,64.528-3.504,30.512,30.512h0C-3.504,64.528-3.504,119.678,30.512,153.694l11.124,11.124h0l123.182,123.182,133.764-133.764c34.016-34.016,34.016-89.166,0-123.182Z"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="10">
+                                            </path>
+                                            <line x1="183.401" y1="107" x2="273.401" y2="107" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                            <line x1="228.401" y1="62" x2="228.401" y2="152" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <svg width="340" height="283" viewBox="0 0 340 283"
+                                    class="icon icon-software icon_ab about-toggle-element2">
+                                    <path
+                                        d="M315.833,10c7.812,0,14.167,6.355,14.167,14.167v234.667c0,7.812-6.355,14.167-14.167,14.167H24.167c-7.812,0-14.167-6.355-14.167-14.167V24.167c0-7.812,6.355-14.167,14.167-14.167H315.833m0-10H24.167C10.82,0,0,10.82,0,24.167v234.667c0,13.347,10.82,24.167,24.167,24.167H315.833c13.347,0,24.167-10.82,24.167-24.167V24.167c0-13.347-10.82-24.167-24.167-24.167h0Z">
+                                    </path>
+                                    <line x1="8" y1="54" x2="333" y2="54" fill="none" stroke="#000"
+                                        stroke-miterlimit="10" stroke-width="10"></line>
+                                    <g>
+                                        <polyline points="121.749 139.172 85 166.5 121.749 193.828" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2"></polyline>
+                                        <polyline points="219.251 193.828 256 166.5 219.251 139.172" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2">
+                                        </polyline>
+                                    </g>
+                                    <line x1="185.24" y1="104.591" x2="155.76" y2="228.409" fill="none" stroke="#000"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="10" class="ants2">
+                                    </line>
+                                    <circle cx="260" cy="29" r="7"></circle>
+                                    <circle cx="283" cy="29" r="7"></circle>
+                                    <circle cx="306" cy="29" r="7"></circle>
+                                </svg>
+                                <svg width="219.005" height="292.846" viewBox="0 0 219.005 292.846"
+                                    class="icon icon-hardware icon_ab about-toggle-element3">
+                                    <g>
+                                        <g>
+                                            <polyline
+                                                points="191.49 94.135 163.877 27.09 147.515 5 105.679 5 105.459 5 63.623 5 47.481 27.09 19.649 94.135"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="163.877" y1="27.09" x2="47.481" y2="27.09" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <polyline
+                                                points="19.649 198.712 47.261 265.757 63.623 287.846 105.459 287.846 105.679 287.846 147.515 287.846 163.658 265.757 191.49 198.712"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="47.261" y1="265.757" x2="163.658" y2="265.757" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <circle cx="105.679" cy="146.46" r="100.679" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="8"></circle>
+                                            <polyline
+                                                points="180.219 80.411 197.012 74.668 214.005 104.405 201.646 115.931"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <polyline
+                                                points="180.219 212.142 197.012 217.885 214.005 188.148 201.646 176.622"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="72.119" y1="168.126" x2="72.119" y2="146.036" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="89.112" y1="168.126" x2="89.112" y2="138.389" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="106.104" y1="168.126" x2="106.104" y2="131.592" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="123.096" y1="168.126" x2="123.096" y2="123.096" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="140.088" y1="168.126" x2="140.088" y2="114.6" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <div class="about-icon-word-wrapper icon_ab about-toggle-element4"><span>HARDWARE</span>
+                                </div>
+                            </div>
+                            <div class="icon_item about-icon-wrapper-center" style="opacity: 1;">
+                                <svg width="329.094" height="293" viewBox="0 0 329.094 293"
+                                    class="icon icon-health icon_ab about-toggle-element1" style="opacity: 0;">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M298.582,31.055h0c-34.016-34.016-89.166-34.016-123.182,0l-10.582,10.582-11.124-11.124C119.678-3.504,64.528-3.504,30.512,30.512h0C-3.504,64.528-3.504,119.678,30.512,153.694l11.124,11.124h0l123.182,123.182,133.764-133.764c34.016-34.016,34.016-89.166,0-123.182Z"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="10">
+                                            </path>
+                                            <line x1="183.401" y1="107" x2="273.401" y2="107" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                            <line x1="228.401" y1="62" x2="228.401" y2="152" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <svg width="340" height="283" viewBox="0 0 340 283"
+                                    class="icon icon-software icon_ab about-toggle-element2" style="opacity: 0;">
+                                    <path
+                                        d="M315.833,10c7.812,0,14.167,6.355,14.167,14.167v234.667c0,7.812-6.355,14.167-14.167,14.167H24.167c-7.812,0-14.167-6.355-14.167-14.167V24.167c0-7.812,6.355-14.167,14.167-14.167H315.833m0-10H24.167C10.82,0,0,10.82,0,24.167v234.667c0,13.347,10.82,24.167,24.167,24.167H315.833c13.347,0,24.167-10.82,24.167-24.167V24.167c0-13.347-10.82-24.167-24.167-24.167h0Z">
+                                    </path>
+                                    <line x1="8" y1="54" x2="333" y2="54" fill="none" stroke="#000"
+                                        stroke-miterlimit="10" stroke-width="10"></line>
+                                    <g>
+                                        <polyline points="121.749 139.172 85 166.5 121.749 193.828" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2"></polyline>
+                                        <polyline points="219.251 193.828 256 166.5 219.251 139.172" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2">
+                                        </polyline>
+                                    </g>
+                                    <line x1="185.24" y1="104.591" x2="155.76" y2="228.409" fill="none" stroke="#000"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="10" class="ants2">
+                                    </line>
+                                    <circle cx="260" cy="29" r="7"></circle>
+                                    <circle cx="283" cy="29" r="7"></circle>
+                                    <circle cx="306" cy="29" r="7"></circle>
+                                </svg>
+                                <svg width="219.005" height="292.846" viewBox="0 0 219.005 292.846"
+                                    class="icon icon-hardware icon_ab about-toggle-element3" style="opacity: 0;">
+                                    <g>
+                                        <g>
+                                            <polyline
+                                                points="191.49 94.135 163.877 27.09 147.515 5 105.679 5 105.459 5 63.623 5 47.481 27.09 19.649 94.135"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="163.877" y1="27.09" x2="47.481" y2="27.09" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <polyline
+                                                points="19.649 198.712 47.261 265.757 63.623 287.846 105.459 287.846 105.679 287.846 147.515 287.846 163.658 265.757 191.49 198.712"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="47.261" y1="265.757" x2="163.658" y2="265.757" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <circle cx="105.679" cy="146.46" r="100.679" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="8"></circle>
+                                            <polyline
+                                                points="180.219 80.411 197.012 74.668 214.005 104.405 201.646 115.931"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <polyline
+                                                points="180.219 212.142 197.012 217.885 214.005 188.148 201.646 176.622"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="72.119" y1="168.126" x2="72.119" y2="146.036" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="89.112" y1="168.126" x2="89.112" y2="138.389" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="106.104" y1="168.126" x2="106.104" y2="131.592" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="123.096" y1="168.126" x2="123.096" y2="123.096" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="140.088" y1="168.126" x2="140.088" y2="114.6" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <div class="about-icon-word-wrapper icon_ab about-toggle-element4" style="opacity: 1;">
+                                    <svg width="886.16" height="1106.5" viewBox="0 0 886.16 1106.5"
+                                        class="js-about-smv-logo about-smv-logo">
+                                        <g>
+                                            <g>
+                                                <rect x="87.08" y="193.25" width="712" height="720" fill="#b8b8b8">
+                                                </rect>
+                                                <path
+                                                    d="M0,0V1106.5H886.16V0H0ZM362.37,502.66h20.21v81.85h-20.21v-81.85Zm-61.04,101.17h-21.61l-38.83-101.16h22.12l27.51,71.86,27.57-71.86h22.05l-38.81,101.16Zm71.14,15.17c-6.583,0-11.92-5.337-11.92-11.92s5.337-11.92,11.92-11.92c6.581,.006,11.914,5.339,11.92,11.92,0,6.583-5.337,11.92-11.92,11.92Zm70.77-15.17h-20.21v-81.85h20.21v81.85Zm-10.11-92.49c-6.581-.006-11.914-5.339-11.92-11.92,0-6.583,5.337-11.92,11.92-11.92s11.92,5.337,11.92,11.92-5.337,11.92-11.92,11.92Zm106.39,10.62h-25.54v81.88h-20.62v-81.88h-25.53v-19.3h71.69v19.3Zm82.91,81.83l-27.51-71.86-27.57,71.86h-22.05l38.81-101.17h21.61l38.83,101.17h-22.12Z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="icon_item" style="opacity: 0.9404;">
+                                <svg width="329.094" height="293" viewBox="0 0 329.094 293"
+                                    class="icon icon-health icon_ab about-toggle-element1">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M298.582,31.055h0c-34.016-34.016-89.166-34.016-123.182,0l-10.582,10.582-11.124-11.124C119.678-3.504,64.528-3.504,30.512,30.512h0C-3.504,64.528-3.504,119.678,30.512,153.694l11.124,11.124h0l123.182,123.182,133.764-133.764c34.016-34.016,34.016-89.166,0-123.182Z"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="10">
+                                            </path>
+                                            <line x1="183.401" y1="107" x2="273.401" y2="107" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                            <line x1="228.401" y1="62" x2="228.401" y2="152" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <svg width="340" height="283" viewBox="0 0 340 283"
+                                    class="icon icon-software icon_ab about-toggle-element2">
+                                    <path
+                                        d="M315.833,10c7.812,0,14.167,6.355,14.167,14.167v234.667c0,7.812-6.355,14.167-14.167,14.167H24.167c-7.812,0-14.167-6.355-14.167-14.167V24.167c0-7.812,6.355-14.167,14.167-14.167H315.833m0-10H24.167C10.82,0,0,10.82,0,24.167v234.667c0,13.347,10.82,24.167,24.167,24.167H315.833c13.347,0,24.167-10.82,24.167-24.167V24.167c0-13.347-10.82-24.167-24.167-24.167h0Z">
+                                    </path>
+                                    <line x1="8" y1="54" x2="333" y2="54" fill="none" stroke="#000"
+                                        stroke-miterlimit="10" stroke-width="10"></line>
+                                    <g>
+                                        <polyline points="121.749 139.172 85 166.5 121.749 193.828" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2"></polyline>
+                                        <polyline points="219.251 193.828 256 166.5 219.251 139.172" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2">
+                                        </polyline>
+                                    </g>
+                                    <line x1="185.24" y1="104.591" x2="155.76" y2="228.409" fill="none" stroke="#000"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="10" class="ants2">
+                                    </line>
+                                    <circle cx="260" cy="29" r="7"></circle>
+                                    <circle cx="283" cy="29" r="7"></circle>
+                                    <circle cx="306" cy="29" r="7"></circle>
+                                </svg>
+                                <svg width="219.005" height="292.846" viewBox="0 0 219.005 292.846"
+                                    class="icon icon-hardware icon_ab about-toggle-element3">
+                                    <g>
+                                        <g>
+                                            <polyline
+                                                points="191.49 94.135 163.877 27.09 147.515 5 105.679 5 105.459 5 63.623 5 47.481 27.09 19.649 94.135"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="163.877" y1="27.09" x2="47.481" y2="27.09" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <polyline
+                                                points="19.649 198.712 47.261 265.757 63.623 287.846 105.459 287.846 105.679 287.846 147.515 287.846 163.658 265.757 191.49 198.712"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="47.261" y1="265.757" x2="163.658" y2="265.757" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <circle cx="105.679" cy="146.46" r="100.679" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="8"></circle>
+                                            <polyline
+                                                points="180.219 80.411 197.012 74.668 214.005 104.405 201.646 115.931"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <polyline
+                                                points="180.219 212.142 197.012 217.885 214.005 188.148 201.646 176.622"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="72.119" y1="168.126" x2="72.119" y2="146.036" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="89.112" y1="168.126" x2="89.112" y2="138.389" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="106.104" y1="168.126" x2="106.104" y2="131.592" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="123.096" y1="168.126" x2="123.096" y2="123.096" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="140.088" y1="168.126" x2="140.088" y2="114.6" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <div class="about-icon-word-wrapper icon_ab about-toggle-element4"><span>HARDWARE</span>
+                                </div>
+                            </div>
+                            <div class="icon_item" style="opacity: 0.9404;">
+                                <svg width="329.094" height="293" viewBox="0 0 329.094 293"
+                                    class="icon icon-health icon_ab about-toggle-element1">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M298.582,31.055h0c-34.016-34.016-89.166-34.016-123.182,0l-10.582,10.582-11.124-11.124C119.678-3.504,64.528-3.504,30.512,30.512h0C-3.504,64.528-3.504,119.678,30.512,153.694l11.124,11.124h0l123.182,123.182,133.764-133.764c34.016-34.016,34.016-89.166,0-123.182Z"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="10">
+                                            </path>
+                                            <line x1="183.401" y1="107" x2="273.401" y2="107" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                            <line x1="228.401" y1="62" x2="228.401" y2="152" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <svg width="340" height="283" viewBox="0 0 340 283"
+                                    class="icon icon-software icon_ab about-toggle-element2">
+                                    <path
+                                        d="M315.833,10c7.812,0,14.167,6.355,14.167,14.167v234.667c0,7.812-6.355,14.167-14.167,14.167H24.167c-7.812,0-14.167-6.355-14.167-14.167V24.167c0-7.812,6.355-14.167,14.167-14.167H315.833m0-10H24.167C10.82,0,0,10.82,0,24.167v234.667c0,13.347,10.82,24.167,24.167,24.167H315.833c13.347,0,24.167-10.82,24.167-24.167V24.167c0-13.347-10.82-24.167-24.167-24.167h0Z">
+                                    </path>
+                                    <line x1="8" y1="54" x2="333" y2="54" fill="none" stroke="#000"
+                                        stroke-miterlimit="10" stroke-width="10"></line>
+                                    <g>
+                                        <polyline points="121.749 139.172 85 166.5 121.749 193.828" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2"></polyline>
+                                        <polyline points="219.251 193.828 256 166.5 219.251 139.172" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2">
+                                        </polyline>
+                                    </g>
+                                    <line x1="185.24" y1="104.591" x2="155.76" y2="228.409" fill="none" stroke="#000"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="10" class="ants2">
+                                    </line>
+                                    <circle cx="260" cy="29" r="7"></circle>
+                                    <circle cx="283" cy="29" r="7"></circle>
+                                    <circle cx="306" cy="29" r="7"></circle>
+                                </svg>
+                                <svg width="219.005" height="292.846" viewBox="0 0 219.005 292.846"
+                                    class="icon icon-hardware icon_ab about-toggle-element3">
+                                    <g>
+                                        <g>
+                                            <polyline
+                                                points="191.49 94.135 163.877 27.09 147.515 5 105.679 5 105.459 5 63.623 5 47.481 27.09 19.649 94.135"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="163.877" y1="27.09" x2="47.481" y2="27.09" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <polyline
+                                                points="19.649 198.712 47.261 265.757 63.623 287.846 105.459 287.846 105.679 287.846 147.515 287.846 163.658 265.757 191.49 198.712"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="47.261" y1="265.757" x2="163.658" y2="265.757" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <circle cx="105.679" cy="146.46" r="100.679" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="8"></circle>
+                                            <polyline
+                                                points="180.219 80.411 197.012 74.668 214.005 104.405 201.646 115.931"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <polyline
+                                                points="180.219 212.142 197.012 217.885 214.005 188.148 201.646 176.622"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="72.119" y1="168.126" x2="72.119" y2="146.036" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="89.112" y1="168.126" x2="89.112" y2="138.389" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="106.104" y1="168.126" x2="106.104" y2="131.592" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="123.096" y1="168.126" x2="123.096" y2="123.096" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="140.088" y1="168.126" x2="140.088" y2="114.6" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <div class="about-icon-word-wrapper icon_ab about-toggle-element4"><span>HARDWARE</span>
+                                </div>
+                            </div>
+                            <div class="icon_item" style="opacity: 0.9404;">
+                                <svg width="329.094" height="293" viewBox="0 0 329.094 293"
+                                    class="icon icon-health icon_ab about-toggle-element1">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M298.582,31.055h0c-34.016-34.016-89.166-34.016-123.182,0l-10.582,10.582-11.124-11.124C119.678-3.504,64.528-3.504,30.512,30.512h0C-3.504,64.528-3.504,119.678,30.512,153.694l11.124,11.124h0l123.182,123.182,133.764-133.764c34.016-34.016,34.016-89.166,0-123.182Z"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="10">
+                                            </path>
+                                            <line x1="183.401" y1="107" x2="273.401" y2="107" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                            <line x1="228.401" y1="62" x2="228.401" y2="152" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <svg width="340" height="283" viewBox="0 0 340 283"
+                                    class="icon icon-software icon_ab about-toggle-element2">
+                                    <path
+                                        d="M315.833,10c7.812,0,14.167,6.355,14.167,14.167v234.667c0,7.812-6.355,14.167-14.167,14.167H24.167c-7.812,0-14.167-6.355-14.167-14.167V24.167c0-7.812,6.355-14.167,14.167-14.167H315.833m0-10H24.167C10.82,0,0,10.82,0,24.167v234.667c0,13.347,10.82,24.167,24.167,24.167H315.833c13.347,0,24.167-10.82,24.167-24.167V24.167c0-13.347-10.82-24.167-24.167-24.167h0Z">
+                                    </path>
+                                    <line x1="8" y1="54" x2="333" y2="54" fill="none" stroke="#000"
+                                        stroke-miterlimit="10" stroke-width="10"></line>
+                                    <g>
+                                        <polyline points="121.749 139.172 85 166.5 121.749 193.828" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2"></polyline>
+                                        <polyline points="219.251 193.828 256 166.5 219.251 139.172" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2">
+                                        </polyline>
+                                    </g>
+                                    <line x1="185.24" y1="104.591" x2="155.76" y2="228.409" fill="none" stroke="#000"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="10" class="ants2">
+                                    </line>
+                                    <circle cx="260" cy="29" r="7"></circle>
+                                    <circle cx="283" cy="29" r="7"></circle>
+                                    <circle cx="306" cy="29" r="7"></circle>
+                                </svg>
+                                <svg width="219.005" height="292.846" viewBox="0 0 219.005 292.846"
+                                    class="icon icon-hardware icon_ab about-toggle-element3">
+                                    <g>
+                                        <g>
+                                            <polyline
+                                                points="191.49 94.135 163.877 27.09 147.515 5 105.679 5 105.459 5 63.623 5 47.481 27.09 19.649 94.135"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="163.877" y1="27.09" x2="47.481" y2="27.09" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <polyline
+                                                points="19.649 198.712 47.261 265.757 63.623 287.846 105.459 287.846 105.679 287.846 147.515 287.846 163.658 265.757 191.49 198.712"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="47.261" y1="265.757" x2="163.658" y2="265.757" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <circle cx="105.679" cy="146.46" r="100.679" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="8"></circle>
+                                            <polyline
+                                                points="180.219 80.411 197.012 74.668 214.005 104.405 201.646 115.931"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <polyline
+                                                points="180.219 212.142 197.012 217.885 214.005 188.148 201.646 176.622"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="72.119" y1="168.126" x2="72.119" y2="146.036" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="89.112" y1="168.126" x2="89.112" y2="138.389" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="106.104" y1="168.126" x2="106.104" y2="131.592" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="123.096" y1="168.126" x2="123.096" y2="123.096" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="140.088" y1="168.126" x2="140.088" y2="114.6" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <div class="about-icon-word-wrapper icon_ab about-toggle-element4"><span>HARDWARE</span>
+                                </div>
+                            </div>
+                            <div class="icon_item" style="opacity: 0.9404;">
+                                <svg width="329.094" height="293" viewBox="0 0 329.094 293"
+                                    class="icon icon-health icon_ab about-toggle-element1">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M298.582,31.055h0c-34.016-34.016-89.166-34.016-123.182,0l-10.582,10.582-11.124-11.124C119.678-3.504,64.528-3.504,30.512,30.512h0C-3.504,64.528-3.504,119.678,30.512,153.694l11.124,11.124h0l123.182,123.182,133.764-133.764c34.016-34.016,34.016-89.166,0-123.182Z"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="10">
+                                            </path>
+                                            <line x1="183.401" y1="107" x2="273.401" y2="107" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                            <line x1="228.401" y1="62" x2="228.401" y2="152" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="10"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <svg width="340" height="283" viewBox="0 0 340 283"
+                                    class="icon icon-software icon_ab about-toggle-element2">
+                                    <path
+                                        d="M315.833,10c7.812,0,14.167,6.355,14.167,14.167v234.667c0,7.812-6.355,14.167-14.167,14.167H24.167c-7.812,0-14.167-6.355-14.167-14.167V24.167c0-7.812,6.355-14.167,14.167-14.167H315.833m0-10H24.167C10.82,0,0,10.82,0,24.167v234.667c0,13.347,10.82,24.167,24.167,24.167H315.833c13.347,0,24.167-10.82,24.167-24.167V24.167c0-13.347-10.82-24.167-24.167-24.167h0Z">
+                                    </path>
+                                    <line x1="8" y1="54" x2="333" y2="54" fill="none" stroke="#000"
+                                        stroke-miterlimit="10" stroke-width="10"></line>
+                                    <g>
+                                        <polyline points="121.749 139.172 85 166.5 121.749 193.828" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2"></polyline>
+                                        <polyline points="219.251 193.828 256 166.5 219.251 139.172" fill="none"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="10" class="ants2">
+                                        </polyline>
+                                    </g>
+                                    <line x1="185.24" y1="104.591" x2="155.76" y2="228.409" fill="none" stroke="#000"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="10" class="ants2">
+                                    </line>
+                                    <circle cx="260" cy="29" r="7"></circle>
+                                    <circle cx="283" cy="29" r="7"></circle>
+                                    <circle cx="306" cy="29" r="7"></circle>
+                                </svg>
+                                <svg width="219.005" height="292.846" viewBox="0 0 219.005 292.846"
+                                    class="icon icon-hardware icon_ab about-toggle-element3">
+                                    <g>
+                                        <g>
+                                            <polyline
+                                                points="191.49 94.135 163.877 27.09 147.515 5 105.679 5 105.459 5 63.623 5 47.481 27.09 19.649 94.135"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="163.877" y1="27.09" x2="47.481" y2="27.09" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <polyline
+                                                points="19.649 198.712 47.261 265.757 63.623 287.846 105.459 287.846 105.679 287.846 147.515 287.846 163.658 265.757 191.49 198.712"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="47.261" y1="265.757" x2="163.658" y2="265.757" fill="none"
+                                                stroke="#000" stroke-linejoin="round" stroke-width="8"></line>
+                                            <circle cx="105.679" cy="146.46" r="100.679" fill="none" stroke="#000"
+                                                stroke-linejoin="round" stroke-width="8"></circle>
+                                            <polyline
+                                                points="180.219 80.411 197.012 74.668 214.005 104.405 201.646 115.931"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <polyline
+                                                points="180.219 212.142 197.012 217.885 214.005 188.148 201.646 176.622"
+                                                fill="none" stroke="#000" stroke-linejoin="round" stroke-width="8">
+                                            </polyline>
+                                            <line x1="72.119" y1="168.126" x2="72.119" y2="146.036" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="89.112" y1="168.126" x2="89.112" y2="138.389" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="106.104" y1="168.126" x2="106.104" y2="131.592" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="123.096" y1="168.126" x2="123.096" y2="123.096" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                            <line x1="140.088" y1="168.126" x2="140.088" y2="114.6" fill="none"
+                                                stroke="#000" stroke-miterlimit="10" stroke-width="8"
+                                                class="hardware-line"></line>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <div class="about-icon-word-wrapper icon_ab about-toggle-element4"><span>HARDWARE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about_content">
+
+                    </div>
+                </section>
             </div>
             <!-- footer -->
-            <footer>
+            <!-- <footer>
                 <div class="footer_inner_box">
                     <div class="imprint_box">
                         <a href="" class="footer_imprint">Imprint</a>
@@ -490,7 +2043,7 @@
                     Website&nbsp;by
                     <a target="_blank" rel="noopener noreferrer" href="https://spatzek.studio/"
                         class="footer_spatzeklink">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                             y="0px" viewBox="0 0 225 30" style="enable_background:new 0 0 225 30;" xml:space="preserve">
                             <title>weaverloft_logo</title>
                             <style type="text/css">
@@ -573,18 +2126,13 @@
 
                     </a>
                 </div>
-            </footer>
+            </footer> -->
         </div>
 
     </div>
 
     <!-- id="entire"> -->
-
-    <script src="asset/js/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="asset/js/main.js"></script>
-
-
 </body>
 
 </html>
