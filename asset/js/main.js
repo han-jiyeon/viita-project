@@ -55,5 +55,5 @@ $(function(){
     .to('.loading', { opacity: 1, duration: 0.1})
     .to('.loading_item', { opacity: 0, stagger: { from: "random", amount: .6, duration: 0.1}})
       }
-
+      
  });
