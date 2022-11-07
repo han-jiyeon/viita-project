@@ -452,6 +452,12 @@ header .nav .nav_item.active .nav_bg {
 }
 
 /* sec_product */
+#product {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 20vh;
+}
 .product.hide {opacity: 0;}
 #product0 { color: rgb(255, 255, 255);}
 #product1 { color: rgb(215, 30, 40);}
@@ -475,8 +481,6 @@ header .nav .nav_item.active .nav_bg {
     height: 100%;
 }
 
-
-
 .products-nav-activator[data-v-7718a013] {
     position: absolute;
     top: 0;
@@ -494,11 +498,11 @@ header .nav .nav_item.active .nav_bg {
 
 .product {
     position: relative;
-    cursor: default;
-    pointer-events: none;
     width: 100%;
-    margin-bottom: calc(-100vh + 4.16667vw);
-    height: calc(200vh - 6.25vw)
+    cursor: default;
+    transform-origin: 0 0;
+    height: calc(200vh - 6.25vw);
+    margin-bottom: calc(-100vh + 4.17vw);
 }
 
 .product-stickytainer {
@@ -648,7 +652,7 @@ header .nav .nav_item.active .nav_bg {
     top: 174px;
 }
 #product8 .runningtext {
-    top: 189px;
+    top: 193px;
 }
 
 @media(max-width:1366px)and (orientation:landscape) {
@@ -1016,6 +1020,7 @@ header .nav .nav_item.active .nav_bg {
     color: var(--bg-color);
     font-size: 16px;
     width: 100%;
+    height: 100%;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -1040,46 +1045,110 @@ header .nav .nav_item.active .nav_bg {
     visibility: hidden;
     background-color: var(--main-color);
 }
-.icon_wrap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
+
+.about-icons-stickytainer {
+    position: relative;
+    width: 100%;
+    height: 400vh;
+}
+.about-icons-container,
+.about-icons-pinner {
     width: 100vw;
     height: 100vh;
-    flex-wrap: wrap;
-    opacity:0;
-    padding: 10vh 5.20833vw;
-    box-sizing: border-box;
-    align-items: center;
-}
-.icon_wrap.on {
-    opacity: 1;
-}
-.icon_item {
     display: flex;
-    width: 33.333%;
-    height: 20%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-logopictainer {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-.icon_item .icon_ab {
+.about-scaled-logo-box {
+    width: 100vw;
+    height: 100%;
     position: absolute;
-    /* transform: translate(-50%, -50%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
 }
-.icon_item .icon_ab.on {
+.about-intro-img-box {
+    width: 100vw;
+    height: 150vh;
+    position: absolute;
+}
+.about_intro_img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    opacity: 0;
+}
+.about-icons-container {
+    position: relative;
+    padding: 10vh 5.20833vw;
+    box-sizing: border-box;
+}
+.about-icons-pinner {
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.about-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 33%;
+    height: 20%;
+    opacity: 0;
+}
+.about-icon-wrapper .icon_ab {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 80% !important;
+    opacity: 0;
+}
+.about-icon-wrapper .icon_ab.on {
     opacity: 1;
 }
-.icon_item .icon {
-    /* width: 100%; */
-    height: 80% !important;
+#about .about-toggle-element4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
 }
-.icon_item .icon-health {
+.about-icon-wrapper-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 33%;
+    height: 20%;
+}
+
+.about_logo {
+    display: block;
+    position: absolute;
+    width: 18vw;
+    height: 18vw;
+    z-index: 2;
+}
+#about .icon-health {
     display: block;
     height: 70% !important;
 }
-.icon_item .icon-software {
+#about .icon-software {
     display: block;
     height: 65% !important;
 }
@@ -1103,10 +1172,29 @@ header .nav .nav_item.active .nav_bg {
 #about .icon-software path {
     fill: var(--bg-color) !important;
 }
-.about-toggle-element4 svg {width: 18vw;/* height: 18vw; */}
 
-
-
+.about_content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: -100vh;
+}
+.about_intro_text {
+    padding: 0 3.125vw;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    color: var(--bg-color);
+    text-align: center;
+    text-indent: 46.66667vw;
+    font-size: 5.2083333333vw;
+    line-height: 1em;
+    font-weight: 200;
+    mix-blend-mode: difference;
+    text-align: justify;
+    -moz-text-align-last: justify;
+    text-align-last: justify;
+}
 
 /* footer */
 footer {

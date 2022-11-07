@@ -20,7 +20,6 @@ $(function(){
     $(this).find(".pic_wrap img").stop().animate({
       top: "-100vh"
     },0);
-    console.log("됨");
     // $(this).find(".pic_wrap img").stop().animate({
     //   top: "15%"
     // },800,"easeOutExpo");
@@ -112,17 +111,13 @@ $(function(){
           content : "Vitalmonitor Original -"
         });
 
-
-
-        
-      
-
         //count
 
         $(window).scroll(function() {
         
           var countTop =  $('#counter').offset().top;
           var productTop =  $('#product').offset().top - 10;
+          var aboutTop =  $('#about').offset().top - 570;
           var winH = window.innerHeight;
           var winST = $(window).scrollTop();
           var leftC = $('.left_count li');
@@ -163,20 +158,21 @@ $(function(){
           }
           
           
-          
-          
-          if(winST >= productTop) {
+          if(winST >= productTop && winST < aboutTop) {
             $('.nav_item').removeClass('active');
             $('.nav_item:nth-child(2)').addClass('active');
             $('#counter').css({
               opacity: 0
             });
-          }else if(winST < productTop) {
+          }else if(winST < productTop+winH) {
             $('.nav_item:nth-child(1)').addClass('active');
             $('.nav_item:nth-child(2)').removeClass('active');
             $('#counter').css({
               opacity: 1
             });
+          }else if(winST > aboutTop){
+            $('.nav_item').removeClass('active');
+            $('.nav_item:nth-child(3)').addClass('active');
           }
         
         });
@@ -351,11 +347,20 @@ $(function () {
     duration: "95%"
     }).
     setTween(prod2)
+    // .addIndicators()
+    .addTo(controller);
+
+    
+  var scene2Text = new ScrollMagic.Scene({
+    triggerElement: "#product2",
+    triggerHook: 0.8, 
+    offset: -150,
+    duration: "95%"
+    })
     .setTween(prod3_text)
     // .addIndicators()
     .addTo(controller);
 
-    let sm31 = document.getElementById('runningtext-l3-1');
 
     let prod3 =  TweenMax.to('#product2 .product-mask', 0.5, {
       rotation:7, 
@@ -487,6 +492,7 @@ $(function () {
         // .addIndicators()
         .addTo(controller);
         
+        
       let prod9 =  TweenMax.to('#product8 .product-mask', 0.5, {
         rotation:7, 
         scale:'0.7',
@@ -563,57 +569,45 @@ $(function(){
   // about
 
 
-  // $(window).scroll(function() {
-        
-  //   var iconWrapTop =  $('.icon_wrap').offset().top - 60;
-  //   var winST = $(window).scrollTop();
-  //   console.log(iconWrapTop, winST+"!");
-  //   if(winST>=iconWrapTop) {
-  //     $('.icon_wrap').addClass('on');
-  //   }else {
-  //     $('.icon_wrap').remove('on');
-  //   }
-  // });
-
-  
   const controller = new ScrollMagic.Controller();
 
   gsap.registerPlugin(ScrollTrigger);
     
-  let iconWrap =  TweenMax.to('.icon_wrap', 0.5, {
+  let iconWrap =  TweenMax.to('.about-icon-wrapper', 0.5, {
     opacity:1, 
   });
   /* ScrollMagic Scene */
   var iconWrapShow = new ScrollMagic.Scene({
-    triggerElement: ".about_content",
+    triggerElement: ".about-icons-stickytainer",
   
-    triggerHook: 0.3, 
-    offset: -100,
-    duration: "50%"
+    triggerHook: 0.6, 
+    offset: 0,
+    duration: "100%"
     }).
     setTween(iconWrap)
     // .addIndicators()
     .addTo(controller);
 
 
+    
 
 
     setInterval(function(){
       setTimeout(function(){
-        $('.icon_ab:nth-child(4)').removeClass('on');
-      $('.icon_ab:nth-child(1)').addClass('on');
+        $('#about .icon_ab:nth-child(4)').removeClass('on');
+      $('#about .icon_ab:nth-child(1)').addClass('on');
     },200);
     setTimeout(function(){
-      $('.icon_ab:nth-child(1)').removeClass('on');
-      $('.icon_ab:nth-child(2)').addClass('on');
+      $('#about .icon_ab:nth-child(1)').removeClass('on');
+      $('#about .icon_ab:nth-child(2)').addClass('on');
   },400);
   setTimeout(function(){
-    $('.icon_ab:nth-child(2)').removeClass('on');
-    $('.icon_ab:nth-child(3)').addClass('on');
+    $('#about .icon_ab:nth-child(2)').removeClass('on');
+    $('#about .icon_ab:nth-child(3)').addClass('on');
   },600);
   setTimeout(function(){
-    $('.icon_ab:nth-child(3)').removeClass('on');
-    $('.icon_ab:nth-child(4)').addClass('on');
+    $('#about .icon_ab:nth-child(3)').removeClass('on');
+    $('#about .icon_ab:nth-child(4)').addClass('on');
   },800);
     },1800);
 
