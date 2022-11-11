@@ -37,13 +37,12 @@
     <link rel="stylesheet" href="asset/fonts/pretendard.css">
     <link rel="stylesheet" href="asset/css/reset.css">
     <link rel="stylesheet" href="asset/css/style.css">
-</head>
 <script src="asset/js/jquery-3.6.0.min.js"></script>
 <script src="asset/js/jquery.easing.1.3.js"></script>
 <script src="asset/js/SuperMarquee.min.js"></script>
 <!-- ScrollMagic -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.js"></script>
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.js"></script> -->
 <!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
@@ -140,6 +139,7 @@
             <!--  -->
             <div class="sec_container">
                 <section id="intro" class="sec sec_intro">
+                    <h2 class="hidden">intro</h2>
                     <div>
                         <div class="intro-headline">
                             <h1>The health, <br>soft- &amp; <br>hardware <br>company.</h1>
@@ -479,6 +479,7 @@
                     </div>
                 </section>
                 <section id="counter" class="sec sec_count">
+                    <h2 class="hidden">counter</h2>
                     <ul class="left_count">
                         <li>FINISHED</li>
                         <li>FINISHED</li>
@@ -506,6 +507,7 @@
                     </ul>
                 </section>
                 <section id="product" class="sec sec_product">
+                    <h2 class="hidden">product</h2>
                     <div class="products-container">
                         <div id="product0" class="product product-size">
                             <div class="product-stickytainer">
@@ -1017,6 +1019,7 @@
                     </div>
                 </section>
                 <section id="about" class="sec sec_about">
+                    <h2 class="hidden">about</h2>
                     <div class="raster_wrap">
                         <div class="raster_inner" style="background-color: rgba(0, 0, 0, 0);">
                             <div class="raster_item raster_item1" style="visibility: hidden; display: flex;"></div>
@@ -1227,15 +1230,18 @@
                                         <img
                                             width="2560" height="1710"
                                             src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/2650x1770/940f85fea8/viita_about.jpg"
-                                            srcset="https://img2.storyblok.com/500x1000/filters:quality(85):format(webp)/f/160527/2650x1770/940f85fea8/viita_about.jpg 551w, https://img2.storyblok.com/1366x0/filters:quality(85):format(webp)/f/160527/2650x1770/940f85fea8/viita_about.jpg 1367w, https://img2.storyblok.com/1600x0/filters:quality(85):format(webp)/f/160527/2650x1770/940f85fea8/viita_about.jpg 1601w, https://img2.storyblok.com/1920x0/filters:quality(85):format(webp)/f/160527/2650x1770/940f85fea8/viita_about.jpg 1921w, https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/2650x1770/940f85fea8/viita_about.jpg 2561w, "
-                                            alt="background" imgparams="[object Object]" class="about_intro_img"
+                                            
+                                            alt="background" class="about_intro_img"
                                             ></div>
                                     <div class="about-scaled-logo-box">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 888.81 1106.5" class="about_logo">
-                                            <rect width="888.81" height="1106.5" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 971.64 362.72">
                                             <g>
-                                                <polygon class="cls-1" fill="#b8b8b8" points="428.67 523.68 409.04 582.55 373.92 477.76 342.36 477.76 392.89 629.05 425.26 629.05 460.49 523.64 428.67 523.68" />
-                                                <polygon class="cls-1" fill="#b8b8b8" points="514.22 477.53 479.16 582.28 464.58 537.73 464.49 537.37 448.26 585.61 463.38 629.05 495.69 629.05 546.45 477.53 514.22 477.53" />
+                                                <rect class="cls-1" x="575.29" y="27.86" width="369.52" height="307" fill: #b8b8b8; />
+                                                <path d="M548.45,0V362.72h423.19V0h-423.19Zm160.08,257.12l-50.53-151.29h31.56l35.12,104.79,19.63-58.87,31.82-.04-35.23,105.41h-32.37Zm102.8,0h-32.31l-15.12-43.44,16.23-48.24,.09,.36,14.58,44.55,35.06-104.75h32.23l-50.76,151.52Z" />
+                                            </g>
+                                            <g>
+                                                <polygon class="cls-1" points="86.31 151.79 66.68 210.66 31.56 105.87 0 105.87 50.53 257.16 82.9 257.16 118.13 151.75 86.31 151.79" />
+                                                <polygon class="cls-1" points="171.86 105.64 136.8 210.39 122.22 165.84 122.13 165.48 105.9 213.72 121.02 257.16 153.33 257.16 204.09 105.64 171.86 105.64" />
                                             </g>
                                         </svg>
                                     </div>
@@ -1266,7 +1272,7 @@
                                                 ></path>
                                             <line x1="8" y1="54" x2="333" y2="54" fill="none" stroke="#000" stroke-miterlimit="10"
                                                 stroke-width="10" ></line>
-                                            <g >
+                                            <g>
                                                 <polyline points="121.749 139.172 85 166.5 121.749 193.828" fill="none" stroke="#000"
                                                     stroke-linecap="round" stroke-linejoin="round" stroke-width="10" class="ants2"
                                                     ></polyline>
@@ -2023,7 +2029,7 @@
                         </div>
                     </div>
                     <div class="about_content">
-                        <span class="about_intro_text"><h1>VIITA WATCHES <br>is an Austrian high-end smartwatch manufacturer for luxury &amp; premium brands like</h1></span>
+                        <div class="about_intro_text"><h1>VIITA WATCHES <br>is an Austrian high-end smartwatch manufacturer for luxury &amp; premium brands like</h1></div>
                     </div>
                 </section>
             </div>

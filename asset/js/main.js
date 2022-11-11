@@ -122,7 +122,7 @@ $(function(){
           var winST = $(window).scrollTop();
           var leftC = $('.left_count li');
           var rightC = $('.right_count li');
-          // console.log(countTop,winH,countTop- winH, winST);
+          console.log(winST);
           var oTop = countTop - winH + 300;
           if (winST >= oTop) {
 
@@ -289,18 +289,7 @@ $(function () {
   const controller = new ScrollMagic.Controller();
 
   gsap.registerPlugin(ScrollTrigger);
-    
-  gsap.to("#product0 .product-bg-pic", {
-    y: 0,
-    scrollTrigger: {
-      trigger: "#counter",
-      start: "center center",
-      end: "top 100px",
-      ease: Power3.easeOut,
-      scrub: true,
-      markers: true,
-    }
-  });
+
 
 	if ($("#product").length > 0) {
     
@@ -347,7 +336,6 @@ $(function () {
     duration: "95%"
     }).
     setTween(prod2)
-    // .addIndicators()
     .addTo(controller);
 
     
@@ -358,7 +346,6 @@ $(function () {
     duration: "95%"
     })
     .setTween(prod3_text)
-    // .addIndicators()
     .addTo(controller);
 
 
@@ -401,7 +388,6 @@ $(function () {
         duration: "130%"
         }).
         setTween(prod4)
-        // .addIndicators()
         .addTo(controller);
 
         
@@ -423,7 +409,6 @@ $(function () {
         duration: "130%"
         }).
         setTween(prod5)
-        // .addIndicators()
         .addTo(controller);
 
         
@@ -445,7 +430,6 @@ $(function () {
         duration: "130%"
         }).
         setTween(prod6)
-        // .addIndicators()
         .addTo(controller);
 
         
@@ -467,7 +451,6 @@ $(function () {
         duration: "130%"
         }).
         setTween(prod7)
-        // .addIndicators()
         .addTo(controller);
         
         
@@ -489,7 +472,6 @@ $(function () {
         duration: "130%"
         }).
         setTween(prod8)
-        // .addIndicators()
         .addTo(controller);
         
         
@@ -511,7 +493,6 @@ $(function () {
         duration: "130%"
         }).
         setTween(prod9)
-        // .addIndicators()
         .addTo(controller);
         
         
@@ -535,7 +516,6 @@ $(function () {
         duration: "130%"
         }).
         setTween(prod10)
-        // .addIndicators()
         .addTo(controller);
 
       }
@@ -558,7 +538,6 @@ $(function () {
 		duration: "60%",
     
 	}).setTween(tween1)
-  // .addIndicators()
   .addTo(controller);
 
 });
@@ -570,8 +549,6 @@ $(function(){
 
 
   const controller = new ScrollMagic.Controller();
-
-  gsap.registerPlugin(ScrollTrigger);
     
   let iconWrap =  TweenMax.to('.about-icon-wrapper', 0.5, {
     opacity:1, 
@@ -582,14 +559,11 @@ $(function(){
   
     triggerHook: 0.6, 
     offset: 0,
-    duration: "100%"
+    duration: "50%"
     }).
     setTween(iconWrap)
-    // .addIndicators()
     .addTo(controller);
 
-
-    
 
 
     setInterval(function(){
@@ -612,6 +586,35 @@ $(function(){
     },1800);
 
 });
+
+$(window).on("scroll",function(){
+  var winST = $(window).scrollTop();
+  var iconsST = $(".about-icons-stickytainer").offset().top;
+  var width1 = ((winST - iconsST)/6)*18;
+  // console.log("아이콘 영역 스크롤 탑" + iconsST + "width1 값=" +width1);
+  // console.log("윈도우 스크롤 탑" + winST + "아이콘 영역 스크롤 탑" + iconsST + " / " + (winST - iconsST)+"차이" + ((winST - iconsST)/6) + "배" );
+  if(winST > iconsST){
+    console.log("윈도우 스크롤 탑" + winST + "아이콘 영역 스크롤 탑" + iconsST + " / " + (winST - iconsST)+"차이" + ((winST - iconsST)/6) + "배" );
+    $('.about-scaled-logo-box').css({
+      opacity:1
+    });
+    $('.about_logo').css({
+      "width": width1+"vw",
+      "height": width1+"vw"
+      // transform: scale(width1)
+    });
+  }else if(winST <= iconsST) {
+    $('.about-scaled-logo-box').css({
+      opacity:0
+    });
+    $('.about_logo').css({
+      "width": "18vw",
+      "height": "18vw"
+      // transform: scale(width1)
+    });
+  }
+
+  });
 
     //     let box = $('.initloading-box');
     //     let item = $('<div class="loading_item"> </div>');

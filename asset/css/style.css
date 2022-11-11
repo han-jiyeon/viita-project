@@ -81,6 +81,7 @@ ul {
 ::-webkit-scrollbar-thumb {
     background: #000;
 }
+.hidden { display: none; }
 /* main */
 header {
     color: var(--bg-color);
