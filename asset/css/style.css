@@ -638,7 +638,7 @@ header .nav .nav_item.active .nav_bg {
     height: 0.75em;
 }
 
-.js-runningtext {
+.js-runningText {
     text-transform: uppercase;
     margin-right: 1.5vw;
     color: #fff;
@@ -646,13 +646,13 @@ header .nav .nav_item.active .nav_bg {
     white-space: nowrap;
     position: relative;
 }
-.runningtext_wrap {
+.runningText_wrap {
     overflow: hidden;
 }
-#product2 .runningtext {
+#product3 .runningText {
     top: 174px;
 }
-#product8 .runningtext {
+#product9 .runningText {
     top: 193px;
 }
 
@@ -690,10 +690,10 @@ header .nav .nav_item.active .nav_bg {
     height: .75em
 }
 
-.product-triple-rt .runningtext {
+.product-triple-rt .runningText {
     margin-right: .26em
 }
-.runningtext-bufferdiv {
+.runningText-bufferdiv {
     text-transform: uppercase;
     /* margin-right: 1.5vw; */
     display: inline-block;
@@ -701,13 +701,13 @@ header .nav .nav_item.active .nav_bg {
     position: relative;
     overflow: hidden;
 }
-#runningtext-l1 {
+#runningText-l1 {
     color: #fff;
 }
-#runningtext-l2 {
+#runningText-l2 {
     color: rgb(215, 30, 40);
 }
-#runningtext-l5 {
+#runningText-l5 {
     color: rgb(255, 246, 0);
 }
 @media(max-width:1366px)and (orientation:landscape) {
@@ -1069,6 +1069,7 @@ header .nav .nav_item.active .nav_bg {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 .about-scaled-logo-box {
     width: 100vw;

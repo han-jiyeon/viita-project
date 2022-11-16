@@ -1,3 +1,15 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "cSpell.ignoreWords": [
+        "Carbone",
+        "Ceramique",
+        "Swarovski",
+        "Viita",
+        "Vitalmonitor",
+        "gsap",
+        "stickytainer",
+        "supermarquee",
+        "supermarquee1",
+        "weaverloft"
+    ]
 }
