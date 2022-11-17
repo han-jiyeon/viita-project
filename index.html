@@ -48,6 +48,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
+    <!-- JQUERY SVG -->
+    <script src="asset/js/jquery.svg.js"></script>
+    <script src="asset/js/jquery.svganim.js"></script>
 </head>
 
 <body>
@@ -1228,7 +1232,7 @@
                                             width="2560" height="1710"
                                             src="https://img2.storyblok.com/2560x0/filters:quality(85):format(webp)/f/160527/2650x1770/940f85fea8/viita_about.jpg"
                                             
-                                            alt="background" class="about_intro_img"
+                                            alt="background" class="about_intro_img bright"
                                             ></div>
                                     <div class="about-scaled-logo-box">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 423.19 362.72" class="logo_scaled">
@@ -1239,7 +1243,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <div class="about-icons-container">
+                                <dv class="about-icons-container">
                                     <div class="about-icon-wrapper" >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg" width="329.094" height="293" viewBox="0 0 329.094 293"
@@ -1668,11 +1672,10 @@
                                             </g>
                                         </svg>
                                         <div class="about-icon-word-wrapper icon_ab about-toggle-element4" >
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 888.81 1106.5" class="about_logo">
-                                                <rect width="888.81" height="1106.5" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 423.19 362.72" class="about_logo">
                                                 <g>
-                                                    <polygon class="cls-1" fill="#b8b8b8" points="428.67 523.68 409.04 582.55 373.92 477.76 342.36 477.76 392.89 629.05 425.26 629.05 460.49 523.64 428.67 523.68" />
-                                                    <polygon class="cls-1" fill="#b8b8b8" points="514.22 477.53 479.16 582.28 464.58 537.73 464.49 537.37 448.26 585.61 463.38 629.05 495.69 629.05 546.45 477.53 514.22 477.53" />
+                                                    <rect id="about-logo_grey" fill="#b8b8b8" x="26.84" y="27.86" width="369.52" height="307" />
+                                                    <path id="about-logo_path" fill="#040000" d="M0,0V362.72H423.19V0H0ZM160.08,257.12L109.55,105.83h31.56l35.12,104.79,19.63-58.87,31.82-.04-35.23,105.41h-32.37Zm102.8,0h-32.31l-15.12-43.44,16.23-48.24,.09,.36,14.58,44.55,35.06-104.75h32.23l-50.76,151.52Z" />
                                                 </g>
                                             </svg>
                                         </div>
@@ -2017,12 +2020,78 @@
                                         <div class="about-icon-word-wrapper icon_ab about-toggle-element4" >
                                             <span>HARDWARE</span></div>
                                     </div>
-                                </div>
+                                </dv>
                             </div>
                         </div>
                     </div>
                     <div class="about_content">
                         <div class="about_intro_text"><h1>VIITA WATCHES <br>is an Austrian high-end smartwatch manufacturer for luxury &amp; premium brands like</h1></div>
+                        <div class="about-bugatti-stickytainer">
+                            <!-- <div class="about-bugatti-trigger">
+                                <div class="about-bugatti-trigger-box1" style="height: 1998.5px;"></div>
+                                <div class="about-bugatti-trigger-box2" style="height: 1470px;"></div>
+                                <div class="about-bugatti-trigger-box3" style="height: 1225px;"></div>
+                            </div> -->
+                            <div class="pin-spacer">
+                                <div class="about-bugatti-pinner">
+                                    <div class="about-bugatti-slider" >
+                                        <div class="about-bugatti-textbox">
+                                            <span class="about-bugatti-text about-bugatti-text1 words chars splitting">
+                                                <span class="word" data-word="Bugatti">
+                                                    <span class="char splitTextMask" data-char="B">
+                                                        <span class="splitTextElement" style="transform: translate(0px, 0px);">B</span>
+                                                    </span>
+                                                    <span class="char splitTextMask" data-char="u">
+                                                        <span class="splitTextElement" style="transform: translate(0px, 0px);">u</span>
+                                                    </span>
+                                                    <span class="char splitTextMask" data-char="g">
+                                                        <span class="splitTextElement" style="transform: translate(0px, 0px);">g</span>
+                                                    </span>
+                                                    <span class="char splitTextMask" data-char="a">
+                                                        <span class="splitTextElement" style="transform: translate(0px, 0px);">a</span>
+                                                    </span>
+                                                    <span class="char splitTextMask" data-char="t">
+                                                        <span class="splitTextElement" style="transform: translate(0px, 0px);">t</span>
+                                                    </span>
+                                                    <span class="char splitTextMask" data-char="t">
+                                                        <span class="splitTextElement" style="transform: translate(0px, 0px);">t</span>
+                                                    </span>
+                                                    <span class="char splitTextMask" data-char="i">
+                                                        <span class="splitTextElement" style="transform: translate(0px, 0px);">i</span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="about-bugatti-text about-bugatti-text2 words chars splitting">
+                                                <span class="word" data-word="Bugatti">
+                                                    <span class="char splitTextMask" data-char="B">
+                                                        <span class="splitTextElement" style="transform: translate(0px, 0px);">B</span>
+                                                    </span>
+                                                    <span class="char splitTextMask" data-char="u">
+                                                        <span class="splitTextElement" style="transform: translate(0px, 0px);">u</span>
+                                                    </span>
+                                                    <span class="char splitTextMask" data-char="g">
+                                                        <span class="splitTextElement" style="transform: translate(0px, 0px);">g</span>
+                                                    </span>
+                                                    <span class="char splitTextMask" data-char="a">
+                                                        <span class="splitTextElement" style="transform: translate(0px, 0px);">a</span>
+                                                    </span>
+                                                    <span class="char splitTextMask" data-char="t">
+                                                        <span class="splitTextElement" style="transform: translate(0px, 0px);">t</span>
+                                                    </span>
+                                                    <span class="char splitTextMask" data-char="t">
+                                                        <span class="splitTextElement" style="transform: translate(0px, 0px);">t</span>
+                                                    </span>
+                                                    <span
+                                                        class="char splitTextMask" data-char="i">
+                                                        <span class="splitTextElement" style="transform: translate(0px, 0px);">i</span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>

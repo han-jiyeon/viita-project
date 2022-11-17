@@ -493,7 +493,7 @@ $(function () {
       duration: "95%"
     })
     .setTween(pd9TextUp)
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller);
 
     let scene3TextOP = new ScrollMagic.Scene({
@@ -503,7 +503,7 @@ $(function () {
       duration: "5%"
     })
     .setTween(pd9TextUpOp)
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller);
 
     // 제품9
@@ -626,18 +626,13 @@ $(function () {
     },800);
   },1800);
 
+
   // SVG 로고 사이즈 변화
   $(window).on("scroll",function(){
-
-    let winST = $(window).scrollTop();
-    let iconsST = $(".about-icons-stickytainer").offset().top;
-    let width1 = (winST - iconsST)*18;
-    // console.log("아이콘 영역 스크롤 탑" + iconsST + "width1 값=" +width1);
-
+    var winST = $(window).scrollTop();
+    var iconsST = $(".about-icons-stickytainer").offset().top;
+    var width1 = ((winST - iconsST)/8)*18;
     if(winST > iconsST){
-
-      console.log("윈도우 스크롤 탑" + winST + "아이콘 영역 스크롤 탑" + iconsST + " / " + (winST - iconsST)+"차이" );
-
       $('.about-scaled-logo-box').css({
         opacity:1
       });
@@ -650,39 +645,119 @@ $(function () {
         opacity:0
       });
       $('.logo_scaled').css({
-        "width": "18vw",
-        "height": "18vw"
+        "width": "10vw",
+        "height": "10vw"
       });
     }
-    let logoW = $(".logo_scaled").width();
-    console.log("logoW    " + logoW);
-    // if( logoW >= 40000 ){
-    //   console.log("40000 넘음!!");
-    //   // 아이콘 투명도2
-    //   let logoScaled =  TweenMax.to('.about-logo_grey', 0.5, {
-    //     fill: "transparent",
-    //   });
-    //   // 아이콘 투명도 씬
-    //   let logoScaledScene = new ScrollMagic.Scene({
-    //     triggerElement: ".about-icons-stickytainer",
-    //     triggerHook: 1, 
-    //     offset: -1000,
-    //     duration: "50%"
-    //   })
-    //   .setTween(logoScaled)
-    //   .addTo(controller);
-    // }
+    if( width1 >= 700) {
+      $("#about-logo_grey").css({
+        fill : 'transparent'
+      });
+      $("#about-logo_path").css({
+        fill : '#b8b8b8'
+      });
+      $(".about_intro_img").css({
+        opacity : 1
+      });
+    }else {
+      $("#about-logo_grey").css({
+        fill : '#b8b8b8'
+      });
+      $("#about-logo_path").css({
+        fill : '#040000'
+      });
+      $(".about_intro_img").css({
+        opacity : 0
+      });
+    }
   });
 
+  // 배경 이미지 업
+  let bgImgUp = TweenMax.to('.about_intro_img', 0.5, {
+    scale: 1,
+    top: "-25vh",
+  });
+  // 배경 이미지 업 씬
+  let bgImgUpScene = new ScrollMagic.Scene({
+    triggerElement: ".about_content",
+    triggerHook: 1, 
+    offset: -1300,
+    duration: "100%"
+  })
+  .setTween(bgImgUp)
+    // .addIndicators()
+  .addTo(controller);
+
+  
+  // 배경 이미지 하이드
+  let bgImgHide = TweenMax.to('.about_intro_img', 0.5, {
+    opacity: 0,
+  });
+  // 배경 이미지 하이드 씬
+  let bgImgHideScene = new ScrollMagic.Scene({
+    triggerElement: ".about-bugatti-stickytainer",
+    triggerHook: 0.6, 
+    offset: 300,
+    duration: "50%"
+  })
+  .setTween(bgImgHide)
+    .addIndicators()
+  .addTo(controller);
+
+
+
+  // 
+  // Local variable.
+  let _maxWidth
+
+  // Variable assignment.
+  _maxWidth = 0
+
+  // Register gsap plugins.
+  gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollToPlugin)
+
+  // Const assignment.
+  const _scrollContainer = '.pin-spacer'
+  const _scrollContainerPage = gsap.utils.toArray('.about-bugatti-slider')
+
+  // Get maximum width to scroll
+  const getMaxWidth = () => { _maxWidth = 0 ;_scrollContainerPage.forEach(section => _maxWidth += section.offsetWidth) }
+
+  /*
+   * Calculate maxWidth and update maxWidth
+   * variable for further calculation.
+   */
+  getMaxWidth()
+
+  // Event listener.
+  ScrollTrigger.addEventListener('refreshInit', getMaxWidth)
+
+  // Animate to given section.
+  gsap.to(_scrollContainerPage, {
+    'xPercent': -100 * (_scrollContainerPage.length - 1),
+    'ease': 'power3.inOut',
+    'scrollTrigger': {
+      'trigger': _scrollContainer,
+      'pin': true,
+      'scrub': 1,
+      'start': 'top top',
+      'end': () => `+=${_maxWidth}`,
+      'invalidateOnRefresh': true,
+      'anticipatePin': 1
+    }
+  })
+
+
+
 });
-
-
 
 
 
     //     let box = $('.initloading-box');
     //     let item = $('<div class="loading_item"> </div>');
       
+    
 
 
     //     $('.loading_item').html('<span>VIITA</spam>');
