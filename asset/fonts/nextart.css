@@ -1,0 +1,43 @@
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name NEXTART.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+
+@font-face {
+	font-family: 'NEXTART';
+	font-weight: 800;
+	font-display: swap;
+	src: url('NEXTART-Heavy.woff2') format('woff2'), url('NEXTART-Heavy.woff') format('woff') url('NEXTART-Heavy.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'NEXTART';
+	font-weight: 700;
+	font-display: swap;
+	src: url('NEXTART-Bold.woff2') format('woff2'), url('NEXTART-Bold.woff') format('woff'), url('NEXTART-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'NEXTART';
+	font-weight: 600;
+	font-display: swap;
+	src: url('NEXTART-SemiBold.woff2') format('woff2'), url('NEXTART-SemiBold.woff') format('woff') url('NEXTART-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'NEXTART';
+	font-weight: 400;
+	font-display: swap;
+	src: url('NEXTART-Regular.woff2') format('woff2'), url('NEXTART-Regular.woff') format('woff') url('NEXTART-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'NEXTART';
+	font-weight: 300;
+	font-display: swap;
+	src: url('NEXTART-Light.woff2') format('woff2'), url('NEXTART-Light.woff') format('woff') url('NEXTART-Light.ttf') format('truetype');
+}

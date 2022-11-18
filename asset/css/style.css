@@ -1255,16 +1255,22 @@ header .nav .nav_item.active .nav_bg {
     padding-bottom: 50vh;
     position: relative;
     width: 100%;
-    overflow: hidden
+    overflow: hidden;
 }
 
+.pin-spacer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
 
 .about-bugatti-pinner {
     display: block;
     position: absolute;
     top: 0;
     width: 100vw;
-    height: 100vh
+    height: 100vh;
+    transition: all 200ms;
 }
 .about-bugatti-slider {
     position: relative;
@@ -1275,9 +1281,9 @@ header .nav .nav_item.active .nav_bg {
     width: fit-content
 }
 .about-bugatti-textbox {
+    position: relative;
     display: flex;
     flex-direction: column;
-    position: relative;
     overflow: hidden;
     margin-right: -30vw
 }
@@ -1291,11 +1297,119 @@ header .nav .nav_item.active .nav_bg {
     font-size: 100vh;
     line-height: 1.2em;
     white-space: nowrap;
-    margin-left: -.067em;
+    margin-left: -.14em;
     padding-left: 3.125vw;
-    letter-spacing: -9rem;
 }
-
+.about-bugatti-text2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* color: orange; */
+}
+.about-bugatti-text .word {
+    display: flex;
+}
+.about-bugatti-text .splitTextMask {
+    display: inline-flex;
+    position: relative;
+    width: auto;
+    overflow: hidden;
+}
+.about-bugatti-text2 .splitTextElement {
+    display: inline-block;
+    transform: translateY(100%);
+}
+/* 부가티 텍스트 애니메이션 */
+/* 1 */
+.about-bugatti-textbox.on .about-bugatti-text1 .splitTextMask:nth-of-type(1) span {
+    animation: text1Up 0.5s forwards;
+    -webkit-animation: text1Up 0.5s forwards;
+ }
+ .about-bugatti-textbox.on .about-bugatti-text1 .splitTextMask:nth-of-type(2) span {
+    animation: text1Up 0.5s 0.1s forwards;
+    -webkit-animation: text1Up 0.5s 0.1s forwards;
+ }
+ .about-bugatti-textbox.on .about-bugatti-text1 .splitTextMask:nth-of-type(3) span {
+    animation: text1Up 0.5s 0.2s forwards;
+    -webkit-animation: text1Up 0.5s 0.2s forwards;
+ }
+ .about-bugatti-textbox.on .about-bugatti-text1 .splitTextMask:nth-of-type(4) span {
+    animation: text1Up 0.5s 0.3s forwards;
+    -webkit-animation: text1Up 0.5s 0.3s forwards;
+ }
+ .about-bugatti-textbox.on .about-bugatti-text1 .splitTextMask:nth-of-type(5) span {
+    animation: text1Up 0.5s 0.4s forwards;
+    -webkit-animation: text1Up 0.5s 0.4s forwards;
+ }
+ .about-bugatti-textbox.on .about-bugatti-text1 .splitTextMask:nth-of-type(6) span {
+    animation: text1Up 0.5s 0.5s forwards;
+    -webkit-animation: text1Up 0.5s 0.5s forwards;
+ }
+ .about-bugatti-textbox.on .about-bugatti-text1 .splitTextMask:nth-of-type(7) span {
+    animation: text1Up 0.5s 0.6s forwards;
+    -webkit-animation: text1Up 0.5s 0.6s forwards;
+ }
+ /* 2 */
+ .about-bugatti-textbox.on .about-bugatti-text2 .splitTextMask:nth-of-type(1) span {
+    animation: text2Up 0.5s forwards;
+    -webkit-animation: text2Up 0.5s forwards;
+ }
+ .about-bugatti-textbox.on .about-bugatti-text2 .splitTextMask:nth-of-type(2) span {
+    animation: text2Up 0.5s 0.1s forwards;
+    -webkit-animation: text2Up 0.5s 0.1s forwards;
+ }
+ .about-bugatti-textbox.on .about-bugatti-text2 .splitTextMask:nth-of-type(3) span {
+    animation: text2Up 0.5s 0.2s forwards;
+    -webkit-animation: text2Up 0.5s 0.2s forwards;
+ }
+ .about-bugatti-textbox.on .about-bugatti-text2 .splitTextMask:nth-of-type(4) span {
+    animation: text2Up 0.5s 0.3s forwards;
+    -webkit-animation: text2Up 0.5s 0.3s forwards;
+ }
+ .about-bugatti-textbox.on .about-bugatti-text2 .splitTextMask:nth-of-type(5) span {
+    animation: text2Up 0.5s 0.4s forwards;
+    -webkit-animation: text2Up 0.5s 0.4s forwards;
+ }
+ .about-bugatti-textbox.on .about-bugatti-text2 .splitTextMask:nth-of-type(6) span {
+    animation: text2Up 0.5s 0.5s forwards;
+    -webkit-animation: text2Up 0.5s 0.5s forwards;
+ }
+ .about-bugatti-textbox.on .about-bugatti-text2 .splitTextMask:nth-of-type(7) span {
+    animation: text2Up 0.5s 0.6s forwards;
+    -webkit-animation: text2Up 0.5s 0.6s forwards;
+ }
+ @keyframes text1Up {
+    0% {
+       transform: translateY(0%);
+       -webkit-transform: translateY(0%);
+       -moz-transform: translateY(0%);
+       -ms-transform: translateY(0%);
+       -o-transform: translateY(0%);
+    }
+    100% {
+       transform: translateY(-120%);
+       -webkit-transform: translateY(-120%);
+       -moz-transform: translateY(-120%);
+       -ms-transform: translateY(-120%);
+       -o-transform: translateY(-120%);
+    }
+ }
+ @keyframes text2Up {
+    0% {
+       transform: translateY(100%);
+       -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+       -ms-transform: translateY(100%);
+       -o-transform: translateY(100%);
+    }
+    100% {
+       transform: translateY(0%);
+       -webkit-transform: translateY(0%);
+       -moz-transform: translateY(0%);
+       -ms-transform: translateY(0%);
+       -o-transform: translateY(0%);
+    }
+ }
 
 
 /* footer */

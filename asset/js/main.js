@@ -320,23 +320,36 @@ $(function () {
     // .addIndicators()
     .addTo(controller);
 
-    // 제품3 텍스트
-    let pd3TextUp = tl.to('#product3 .product-rt .runningText', 0.4, {
-      top:'0',
-    }).to('#product3 .runningText_fade', 0.03, {
-      opacity:'0.2',
-    });
 
-    // 제품3 텍스트 씬
-    let scene2Text = new ScrollMagic.Scene({
-      triggerElement: "#product3",
-      triggerHook: 0.8, 
-      offset: -150,
-      duration: "95%"
-    })
-    .setTween(pd3TextUp)
-    // .addIndicators()
-    .addTo(controller);
+    // 제품3 텍스트 업
+    let pd3TextUp =  TweenMax.to('#product3 .product-rt .runningText', 0.5, {
+      top:'0',
+  });
+  // 제품3 텍스트 투명도
+  let pd3TextUpOp = gsap.to('#product3 .product-rt .runningText_fade', 0.4, {
+    opacity:'0.2',
+  });
+  
+  // 제품3 텍스트 씬
+  let scene3Text = new ScrollMagic.Scene({
+    triggerElement: "#product4",
+    triggerHook: 1, 
+    offset: -700,
+    duration: "98%"
+  })
+  .setTween(pd3TextUp)
+  .addIndicators()
+  .addTo(controller);
+
+  let scene3TextOP = new ScrollMagic.Scene({
+    triggerElement: "#product4",
+    triggerHook: 1, 
+    offset: 0,
+    duration: "2%"
+  })
+  .setTween(pd3TextUpOp)
+  .addIndicators()
+  .addTo(controller);
 
     // 제품3
     let pd3 =  TweenMax.to('#product3 .product-mask', 0.5, {
@@ -486,7 +499,7 @@ $(function () {
     });
     
     // 제품9 텍스트 씬
-    let scene3Text = new ScrollMagic.Scene({
+    let scene9Text = new ScrollMagic.Scene({
       triggerElement: "#product10",
       triggerHook: 1, 
       offset: -750,
@@ -496,7 +509,7 @@ $(function () {
     // .addIndicators()
     .addTo(controller);
 
-    let scene3TextOP = new ScrollMagic.Scene({
+    let scene9TextOP = new ScrollMagic.Scene({
       triggerElement: "#product10",
       triggerHook: 1, 
       offset: 0,
@@ -698,59 +711,45 @@ $(function () {
     triggerElement: ".about-bugatti-stickytainer",
     triggerHook: 0.6, 
     offset: 300,
-    duration: "50%"
+    duration: "130%"
   })
   .setTween(bgImgHide)
+    // .addIndicators()
+  .addTo(controller);
+
+
+  // 부가티 고정
+  let pinnerFixed = TweenMax.to('.about-bugatti-pinner', 1, {
+    position: "fixed",
+    left: 0,
+    ease:Power2.easeIn,
+  });
+  // 부가티 고정 씬
+  let pinnerFixedScene = new ScrollMagic.Scene({
+    triggerElement: ".about-bugatti-pinner",
+    triggerHook: 0.1, 
+    offset: 50,
+    duration: "100%"
+  })
+  .setTween(pinnerFixed)
     .addIndicators()
   .addTo(controller);
 
 
+// 부가티 텍스트 애니메이션
+	$(window).on("scroll", function () {
 
-  // 
-  // Local variable.
-  let _maxWidth
+    let bugattiTop = $(".pin-spacer").offset().top;
+    let pos = $(window).scrollTop();
 
-  // Variable assignment.
-  _maxWidth = 0
+		if (pos >= bugattiTop) {
+			$(".about-bugatti-textbox").addClass("on");
+      } else {
+        $(".about-bugatti-textbox").removeClass("on");
+      }
+    });
 
-  // Register gsap plugins.
-  gsap.registerPlugin(ScrollTrigger)
-gsap.registerPlugin(ScrollToPlugin)
-
-  // Const assignment.
-  const _scrollContainer = '.pin-spacer'
-  const _scrollContainerPage = gsap.utils.toArray('.about-bugatti-slider')
-
-  // Get maximum width to scroll
-  const getMaxWidth = () => { _maxWidth = 0 ;_scrollContainerPage.forEach(section => _maxWidth += section.offsetWidth) }
-
-  /*
-   * Calculate maxWidth and update maxWidth
-   * variable for further calculation.
-   */
-  getMaxWidth()
-
-  // Event listener.
-  ScrollTrigger.addEventListener('refreshInit', getMaxWidth)
-
-  // Animate to given section.
-  gsap.to(_scrollContainerPage, {
-    'xPercent': -100 * (_scrollContainerPage.length - 1),
-    'ease': 'power3.inOut',
-    'scrollTrigger': {
-      'trigger': _scrollContainer,
-      'pin': true,
-      'scrub': 1,
-      'start': 'top top',
-      'end': () => `+=${_maxWidth}`,
-      'invalidateOnRefresh': true,
-      'anticipatePin': 1
-    }
-  })
-
-
-
-});
+})
 
 
 
