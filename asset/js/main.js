@@ -720,7 +720,7 @@ $(function () {
 
   // 부가티 고정
   let pinnerFixed = TweenMax.to('.about-bugatti-pinner', 1, {
-    position: "fixed",
+    // position: "fixed",
     left: 0,
     ease:Power2.easeIn,
   });
@@ -736,7 +736,7 @@ $(function () {
   .addTo(controller);
 
 
-// 부가티 텍스트 애니메이션
+// 부가티 텍스트 애니메이션 & 배경 이미지 하이드
 	$(window).on("scroll", function () {
 
     let bugattiTop = $(".pin-spacer").offset().top;
@@ -744,12 +744,56 @@ $(function () {
 
 		if (pos >= bugattiTop) {
 			$(".about-bugatti-textbox").addClass("on");
-      } else {
+      $('.about_intro_img').css("opacity",'0');
+      $
+    }else {
         $(".about-bugatti-textbox").removeClass("on");
-      }
-    });
+    }
+  });
+
+
+    // 어바웃 가로 스크롤
+    
+  gsap.registerPlugin(ScrollTrigger);
+
+	let vSlide = document.querySelector(".about-bugatti-slider");
+  gsap.to(vSlide, {
+		x: () => -1 * (vSlide.clientWidth - window.innerWidth ),
+    scrollTrigger: {
+      trigger: ".about-bugatti-stickytainer",
+      pin: true,
+      scrub: 1,
+			// markers: true, //스크롤이 시작되고 끝나는 시점을 마킹
+      invalidateOnRefresh: true,
+			end: () => "+=" + (vSlide.clientWidth + window.innerWidth), 
+    }
+  });
+
+
+  // 가로 스크롤 이미지 1 마스크
+  // let verticalImg1 = TweenMax.to('.about-bugatti-pic-mask0', 1, {
+  var verticalImg1 = gsap.to('.about-bugatti-pic-mask0, .about-bugatti-pic-mask0 img', {
+    x: 0,
+    ease:Power2.easeIn,
+  });
+  // 가로 스크롤 이미지 1 마스크 씬
+  let verticalImg1Scene = new ScrollMagic.Scene({
+    triggerElement: ".measurements-trigger",
+    triggerHook: 1,
+		offset: -8000,
+    duration: "100%"
+  })
+  .setTween(verticalImg1)
+    .addIndicators()
+  .addTo(controller);
 
 })
+
+
+
+
+
+
 
 
 

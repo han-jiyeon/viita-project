@@ -1412,6 +1412,1119 @@ header .nav .nav_item.active .nav_bg {
  }
 
 
+
+/* about-bugatti-pic-grid */
+
+.about-bugatti-pic-grid {
+    display: grid;
+    grid-template-rows: repeat(100, 1fr); /* 1fr이란 남은 자유 공간의 1/(총fr)만큼의 크기를 할당 */
+    grid-template-columns: repeat(100, 1fr); /* 1fr이란 남은 자유 공간의 1/(총fr)만큼의 크기를 할당 */
+    position: relative;
+    width: 120vw;
+    margin-right: -20vw;
+    min-width: 1600px;
+    height: 100vh;
+    pointer-events: none;
+}
+/* Interaction(상호작용) 미디어 쿼리 */
+@media(pointer:coarse) {
+    .about-bugatti-pic-grid {
+        width: 100vw;
+        margin-right: 0;
+        min-width: unset;
+        height: 200vw;
+    }
+}
+
+.about-bugatti-picbox {
+    display: grid;
+    grid-template-rows: 100% auto;
+    grid-template-areas: "grid-img" "grid-title"; /* 그리드 영역을 정의하는 동시에 각 영역에 이름을 할당 */
+    grid-column: var(--c)/span var(--cs);
+    grid-row: var(--r)/span var(--rs);
+    position: relative;
+}
+
+.about-bugatti-pic-mask {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.about-bugatti-pic-tag {
+    display: block;
+    color: var(--bg-color);
+    font-size: 10px;
+    line-height: 1em;
+    margin-top: 5px;
+    opacity: .75;
+}
+
+.about-bugatti-pic-mask0{
+    transform: translate(105%, 0);
+ }
+ .about-bugatti-pic-mask1{
+    transform: translate(0, 105%);
+ }
+ .about-bugatti-pic-mask2{
+    transform: translate(0, -105%);
+ }
+ .about-bugatti-pic-mask3{
+    transform: translate(-105%, 0);
+ }
+ .about-bugatti-pic-mask4{
+    transform: translate(105%, 0);
+ }
+ .about-bugatti-pic-mask5{
+    transform: translate(0, 105%);
+ }
+ .about-bugatti-pic-mask6{
+    transform: translate(0, -105%);
+ }
+ .about-bugatti-pic-mask7{
+    transform: translate(0, -105%);
+ }
+ .about-bugatti-pic-mask8{
+    transform: translate(105%, 0);
+ }
+ .about-bugatti-pic-mask9{
+    transform: translate(0, -105%);
+ }
+ .about-bugatti-pic-mask10{
+    transform: translate(105%, 0);
+ }
+ .about-bugatti-pic-mask0 img{
+    transform: translate(-105%, 0);
+ }
+ .about-bugatti-pic-mask1 img{
+    transform: translate(0, -105%);
+ }
+ .about-bugatti-pic-mask2 img{
+    transform: translate(0, 105%);
+ }
+ .about-bugatti-pic-mask3 img{
+    transform: translate(105%, 0);
+ }
+ .about-bugatti-pic-mask4 img{
+    transform: translate(-105%, 0);
+ }
+ .about-bugatti-pic-mask5 img{
+    transform: translate(0, -105%);
+ }
+ .about-bugatti-pic-mask6 img{
+    transform: translate(0, 105%);
+ }
+ .about-bugatti-pic-mask7 img{
+    transform: translate(0, 105%);
+ }
+ .about-bugatti-pic-mask8 img{
+    transform: translate(-105%, 0);
+ }
+ .about-bugatti-pic-mask9 img{
+    transform: translate(0, 105%);
+ }
+ .about-bugatti-pic-mask10 img{
+    transform: translate(-105%, 0);
+ }
+.about-bugatti-picbox0 {
+    --c: 5;
+    --r: 47;
+    --cs: 16;
+    --rs: 22;
+}
+
+@media(max-width:1023px)and (orientation:portrait) {
+    .about-bugatti-picbox0 {
+        --c: 5;
+        --r: 49;
+        --cs: 12;
+        --rs: 16;
+    }
+}
+
+@media(pointer:coarse) {
+    .about-bugatti-picbox0 {
+        --c: 3;
+        --r: 49;
+        --cs: 20;
+        --rs: 8;
+    }
+}
+
+.about-bugatti-picbox1 {
+    --c: 19;
+    --r: 81;
+    --cs: 16;
+    --rs: 20
+}
+
+@media(max-width:1023px)and (orientation:portrait) {
+    .about-bugatti-picbox1 {
+        --c: 19;
+        --r: 83;
+        --cs: 16;
+        --rs: 19;
+    }
+}
+
+@media(pointer:coarse) {
+    .about-bugatti-picbox1 {
+        --c: 8;
+        --r: 83;
+        --cs: 24;
+        --rs: 9;
+    }
+}
+
+.about-bugatti-picbox2 {
+    --c: 22;
+    --r: 1;
+    --cs: 18;
+    --rs: 26;
+}
+
+@media(max-width:1023px)and (orientation:portrait) {
+    .about-bugatti-picbox2 {
+        --c: 22;
+        --r: 1;
+        --cs: 18;
+        --rs: 18;
+    }
+}
+
+@media(pointer:coarse) {
+    .about-bugatti-picbox2 {
+        --c: 8;
+        --r: 0;
+        --cs: 26;
+        --rs: 10;
+    }
+}
+
+.about-bugatti-picbox3 {
+    --c: 31;
+    --r: 35;
+    --cs: 7;
+    --rs: 20;
+}
+
+@media(pointer:coarse) {
+    .about-bugatti-picbox3 {
+        --c: 15;
+        --r: 15;
+        --cs: 20;
+        --rs: 12;
+    }
+}
+
+.about-bugatti-picbox4 {
+    --c: 39;
+    --r: 72;
+    --cs: 11;
+    --rs: 17;
+}
+
+@media(max-width:1023px)and (orientation:portrait) {
+    .about-bugatti-picbox4 {
+        --c: 39;
+        --r: 76;
+        --cs: 11;
+        --rs: 12;
+    }
+}
+
+@media(pointer:coarse) {
+    .about-bugatti-picbox4 {
+        --c: 24;
+        --r: 62;
+        --cs: 20;
+        --rs: 12;
+    }
+}
+
+.about-bugatti-picbox5 {
+    --c: 47;
+    --r: 40;
+    --cs: 9;
+    --rs: 24;
+}
+
+@media(max-width:1023px)and (orientation:portrait) {
+    .about-bugatti-picbox5 {
+        --c: 47;
+        --r: 43;
+        --cs: 9;
+        --rs: 18
+    }
+}
+
+@media(pointer:coarse) {
+    .about-bugatti-picbox5 {
+        --c: 38;
+        --r: 38;
+        --cs: 16;
+        --rs: 11
+    }
+}
+
+.about-bugatti-picbox6 {
+    --c: 50;
+    --r: 6;
+    --cs: 8;
+    --rs: 22
+}
+
+@media(pointer:coarse) {
+    .about-bugatti-picbox6 {
+        --c: 46;
+        --r: 6;
+        --cs: 22;
+        --rs: 8
+    }
+}
+
+.about-bugatti-picbox7 {
+    --c: 60;
+    --r: 68;
+    --cs: 19;
+    --rs: 24
+}
+
+@media(max-width:1023px)and (orientation:portrait) {
+    .about-bugatti-picbox7 {
+        --c: 60;
+        --r: 72;
+        --cs: 16;
+        --rs: 20
+    }
+}
+
+@media(pointer:coarse) {
+    .about-bugatti-picbox7 {
+        --c: 54;
+        --r: 76;
+        --cs: 30;
+        --rs: 10
+    }
+}
+
+.about-bugatti-picbox8 {
+    --c: 65;
+    --r: 30;
+    --cs: 12;
+    --rs: 23
+}
+
+@media(pointer:coarse) {
+    .about-bugatti-picbox8 {
+        --c: 65;
+        --r: 30;
+        --cs: 31;
+        --rs: 10
+    }
+}
+
+.about-bugatti-picbox9 {
+    --c: 82;
+    --r: 3;
+    --cs: 11;
+    --rs: 35
+}
+
+@media(max-width:1023px)and (orientation:portrait) {
+    .about-bugatti-picbox9 {
+        --c: 81;
+        --r: 3;
+        --cs: 11;
+        --rs: 26
+    }
+}
+
+@media(pointer:coarse) {
+    .about-bugatti-picbox9 {
+        --c: 82;
+        --r: 2;
+        --cs: 20;
+        --rs: 14
+    }
+}
+
+.about-bugatti-picbox10 {
+    --c: 86;
+    --r: 60;
+    --cs: 15;
+    --rs: 20
+}
+
+@media(max-width:1023px)and (orientation:portrait) {
+    .about-bugatti-picbox10 {
+        --c: 84;
+        --r: 56;
+        --cs: 15;
+        --rs: 28
+    }
+}
+
+@media(pointer:coarse) {
+    .about-bugatti-picbox10 {
+        --c: 84;
+        --r: 56;
+        --cs: 15;
+        --rs: 13
+    }
+}
+
+.about-bugatti-pic {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%
+}
+
+
+/* about-bugatti-cta-btn */
+
+.about-bugatti-pic {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.about-bugatti-cta {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0
+}
+
+@media(orientation:portrait) {
+    .about-bugatti-cta {
+        margin-left: 20vw
+    }
+}
+
+@media(max-width:767px)and (orientation:portrait) {
+    .about-bugatti-cta {
+        margin-left: 50vw
+    }
+}
+
+@media(pointer:coarse) {
+    .about-bugatti-cta {
+        margin-left: 0
+    }
+}
+
+.about-bugatti-cta-pic {
+    width: auto;
+    height: 48vh
+}
+
+@media(orientation:portrait) {
+    .about-bugatti-cta-pic {
+        height: 48vw
+    }
+}
+
+@media(max-width:767px)and (orientation:portrait) {
+    .about-bugatti-cta-pic {
+        height: 62vw
+    }
+}
+
+@media(pointer:coarse)and (orientation:portrait) {
+    .about-bugatti-cta-pic {
+        height: 40vw
+    }
+}
+
+@media(pointer:coarse)and (max-width:767px)and (orientation:portrait) {
+    .about-bugatti-cta-pic {
+        height: 62vw
+    }
+}
+
+.about-bugatti-ring {
+    position: absolute;
+    height: 92vh;
+    width: 92vh
+}
+
+@media(orientation:portrait) {
+    .about-bugatti-ring {
+        height: 92vw;
+        width: 92vw
+    }
+}
+
+@media(max-width:767px)and (orientation:portrait) {
+    .about-bugatti-ring {
+        height: 92vw;
+        width: 92vw
+    }
+}
+
+@media(pointer:coarse)and (orientation:portrait) {
+    .about-bugatti-ring {
+        height: 80vw;
+        width: 80vw
+    }
+}
+
+@media(pointer:coarse)and (max-width:767px)and (orientation:portrait) {
+    .about-bugatti-ring {
+        height: 92vw;
+        width: 92vw
+    }
+}
+
+.about-shop-now-ring {
+    position: absolute;
+    height: 88vh
+}
+
+.about-shop-now-ring text {
+    fill: var(--bg-color)
+}
+
+@media(orientation:portrait) {
+    .about-shop-now-ring {
+        height: 88vw
+    }
+}
+
+@media(max-width:767px)and (orientation:portrait) {
+    .about-shop-now-ring {
+        height: 120vw
+    }
+}
+
+@media(pointer:coarse)and (orientation:portrait) {
+    .about-shop-now-ring {
+        height: 80vw
+    }
+}
+
+@media(pointer:coarse)and (max-width:767px)and (orientation:portrait) {
+    .about-shop-now-ring {
+        height: 120vw
+    }
+}
+
+.about-hours-ring {
+    position: absolute;
+    height: 70vh
+}
+
+@media(orientation:portrait) {
+    .about-hours-ring {
+        height: 70vw
+    }
+}
+
+@media(max-width:767px)and (orientation:portrait) {
+    .about-hours-ring {
+        height: 97vw
+    }
+}
+
+@media(pointer:coarse)and (orientation:portrait) {
+    .about-hours-ring {
+        height: 66vw
+    }
+}
+
+@media(pointer:coarse)and (max-width:767px)and (orientation:portrait) {
+    .about-hours-ring {
+        height: 97vw
+    }
+}
+
+.about-bugatti-cta-btn {
+    background-color: #d71e28;
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 200px;
+    position: absolute;
+    margin-top: 68vh
+}
+
+@media(max-width:1024px)and (orientation:landscape) {
+    .about-bugatti-cta-btn {
+        margin-top: 66vh;
+        padding: 7px 30px
+    }
+}
+
+.about-bugatti-cta-btn:hover {
+    background-color: #fff;
+    color: var(--main-color)
+}
+
+@media(orientation:portrait) {
+    .about-bugatti-cta-btn {
+        margin-top: 70vw
+    }
+}
+
+@media(max-width:767px)and (orientation:portrait) {
+    .about-bugatti-cta-btn {
+        margin-top: 93vw
+    }
+}
+
+@media(pointer:coarse)and (orientation:portrait) {
+    .about-bugatti-cta-btn {
+        margin-top: 66vw
+    }
+}
+
+@media(pointer:coarse)and (max-width:767px)and (orientation:portrait) {
+    .about-bugatti-cta-btn {
+        margin-top: 93vw
+    }
+}
+
+/* m */
+
+.about-measurements {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--main-color)
+}
+
+.about-measurements .char {
+    display: inline-block
+}
+
+.about-measurements .word {
+    position: relative;
+    display: block
+}
+
+@media(max-width:767px)and (orientation:portrait) {
+    .about-measurements .word {
+        display: block
+    }
+}
+
+.measurements-trigger {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 10
+}
+
+.about-msmts-scale-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none
+}
+
+.about-msmts-scale-bar {
+    width: 100%;
+    height: 10%;
+    transform-origin: left;
+    display: flex;
+    position: relative;
+    justify-content: flex-end
+}
+
+.about-msmts-scale-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #252525;
+    transform: scaleY(0);
+    transform-origin: bottom
+}
+
+.about-msmts-scale-line {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 0;
+    opacity: 0;
+    border-bottom: 1px dashed hsla(0, 0%, 100%, .1);
+    box-sizing: border-box
+}
+
+.about-msmts-scale-tag {
+    display: block;
+    position: relative;
+    margin-right: 10px;
+    margin-top: 5px;
+    color: var(--bg-color);
+    font-size: 12px
+}
+
+@media(max-width:1023px)and (orientation:portrait) {
+    .about-msmts-scale-tag {
+        font-size: 12px
+    }
+}
+
+@media(max-width:767px)and (orientation:portrait) {
+    .about-msmts-scale-tag {
+        font-size: 10px
+    }
+}
+
+.about-msmts-bar-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    pointer-events: none;
+    mix-blend-mode: difference
+}
+
+.about-msmts-bar-item {
+    position: relative;
+    width: 20%;
+    height: 100%;
+    bottom: 0
+}
+
+.about-msmts-bar {
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--bg-color)
+}
+
+.a-bar-dup {
+    opacity: 0
+}
+
+.about-msmts-text-box {
+    padding-top: 77vh
+}
+
+.about-msmts-text {
+    width: 93.75vw;
+    left: 3.125vw;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    color: var(--bg-color);
+    text-align: left;
+    font-size: 5.2083333333vw;
+    line-height: 1em;
+    mix-blend-mode: difference;
+    text-align: justify;
+    -moz-text-align-last: justify;
+    text-align-last: justify
+}
+
+@media(max-width:1365px) {
+    .about-msmts-text {
+        font-size: 6.25vw;
+        text-align: left;
+        -moz-text-align-last: left;
+        text-align-last: left;
+        left: 4.16667vw;
+        width: 91.66667vw
+    }
+}
+
+@media(max-width:767px)and (orientation:portrait) {
+    .about-msmts-text {
+        font-size: 7.2916666667vw;
+        width: 83.33333vw;
+        left: 20px
+    }
+}
+
+.about-msmts-number-box {
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    height: 100vh
+}
+
+@media(orientation:portrait) {
+    .about-msmts-number-box {
+        margin-top: 0
+    }
+}
+
+.about-msmts-text-number {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    color: var(--bg-color);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 15.625vw;
+    line-height: .75em;
+    mix-blend-mode: difference;
+    z-index: 2
+}
+
+.about-msmts-text-number .splitTextMask {
+    overflow: hidden
+}
+
+@media(max-width:767px)and (orientation:portrait) {
+    .about-msmts-text-number {
+        font-size: 27.6041666667vw
+    }
+}
+
+.about-msmts-text-msmts {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    color: var(--bg-color);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 15.625vw;
+    line-height: .75em;
+    mix-blend-mode: difference;
+    z-index: 2
+}
+
+.about-msmts-text-msmts .splitTextMask {
+    overflow: hidden
+}
+
+@media(max-width:767px)and (orientation:portrait) {
+    .about-msmts-text-msmts {
+        font-size: 27.6041666667vw
+    }
+}
+
+.about-msmts-text-smallnumber {
+    display: block;
+    position: absolute;
+    color: var(--main-color);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1em
+}
+
+@media(max-width:1024px) {
+    .about-msmts-text-smallnumber {
+        font-size: 16px
+    }
+}
+
+.msmts-smallnumber1 {
+    transform: translate(-30vw, -20vh)
+}
+
+.msmts-smallnumber2 {
+    transform: translate(30vw, 20vh)
+}
+
+.msmts-smallnumber3 {
+    transform: translate(-10vw, -40vh)
+}
+
+.msmts-smallnumber4 {
+    transform: translateY(30vh)
+}
+
+.msmts-smallnumber5 {
+    transform: translate(-16vw, 39vh)
+}
+
+.msmts-smallnumber6 {
+    transform: translate(-5vw, 18vh)
+}
+
+.msmts-smallnumber7 {
+    transform: translate(36vw, -46vh)
+}
+
+.msmts-smallnumber9 {
+    transform: translate(26vw, -5vh)
+}
+
+.msmts-smallnumber10 {
+    transform: translate(13vw, -29vh)
+}
+
+.msmts-smallnumber11 {
+    transform: translate(-46vw, 20vh)
+}
+
+.msmts-smallnumber12 {
+    transform: translate(-38vw, 36vh)
+}
+
+.msmts-smallnumber13 {
+    transform: translate(24vw, 32vh)
+}
+
+.msmts-smallnumber14 {
+    transform: translate(-21vw, -6vh)
+}
+
+.msmts-smallnumber15 {
+    transform: translate(9vw, -33vh)
+}
+
+.msmts-smallnumber16 {
+    transform: translate(21vw, 6vh)
+}
+
+.msmts-smallnumber17 {
+    transform: translate(49vw)
+}
+
+.msmts-smallnumber18 {
+    transform: translate(-4vw, -16vh)
+}
+
+.msmts-smallnumber19 {
+    transform: translate(21vw, 30vh)
+}
+
+.msmts-smallnumber20 {
+    transform: translate(-19vw, 5vh)
+}
+
+.msmts-smallnumber21 {
+    transform: translate(-50vw, -7vh)
+}
+
+.msmts-smallnumber22 {
+    transform: translate(18vw, 48vh)
+}
+
+.msmts-text-xp {
+    margin-top: 10vh
+}
+
+.about-msmts-progress-txt {
+    color: var(--main-color);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 12px
+}
+
+@media(max-width:767px)and (orientation:portrait) {
+    .about-msmts-progress-txt {
+        font-size: 10px;
+        top: 5px;
+        left: 5px
+    }
+}
+
+.about-last-section {
+    position: relative
+}
+
+.about-ls-footer-spacer {
+    position: relative;
+    height: 50vh;
+    pointer-events: none
+}
+
+@media(max-width:1023px)and (orientation:landscape) {
+    .about-ls-footer-spacer {
+        height: 70vh
+    }
+}
+
+@media(pointer:coarse) {
+    .about-ls-footer-spacer {
+        height: 20vh
+    }
+}
+
+.about-ls-darkener {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-color);
+    opacity: 0;
+    pointer-events: none
+}
+
+.ls-text-1 {
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 0 18.75vw;
+    margin-top: 20vw;
+    margin-bottom: 20vw;
+    text-indent: 29.16667vw;
+    text-align: center;
+    font-size: 4.1666666667vw;
+    mix-blend-mode: difference
+}
+
+@media(max-width:1365px) {
+    .ls-text-1 {
+        font-size: 6.25vw;
+        padding: 0 4.16667vw;
+        text-indent: 41.66667vw;
+        margin-bottom: 30vw
+    }
+}
+
+@media(max-width:767px)and (orientation:portrait) {
+    .ls-text-1 {
+        text-indent: 39.58333vw;
+        padding: 0 20px;
+        font-size: 7.2916666667vw;
+        margin-bottom: 40vw
+    }
+}
+
+.about-ls-picbox {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150vw;
+    width: 100vw;
+    z-index: 1
+}
+
+@media(max-width:1365px)and (orientation:portrait) {
+    .about-ls-picbox {
+        height: 300vw;
+        width: 100vw
+    }
+}
+
+.about-ls-picbox-tiny {
+    display: block;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    height: 22vw;
+    width: 16vw
+}
+
+@media(max-width:1365px) {
+    .about-ls-picbox-tiny {
+        height: 28vw;
+        width: 24vw
+    }
+}
+
+@media(max-width:767px)and (orientation:portrait) {
+    .about-ls-picbox-tiny {
+        height: 44vw;
+        width: 38vw
+    }
+}
+
+.about-ls-img {
+    position: relative;
+    border-radius: 0 0 30px 30px
+}
+
+.about-ls-img,
+.about-ls-img-small {
+    display: block;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%
+}
+
+.about-ls-img-small {
+    border-radius: 15px
+}
+
+.about-ls-textbox {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.about-ls-text {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    color: var(--bg-color);
+    line-height: 1em
+}
+
+.ls-text-2 {
+    width: 93.75vw;
+    font-size: 9.375vw;
+    line-height: 1.1em;
+    padding: 0;
+    text-indent: 49%;
+    text-align: justify;
+    -moz-text-align-last: justify;
+    text-align-last: justify
+}
+
+@media(max-width:1365px)and (orientation:portrait) {
+    .ls-text-2 {
+        font-size: 14.5833333333vw
+    }
+}
+
+.about-ls-cta {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 3.125vw;
+    box-sizing: border-box
+}
+
+@media(max-width:767px)and (orientation:portrait) {
+    .about-ls-cta {
+        bottom: 30px;
+        width: calc(100% - 40px)
+    }
+}
+
+.about-ls-cta-btn {
+    position: relative;
+    padding: 24px 30px;
+    border: 1px solid var(--bg-color);
+    border-radius: 200px;
+    text-align: center;
+    color: var(--bg-color);
+    font-size: 16px;
+    text-transform: uppercase
+}
+
+@media(hover:hover)and (pointer:fine) {
+    .about-ls-cta-btn:hover {
+        background-color: #d71e28;
+        border: 1px solid #d71e28;
+        color: var(--main-color)
+    }
+}
+
+
 /* footer */
 footer {
     display: flex;
