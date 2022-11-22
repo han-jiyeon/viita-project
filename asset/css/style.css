@@ -1091,7 +1091,7 @@ header .nav .nav_item.active .nav_bg {
     -o-object-fit: cover;
     object-fit: cover;
     opacity: 0;
-    scale: 1.2;
+    transform: scale(1.2);
     top: 0;
 }
 .about_intro_img.bright {
@@ -1425,6 +1425,7 @@ header .nav .nav_item.active .nav_bg {
     min-width: 1600px;
     height: 100vh;
     pointer-events: none;
+    transform: translateX(20vw);
 }
 /* Interaction(상호작용) 미디어 쿼리 */
 @media(pointer:coarse) {
@@ -1462,72 +1463,6 @@ header .nav .nav_item.active .nav_bg {
     opacity: .75;
 }
 
-.about-bugatti-pic-mask0{
-    transform: translate(105%, 0);
- }
- .about-bugatti-pic-mask1{
-    transform: translate(0, 105%);
- }
- .about-bugatti-pic-mask2{
-    transform: translate(0, -105%);
- }
- .about-bugatti-pic-mask3{
-    transform: translate(-105%, 0);
- }
- .about-bugatti-pic-mask4{
-    transform: translate(105%, 0);
- }
- .about-bugatti-pic-mask5{
-    transform: translate(0, 105%);
- }
- .about-bugatti-pic-mask6{
-    transform: translate(0, -105%);
- }
- .about-bugatti-pic-mask7{
-    transform: translate(0, -105%);
- }
- .about-bugatti-pic-mask8{
-    transform: translate(105%, 0);
- }
- .about-bugatti-pic-mask9{
-    transform: translate(0, -105%);
- }
- .about-bugatti-pic-mask10{
-    transform: translate(105%, 0);
- }
- .about-bugatti-pic-mask0 img{
-    transform: translate(-105%, 0);
- }
- .about-bugatti-pic-mask1 img{
-    transform: translate(0, -105%);
- }
- .about-bugatti-pic-mask2 img{
-    transform: translate(0, 105%);
- }
- .about-bugatti-pic-mask3 img{
-    transform: translate(105%, 0);
- }
- .about-bugatti-pic-mask4 img{
-    transform: translate(-105%, 0);
- }
- .about-bugatti-pic-mask5 img{
-    transform: translate(0, -105%);
- }
- .about-bugatti-pic-mask6 img{
-    transform: translate(0, 105%);
- }
- .about-bugatti-pic-mask7 img{
-    transform: translate(0, 105%);
- }
- .about-bugatti-pic-mask8 img{
-    transform: translate(-105%, 0);
- }
- .about-bugatti-pic-mask9 img{
-    transform: translate(0, 105%);
- }
- .about-bugatti-pic-mask10 img{
-    transform: translate(-105%, 0);
- }
 .about-bugatti-picbox0 {
     --c: 5;
     --r: 47;
@@ -1823,9 +1758,18 @@ header .nav .nav_item.active .nav_bg {
 
 .about-bugatti-cta-pic {
     width: auto;
-    height: 48vh
+    height: 48vh;
+    animation: spin 40000ms infinite linear;
 }
 
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
 @media(orientation:portrait) {
     .about-bugatti-cta-pic {
         height: 48vw
@@ -1853,13 +1797,15 @@ header .nav .nav_item.active .nav_bg {
 .about-bugatti-ring {
     position: absolute;
     height: 92vh;
-    width: 92vh
+    width: 92vh;
+    transform: scale(1);
+    opacity: 1;
 }
 
 @media(orientation:portrait) {
     .about-bugatti-ring {
         height: 92vw;
-        width: 92vw
+        width: 92vw;
     }
 }
 
@@ -1886,7 +1832,8 @@ header .nav .nav_item.active .nav_bg {
 
 .about-shop-now-ring {
     position: absolute;
-    height: 88vh
+    height: 88vh;
+    animation: spin 40000ms infinite linear;
 }
 
 .about-shop-now-ring text {
