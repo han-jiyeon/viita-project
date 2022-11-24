@@ -796,7 +796,7 @@ $(function () {
       triggerElement: ".measurements-trigger",
       triggerHook: 1,
       offset: -5500,
-      duration: "300%"
+      duration: "200%"
     })
     .setTween(verticalImgGrid)
       // .addIndicators()
@@ -804,7 +804,7 @@ $(function () {
   
 
   // 가로 스크롤 이미지 0 마스크
-  var verticalImg0 = gsap.to('.about-bugatti-picbox0, .about-bugatti-pic-mask0, .about-bugatti-pic-mask0 img', {
+  var verticalImg0 = gsap.to('.about-bugatti-pic-mask0, .about-bugatti-pic-mask0 img', {
     x: 0,
     ease:Power2.easeIn,
   });
@@ -813,15 +813,16 @@ $(function () {
     triggerElement: ".measurements-trigger",
     triggerHook: 1,
 		offset: -5400,
+    // offset: -1200%,
     duration: "100%"
   })
   .setTween(verticalImg0)
-    // .addIndicators()
+    .addIndicators()
   .addTo(controller);
 
   
   // 가로 스크롤 이미지 1 마스크
-  var verticalImg1 = gsap.to('.about-bugatti-picbox1, .about-bugatti-pic-mask1, .about-bugatti-pic-mask1 img', {
+  var verticalImg1 = gsap.to('.about-bugatti-pic-mask1, .about-bugatti-pic-mask1 img', {
     y: 0,
     ease:Power2.easeIn,
   });
@@ -829,7 +830,7 @@ $(function () {
   let verticalImg1Scene = new ScrollMagic.Scene({
     triggerElement: ".measurements-trigger",
     triggerHook: 1,
-		offset: -4900,
+		offset: -5100,
     duration: "100%"
   })
   .setTween(verticalImg1)
@@ -838,7 +839,7 @@ $(function () {
 
   
   // 가로 스크롤 이미지 2 마스크
-  var verticalImg2 = gsap.to('.about-bugatti-picbox2, .about-bugatti-pic-mask2, .about-bugatti-pic-mask2 img', {
+  var verticalImg2 = gsap.to('.about-bugatti-pic-mask2, .about-bugatti-pic-mask2 img', {
     y: 0,
     ease:Power2.easeIn,
   });
@@ -846,7 +847,7 @@ $(function () {
   let verticalImg2Scene = new ScrollMagic.Scene({
     triggerElement: ".measurements-trigger",
     triggerHook: 1,
-		offset: -4900,
+		offset: -5100,
     duration: "100%"
   })
   .setTween(verticalImg2)
@@ -855,7 +856,7 @@ $(function () {
 
   
   // 가로 스크롤 이미지 3 마스크
-  var verticalImg3 = gsap.to('.about-bugatti-picbox3, .about-bugatti-pic-mask3, .about-bugatti-pic-mask3 img', {
+  var verticalImg3 = gsap.to('.about-bugatti-pic-mask3, .about-bugatti-pic-mask3 img', {
     x: 0,
     ease:Power2.easeIn,
   });
@@ -863,7 +864,7 @@ $(function () {
   let verticalImg3Scene = new ScrollMagic.Scene({
     triggerElement: ".measurements-trigger",
     triggerHook: 1,
-		offset: -4900,
+		offset: -5100,
     duration: "100%"
   })
   .setTween(verticalImg3)
@@ -871,7 +872,7 @@ $(function () {
   .addTo(controller);
 
   // 가로 스크롤 이미지 4 마스크
-  var verticalImg4 = gsap.to('.about-bugatti-picbox4, .about-bugatti-pic-mask4, .about-bugatti-pic-mask4 img', {
+  var verticalImg4 = gsap.to('.about-bugatti-pic-mask4, .about-bugatti-pic-mask4 img', {
     x: 0,
     ease:Power2.easeIn,
   });
@@ -879,7 +880,7 @@ $(function () {
   let verticalImg4Scene = new ScrollMagic.Scene({
     triggerElement: ".measurements-trigger",
     triggerHook: 1,
-		offset: -4700,
+		offset: -5100,
     duration: "100%"
   })
   .setTween(verticalImg4)
@@ -887,7 +888,7 @@ $(function () {
   .addTo(controller);
 
   // 가로 스크롤 이미지 5 마스크
-  var verticalImg5 = gsap.to('.about-bugatti-picbox5, .about-bugatti-pic-mask5, .about-bugatti-pic-mask5 img', {
+  var verticalImg5 = gsap.to('.about-bugatti-pic-mask5, .about-bugatti-pic-mask5 img', {
     y: 0,
     ease:Power2.easeIn,
   });
@@ -895,7 +896,7 @@ $(function () {
   let verticalImg5Scene = new ScrollMagic.Scene({
     triggerElement: ".measurements-trigger",
     triggerHook: 1,
-		offset: -4500,
+		offset: -4700,
     duration: "100%"
   })
   .setTween(verticalImg5)
@@ -903,7 +904,7 @@ $(function () {
   .addTo(controller);
 
   // 가로 스크롤 이미지 6 마스크
-  var verticalImg6 = gsap.to('.about-bugatti-picbox6, .about-bugatti-pic-mask6, .about-bugatti-pic-mask6 img', {
+  var verticalImg6 = gsap.to('.about-bugatti-pic-mask6, .about-bugatti-pic-mask6 img', {
     y: 0,
     ease:Power2.easeIn,
   });
@@ -911,7 +912,7 @@ $(function () {
   let verticalImg6Scene = new ScrollMagic.Scene({
     triggerElement: ".measurements-trigger",
     triggerHook: 1,
-		offset: -4500,
+		offset: -4700,
     duration: "100%"
   })
   .setTween(verticalImg6)
@@ -919,7 +920,7 @@ $(function () {
   .addTo(controller);
 
   // 가로 스크롤 이미지 7 마스크
-  var verticalImg7 = gsap.to('.about-bugatti-picbox7, .about-bugatti-pic-mask7, .about-bugatti-pic-mask7 img', {
+  var verticalImg7 = gsap.to('.about-bugatti-pic-mask7, .about-bugatti-pic-mask7 img', {
     y: 0,
     ease:Power2.easeIn,
   });
@@ -927,7 +928,7 @@ $(function () {
   let verticalImg7Scene = new ScrollMagic.Scene({
     triggerElement: ".measurements-trigger",
     triggerHook: 1,
-		offset: -4300,
+		offset: -4700,
     duration: "100%"
   })
   .setTween(verticalImg7)
@@ -935,7 +936,7 @@ $(function () {
   .addTo(controller);
 
   // 가로 스크롤 이미지 8 마스크
-  var verticalImg8 = gsap.to('.about-bugatti-picbox8, .about-bugatti-pic-mask8, .about-bugatti-pic-mask8 img', {
+  var verticalImg8 = gsap.to('.about-bugatti-pic-mask8, .about-bugatti-pic-mask8 img', {
     x: 0,
     ease:Power2.easeIn,
   });
@@ -943,7 +944,7 @@ $(function () {
   let verticalImg8Scene = new ScrollMagic.Scene({
     triggerElement: ".measurements-trigger",
     triggerHook: 1,
-		offset: -4100,
+		offset: -4700,
     duration: "100%"
   })
   .setTween(verticalImg8)
@@ -951,7 +952,7 @@ $(function () {
   .addTo(controller);
 
   // 가로 스크롤 이미지 9 마스크
-  var verticalImg9 = gsap.to('.about-bugatti-picbox9, .about-bugatti-pic-mask9, .about-bugatti-pic-mask9 img', {
+  var verticalImg9 = gsap.to('.about-bugatti-pic-mask9, .about-bugatti-pic-mask9 img', {
     y: 0,
     ease:Power2.easeIn,
   });
@@ -959,7 +960,7 @@ $(function () {
   let verticalImg9Scene = new ScrollMagic.Scene({
     triggerElement: ".measurements-trigger",
     triggerHook: 1,
-		offset: -3900,
+		offset: -4600,
     duration: "100%"
   })
   .setTween(verticalImg9)
@@ -967,7 +968,7 @@ $(function () {
   .addTo(controller);
 
   // 가로 스크롤 이미지 10 마스크
-  var verticalImg10 = gsap.to('.about-bugatti-picbox10, .about-bugatti-pic-mask10, .about-bugatti-pic-mask10 img', {
+  var verticalImg10 = gsap.to(' .about-bugatti-pic-mask10, .about-bugatti-pic-mask10 img', {
     x: 0,
     ease:Power2.easeIn,
   });
@@ -975,7 +976,7 @@ $(function () {
   let verticalImg10Scene = new ScrollMagic.Scene({
     triggerElement: ".measurements-trigger",
     triggerHook: 1,
-		offset: -3800,
+		offset: -4600,
     duration: "100%"
   })
   .setTween(verticalImg10)
@@ -997,8 +998,8 @@ $(function () {
   let spinRing1Scene = new ScrollMagic.Scene({
     triggerElement: ".measurements-trigger",
     triggerHook: 1,
-		offset: -3200,
-    duration: "140%"
+		offset: -3000,
+    duration: "120%"
   })
   .setTween(spinRing1)
     // .addIndicators()
@@ -1014,8 +1015,8 @@ $(function () {
   let spinRing2Scene = new ScrollMagic.Scene({
     triggerElement: ".measurements-trigger",
     triggerHook: 1,
-		offset: -2900,
-    duration: "140%"
+		offset: -2700,
+    duration: "120%"
   })
   .setTween(spinRing2)
     // .addIndicators()
@@ -1030,8 +1031,8 @@ $(function () {
   let spinRing3Scene = new ScrollMagic.Scene({
     triggerElement: ".measurements-trigger",
     triggerHook: 1,
-		offset: -2600,
-    duration: "140%"
+		offset: -2500,
+    duration: "120%"
   })
   .setTween(spinRing3)
     // .addIndicators()
