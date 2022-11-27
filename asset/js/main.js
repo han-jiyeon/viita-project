@@ -1038,8 +1038,6 @@ $(function () {
     // .addIndicators()
   .addTo(controller);
 
-
-
 })
 
 
@@ -1364,8 +1362,6 @@ $(function () {
 
   
 });
-
-
 
 
 
