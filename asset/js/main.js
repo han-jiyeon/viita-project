@@ -1043,281 +1043,518 @@ $(function () {
 
 
 
-// 복사
+// 2211
 $(function () {
 	var controller = new ScrollMagic.Controller();
 
-	// about-msmts-scale-box
-	var scaleBG = gsap.to('.about-msmts-scale-bg', {
+// 10
+	var msmtsScaleBg10 = gsap.to('.about-msmts-scale-bar:nth-child(10) .about-msmts-scale-bg', {
 		scaleY : '1',
-		ease: Power2.easeOut,
-		stagger: {
-			from: "end",
-			amount: 1
-		},
 	});
 
-	
-	var scene1 = new ScrollMagic.Scene({
+	var msmtsScaleBg10Scene = new ScrollMagic.Scene({
 		triggerElement: ".measurements-trigger",
-		triggerHook: 1, //0~1 ,
-		offset: 0,
+		triggerHook: 1,
+		offset: -900,
+		duration: "35%"
+	}).
+	setTween(msmtsScaleBg10).addTo(controller);
+  
+
+  // 10 tag
+  var msmtsScaleTag10 = gsap.to('.about-msmts-scale-bar:nth-child(10) .about-msmts-scale-tag', {
+    x : '0',
+  });
+
+	var msmtsScaleTag10Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -850,
+		duration: "35%"
+	}).
+	setTween(msmtsScaleTag10).addTo(controller);
+
+  // 10 line
+  var msmtsScaleLine10 = gsap.to('.about-msmts-scale-bar:nth-child(10) .about-msmts-scale-line', {
+    opacity : '1',
+  });
+
+	var msmtsScaleLine10Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -850,
+		duration: "90%"
+	}).
+	setTween(msmtsScaleLine10).addTo(controller);
+
+
+	// 9
+	var msmtsScaleBg9 = gsap.to('.about-msmts-scale-bar:nth-child(9) .about-msmts-scale-bg', {
+		scaleY : '1',
+	});
+	
+	var msmtsScaleBg9Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -850,
+		duration: "35%",
+	}).
+	setTween(msmtsScaleBg9).addTo(controller);
+	
+  // 9 tag
+  var msmtsScaleTag9 = gsap.to('.about-msmts-scale-bar:nth-child(9) .about-msmts-scale-tag', {
+    x : '0',
+  });
+
+	var msmtsScaleTag9Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -800,
+		duration: "45%",
+	}).
+	setTween(msmtsScaleTag9).addTo(controller);
+
+  // 9 line
+  var msmtsScaleLine9 = gsap.to('.about-msmts-scale-bar:nth-child(9) .about-msmts-scale-line', {
+    opacity : '1',
+  });
+
+	var msmtsScaleLine9Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -800,
+		duration: "90%"
+	}).
+	setTween(msmtsScaleLine9).addTo(controller);
+  
+	// 8
+	var msmtsScaleBg8 = gsap.to('.about-msmts-scale-bar:nth-child(8) .about-msmts-scale-bg', {
+		scaleY : '1',
+	});
+	
+	var msmtsScaleBg8Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -800,
+		duration: "35%"
+	}).
+	setTween(msmtsScaleBg8).addTo(controller);
+	
+  // 8 tag
+  var msmtsScaleTag8 = gsap.to('.about-msmts-scale-bar:nth-child(8) .about-msmts-scale-tag', {
+    x : '0',
+  });
+
+	var msmtsScaleTag8Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -750,
+		duration: "45%"
+	}).
+	setTween(msmtsScaleTag8).addTo(controller);
+
+  // 8 line
+  var msmtsScaleLine8 = gsap.to('.about-msmts-scale-bar:nth-child(8) .about-msmts-scale-line', {
+    opacity : '1',
+  });
+
+	var msmtsScaleLine8Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -750,
+		duration: "90%"
+	}).
+	setTween(msmtsScaleLine8).addTo(controller);
+  
+	// 7
+	var msmtsScaleBg7 = gsap.to('.about-msmts-scale-bar:nth-child(7) .about-msmts-scale-bg', {
+		scaleY : '1',
+	});
+	
+	var msmtsScaleBg7Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -750,
+		duration: "45%"
+	}).
+	setTween(msmtsScaleBg7).addTo(controller);
+	
+  // 7 tag
+  var msmtsScaleTag7 = gsap.to('.about-msmts-scale-bar:nth-child(7) .about-msmts-scale-tag', {
+    x : '0',
+  });
+
+	var msmtsScaleTag7Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -700,
+		duration: "55%"
+	}).
+	setTween(msmtsScaleTag7).addTo(controller);
+
+  // 7 line
+  var msmtsScaleLine7 = gsap.to('.about-msmts-scale-bar:nth-child(7) .about-msmts-scale-line', {
+    opacity : '1',
+  });
+
+	var msmtsScaleLine7Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -700,
+		duration: "90%"
+	}).
+	setTween(msmtsScaleLine7).addTo(controller);
+  
+	// 6
+	var msmtsScaleBg6 = gsap.to('.about-msmts-scale-bar:nth-child(6) .about-msmts-scale-bg', {
+		scaleY : '1',
+	});
+	
+	var msmtsScaleBg6Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -700,
+		duration: "55%"
+	}).
+	setTween(msmtsScaleBg6).addTo(controller);
+	
+  // 6 tag
+  var msmtsScaleTag6 = gsap.to('.about-msmts-scale-bar:nth-child(6) .about-msmts-scale-tag', {
+    x : '0',
+  });
+
+	var msmtsScaleTag6Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -650,
+		duration: "65%"
+	}).
+	setTween(msmtsScaleTag6).addTo(controller);
+
+  // 6 line
+  var msmtsScaleLine6 = gsap.to('.about-msmts-scale-bar:nth-child(6) .about-msmts-scale-line', {
+    opacity : '1',
+  });
+
+	var msmtsScaleLine6Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -650,
+		duration: "90%"
+	}).
+	setTween(msmtsScaleLine6).addTo(controller);
+
+	// 5
+	var msmtsScaleBg5 = gsap.to('.about-msmts-scale-bar:nth-child(5) .about-msmts-scale-bg', {
+		scaleY : '1',
+	});
+	
+	var msmtsScaleBg5Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -650,
+		duration: "65%"
+	}).
+	setTween(msmtsScaleBg5).addTo(controller);
+	
+  // 5 tag
+  var msmtsScaleTag5 = gsap.to('.about-msmts-scale-bar:nth-child(5) .about-msmts-scale-tag', {
+    x : '0',
+  });
+
+	var msmtsScaleTag5Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -600,
+		duration: "75%"
+	}).
+	setTween(msmtsScaleTag5).addTo(controller);
+
+  // 5 line
+  var msmtsScaleLine5 = gsap.to('.about-msmts-scale-bar:nth-child(5) .about-msmts-scale-line', {
+    opacity : '1',
+  });
+
+	var msmtsScaleLine5Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -600,
+		duration: "90%"
+	}).
+	setTween(msmtsScaleLine5).addTo(controller);
+  
+	// 4
+	var msmtsScaleBg4 = gsap.to('.about-msmts-scale-bar:nth-child(4) .about-msmts-scale-bg', {
+		scaleY : '1',
+	});
+	
+	var msmtsScaleBg4Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -600,
+		duration: "75%"
+	}).
+	setTween(msmtsScaleBg4).addTo(controller);
+	
+  // 4 tag
+  var msmtsScaleTag4 = gsap.to('.about-msmts-scale-bar:nth-child(4) .about-msmts-scale-tag', {
+    x : '0',
+  });
+
+	var msmtsScaleTag4Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -550,
+		duration: "85%"
+	}).
+	setTween(msmtsScaleTag4).addTo(controller);
+
+  // 4 line
+  var msmtsScaleLine4 = gsap.to('.about-msmts-scale-bar:nth-child(4) .about-msmts-scale-line', {
+    opacity : '1',
+  });
+
+	var msmtsScaleLine4Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -550,
+		duration: "90%"
+	}).
+	setTween(msmtsScaleLine4).addTo(controller);
+  
+	// 3
+	var msmtsScaleBg3 = gsap.to('.about-msmts-scale-bar:nth-child(3) .about-msmts-scale-bg', {
+		scaleY : '1',
+	});
+	
+	var msmtsScaleBg3Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -550,
+		duration: "80%"
+	}).
+	setTween(msmtsScaleBg3).addTo(controller);
+
+  // 3 tag
+  var msmtsScaleTag3 = gsap.to('.about-msmts-scale-bar:nth-child(3) .about-msmts-scale-tag', {
+    x : '0',
+  });
+
+	var msmtsScaleTag3Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -500,
+		duration: "90%"
+	}).
+	setTween(msmtsScaleTag3).addTo(controller);
+
+  // 3 line
+  var msmtsScaleLine3 = gsap.to('.about-msmts-scale-bar:nth-child(3) .about-msmts-scale-line', {
+    opacity : '1',
+  });
+
+	var msmtsScaleLine3Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -530,
+		duration: "90%"
+	}).
+	setTween(msmtsScaleLine3).addTo(controller);
+  
+
+	// 2
+	var msmtsScaleBg2 = gsap.to('.about-msmts-scale-bar:nth-child(2) .about-msmts-scale-bg', {
+		scaleY : '1',
+	});
+	
+	var msmtsScaleBg2Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -500,
+		duration: "80%"
+	}).
+	setTween(msmtsScaleBg2).addTo(controller);
+
+  // 2 tag
+  var msmtsScaleTag2 = gsap.to('.about-msmts-scale-bar:nth-child(2) .about-msmts-scale-tag', {
+    x : '0',
+  });
+
+	var msmtsScaleTag2Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -450,
+		duration: "90%"
+	}).
+	setTween(msmtsScaleTag2).addTo(controller);
+
+  // 2 line
+  var msmtsScaleLine2 = gsap.to('.about-msmts-scale-bar:nth-child(2) .about-msmts-scale-line', {
+    opacity : '1',
+  });
+
+	var msmtsScaleLine2Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -480,
+		duration: "90%"
+	}).
+	setTween(msmtsScaleLine2).addTo(controller);
+
+	// 1
+	var msmtsScaleBg1 = gsap.to('.about-msmts-scale-bar:nth-child(1) .about-msmts-scale-bg', {
+		scaleY : '1',
+	});
+	
+	var msmtsScaleBg1Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -450,
+		duration: "85%"
+	}).
+	setTween(msmtsScaleBg1).addTo(controller);
+
+  // 1 tag
+  var msmtsScaleTag1 = gsap.to('.about-msmts-scale-bar:nth-child(1) .about-msmts-scale-tag', {
+    x : '0',
+  });
+
+	var msmtsScaleTag1Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -400,
+		duration: "95%"
+	}).
+	setTween(msmtsScaleTag1).addTo(controller);
+
+  // 1 line
+  var msmtsScaleLine1 = gsap.to('.about-msmts-scale-bar:nth-child(1) .about-msmts-scale-line', {
+    opacity : '1',
+  });
+
+	var msmtsScaleLine1Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset: -430,
+		duration: "90%"
+	}).
+	setTween(msmtsScaleLine1).addTo(controller);
+  
+  
+
+
+
+	// scale-bg black
+	var msmtsScaleBgBK = gsap.to('.about-msmts-scale-bg', {
+		background: "black",
+	});
+	
+	var msmtsScaleBgBKScene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset:0,
+		duration: "85%"
+	}).
+	setTween(msmtsScaleBgBK).addTo(controller);
+
+  
+	// scale-line hide
+	// var msmtsScaleLineHide = gsap.to('.about-msmts-scale-line', {
+	// 	opacity: "0",
+	// });
+	
+	// var msmtsScaleLineHideScene = new ScrollMagic.Scene({
+	// 	triggerElement: ".measurements-trigger",
+	// 	triggerHook: 1,
+	// 	offset:0,
+	// 	duration: "85%"
+	// }).
+	// setTween(msmtsScaleLineHide).addTo(controller);
+
+  
+
+
+
+	// bar1
+	var msmtsBar1 = gsap.to('.a-bar1', {
+		height: "99%",
+    ease: Power2.easeOut
+	});
+	
+	var msmtsBar1Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset:400,
+		duration: "65%"
+	}).
+	setTween(msmtsBar1).addTo(controller);
+
+
+	// bar2
+	var msmtsBar2 = gsap.to('.a-bar2', {
+		height: "99%",
+    ease: Power2.easeOut
+	});
+	
+	var msmtsBar2Scene = new ScrollMagic.Scene({
+		triggerElement: ".measurements-trigger",
+		triggerHook: 1,
+		offset:500,
 		duration: "70%"
 	}).
-	setTween(scaleBG).addTo(controller);
-	
-	var scaleBG2 = gsap.to('.about-msmts-scale-bg', {
-		backgroundColor : '#000',
-		ease: Power2.easeOut,
-	});
-	
-	var scene1 = new ScrollMagic.Scene({
-		triggerElement: ".measurements-trigger",
-		triggerHook: 1, //0~1 ,
-		offset: 800,
-		duration: "40%"
-	}).
-	setTween(scaleBG2).addTo(controller);
+	setTween(msmtsBar2).addTo(controller);
 
-	var scaleLine = gsap.to('.about-msmts-scale-line', {
-		opacity: '1',
-		ease: Power2.easeOut,
-		stagger: {
-			from: "end",
-			amount: 1
-		},
+
+	// bar3
+	var msmtsBar3 = gsap.to('.a-bar3', {
+		height: "99%",
+    ease: Power2.easeOut
 	});
 	
-	var scene1 = new ScrollMagic.Scene({
+	var msmtsBar3Scene = new ScrollMagic.Scene({
 		triggerElement: ".measurements-trigger",
-		triggerHook: 1, //0~1 ,
-		offset: 0,
-		duration: "100%"
-	}).
-	setTween(scaleLine).addTo(controller);
-
-	var scaleTag = gsap.to('.about-msmts-scale-tag', {
-		x: '0' ,
-		ease: Power2.easeInOut,
-		stagger: {
-			from: "end",
-			amount: 1
-		},
-	});
-	
-	var scene1 = new ScrollMagic.Scene({
-		triggerElement: ".measurements-trigger",
-		triggerHook: 1, //0~1 ,
-		offset: 0,
-		duration: "100%"
-	}).
-	setTween(scaleTag).addTo(controller);
-
-	
-	var scaleTag = gsap.to('.about-msmts-scale-box', {
-		opacity: 0 ,
-		ease: Power2.easeInOut,
-	});
-	
-	var scene1 = new ScrollMagic.Scene({
-		triggerElement: ".about-msmts-number-box",
-		triggerHook: 1, //0~1 ,
-		offset: 0,
-		duration: "40%"
-	}).
-	setTween(scaleTag).addTo(controller);
-
-	var msmtsBar = gsap.to('.about-msmts-bar.a-bar1', {
-		height: '99%',
-		ease: Power2.easeInOut,
-	});
-	var scene1 = new ScrollMagic.Scene({
-		triggerElement: ".measurements-trigger",
-		triggerHook: 1, //0~1 ,
-		offset: 600,
-		duration: "100%"
-	}).
-	setTween(msmtsBar).addTo(controller);
-
-	var msmtsBar = gsap.to('.about-msmts-bar.a-bar1', {
-		height: '90%',
-		ease: Power2.easeInOut,
-	});
-	var scene1 = new ScrollMagic.Scene({
-		triggerElement: ".measurements-trigger",
-		triggerHook: 1, //0~1 ,
-		offset: 1800,
+		triggerHook: 1,
+		offset:400,
 		duration: "50%"
 	}).
-	setTween(msmtsBar).addTo(controller);
+	setTween(msmtsBar3).addTo(controller);
 
-	var msmtsBar = gsap.to('.about-msmts-bar.a-bar2', {
-		height: '99%',
-		ease: Power2.easeInOut,
+	// bar4
+	var msmtsBar4 = gsap.to('.a-bar4', {
+		height: "99%",
+    ease: Power2.easeOut
 	});
-	var scene1 = new ScrollMagic.Scene({
-		triggerElement: ".measurements-trigger",
-		triggerHook: 1, //0~1 ,
-		offset: 700,
-		duration: "100%"
-	}).
-	setTween(msmtsBar).addTo(controller);
-
-	var msmtsBar = gsap.to('.about-msmts-bar.a-bar2', {
-		height: '90%',
-		ease: Power2.easeInOut,
-	});
-	var scene1 = new ScrollMagic.Scene({
-		triggerElement: ".measurements-trigger",
-		triggerHook: 1, //0~1 ,
-		offset: 1850,
-		duration: "50%"
-	}).
-	setTween(msmtsBar).addTo(controller);
 	
-	var msmtsBar = gsap.to('.about-msmts-bar.a-bar3', {
-		height: '98%',
-		ease: Power2.easeInOut,
-	});
-	var scene1 = new ScrollMagic.Scene({
+	var msmtsBar4Scene = new ScrollMagic.Scene({
 		triggerElement: ".measurements-trigger",
-		triggerHook: 1, //0~1 ,
-		offset: 500,
-		duration: "100%"
-	}).
-	setTween(msmtsBar).addTo(controller);
-
-	var msmtsBar = gsap.to('.about-msmts-bar.a-bar3', {
-		height: '90%',
-		ease: Power2.easeInOut,
-	});
-	var scene1 = new ScrollMagic.Scene({
-		triggerElement: ".measurements-trigger",
-		triggerHook: 1, //0~1 ,
-		offset: 1750,
+		triggerHook: 1,
+		offset:500,
 		duration: "50%"
 	}).
-	setTween(msmtsBar).addTo(controller);
+	setTween(msmtsBar4).addTo(controller);
 
-	var msmtsBar = gsap.to('.about-msmts-bar.a-bar4', {
-		height: '99%',
-		ease: Power2.easeInOut,
+	// bar5
+	var msmtsBar5 = gsap.to('.a-bar5', {
+		height: "99%",
+    ease: Power2.easeOut
 	});
-	var scene1 = new ScrollMagic.Scene({
-		triggerElement: ".measurements-trigger",
-		triggerHook: 1, //0~1 ,
-		offset: 650,
-		duration: "100%"
-	}).
-	setTween(msmtsBar).addTo(controller);
-
-	var msmtsBar = gsap.to('.about-msmts-bar.a-bar4', {
-		height: '90%',
-		ease: Power2.easeInOut,
-	});
-	var scene1 = new ScrollMagic.Scene({
-		triggerElement: ".measurements-trigger",
-		triggerHook: 1, //0~1 ,
-		offset: 1750,
-		duration: "50%"
-	}).
-	setTween(msmtsBar).addTo(controller);
-
-	var msmtsBar = gsap.to('.about-msmts-bar.a-bar5', {
-		height: '98%',
-		ease: Power2.easeInOut,
-	});
-	var scene1 = new ScrollMagic.Scene({
-		triggerElement: ".measurements-trigger",
-		triggerHook: 1, //0~1 ,
-		offset: 750,
-		duration: "100%"
-	}).
-	setTween(msmtsBar).addTo(controller);
-
-	var msmtsBar = gsap.to('.about-msmts-bar.a-bar5', {
-		height: '90%',
-		ease: Power2.easeInOut,
-	});
-	var scene1 = new ScrollMagic.Scene({
-		triggerElement: ".measurements-trigger",
-		triggerHook: 1, //0~1 ,
-		offset: 1950,
-		duration: "50%"
-	}).
-	setTween(msmtsBar).addTo(controller);
-
-	var msmtsBar = gsap.to('.about-msmts-bar', {
-		height: '100%',
-		ease: Power2.easeInOut,
-	});
-	var scene1 = new ScrollMagic.Scene({
-		triggerElement: ".measurements-trigger",
-		triggerHook: 1, //0~1 ,
-		offset: 2400,
-		duration: "20%"
-	}).
-	setTween(msmtsBar).addTo(controller);
 	
-	var msmtsBar = gsap.to('.about-msmts-progress-txt', {
-		top: '-10px' ,
-		ease: Power2.easeInOut,
-	});
-	var scene1 = new ScrollMagic.Scene({
+	var msmtsBar5Scene = new ScrollMagic.Scene({
 		triggerElement: ".measurements-trigger",
-		triggerHook: 1, //0~1 ,
-		offset: 1700,
-		duration: "50%"
+		triggerHook: 1,
+		offset:600,
+    
+		duration: "45%"
 	}).
-	setTween(msmtsBar).addTo(controller);
+	setTween(msmtsBar5).addTo(controller);
 
-  // 숫자 수직 그래프바
-	$(window).on('scroll',function(){
-		var bar = $(window).innerHeight();
-    console.log(bar + "bar     ");
-		var barH1 = $( ".about-msmts-bar.a-bar1" ).height();
-		var barH2 = $( ".about-msmts-bar.a-bar2" ).height();
-		var barH3 = $( ".about-msmts-bar.a-bar3" ).height();
-		var barH4 = $( ".about-msmts-bar.a-bar4" ).height();
-		var barH5 = $( ".about-msmts-bar.a-bar5" ).height();
-		var barPer1 = (barH1/bar*100).toFixed(2);
-		var barPer2 = (barH2/bar*100).toFixed(2);
-		var barPer3 = (barH3/bar*100).toFixed(2);
-		var barPer4 = (barH4/bar*100).toFixed(2);
-		var barPer5 = (barH5/bar*100).toFixed(2);
-		if($(window).scrollTop()){
-			$(".about-msmts-progress-txt.a-p-txt1").text(barPer1+"%");
-			$(".about-msmts-progress-txt.a-p-txt2").text(barPer2+"%");
-			$(".about-msmts-progress-txt.a-p-txt3").text(barPer3+"%");
-			$(".about-msmts-progress-txt.a-p-txt4").text(barPer4+"%");
-			$(".about-msmts-progress-txt.a-p-txt5").text(barPer5+"%");
-		}else{
-			// $('#header').removeClass('active');
-		}
-	});
 
-	// 숫자 애니메이션 깜박이
-	// function smallNumO() {
-	// 	var sNum = document.querySelectorAll(".about-msmts-text-smallnumber");
 
-	// 	for (i = 0; i < sNum.length+100; i++) {
-	// 		animateMe(sNum[i])
-	// 	}
-	// 	function animateMe(box) {
-	// 		TweenMax.to(box, randomNumber(1, 2), {
-	// 			opacity: 1,
-	// 			repeat: 1,
-	// 			yoyoEase: true,
-	// 			onComplete: animateMe,
-	// 			duration: "20%",
-	// 			onCompleteParams: [box]
-	// 		})
-	// 	}
-	// 	function randomNumber(min, max) {
-	// 		return Math.random() * (max - min);
-	// 	}	
-	// }
-	// smallNumO();
+
+
+
+
+
 
 
 
@@ -1326,7 +1563,7 @@ $(function () {
 	});
 	var scene1 = new ScrollMagic.Scene({
 		triggerElement: ".about-last-section",
-		triggerHook: 1, //0~1 ,
+		triggerHook: 1, 
 		offset: 0,
 		duration: "40%"
 	}).
